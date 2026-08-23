@@ -1,5 +1,6 @@
 # investing-hub -- The Investing Hub
 
+aaaaaaaaaaaaaaaaaaaaaaaaaa
 All investing research of the [Suggi-Workstation](https://github.com/Suggi-Workstation)
 org lives here: portfolios, watchlist, company research, valuation
 frameworks, and screening data.
