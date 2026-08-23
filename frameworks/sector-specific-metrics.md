@@ -7,7 +7,7 @@ author: Ava
 tags: [sector-metrics, screening, valuation, SaaS, banks, REITs, insurance, energy, industrials, composite-ranking]
 links:
   - frameworks/dcf-intrinsic-value.md
-  - brain:library/value-investing/anchor-value-investing.md
+  - agentic-brain:library/value-investing/anchor-value-investing.md
 ---
 
 # Sector-Specific Metrics -- Choosing the Right Yardstick for Every Business (Phase A)
@@ -747,4 +747,4 @@ substantial.
 ## See Also
 
 - `frameworks/dcf-intrinsic-value.md` -- sector-specific DCF methods
-- `brain:library/value-investing/anchor-value-investing.md` -- domain anchor
+- `agentic-brain:library/value-investing/anchor-value-investing.md` -- domain anchor

@@ -8,8 +8,8 @@ tags: [dcf, valuation, intrinsic-value, EPV, margin-of-safety, bull-bear-scenari
 links:
   - frameworks/deep-financial-scoring.md
   - frameworks/deep-moat-scoring.md
-  - brain:library/value-investing/margin-of-safety.md
-  - brain:library/value-investing/intrinsic-value-estimation-methods.md
+  - agentic-brain:library/value-investing/margin-of-safety.md
+  - agentic-brain:library/value-investing/intrinsic-value-estimation-methods.md
 ---
 
 # DCF Intrinsic Value -- Valuation Framework with Bull/Base/Bear Cases (Stage 7A)
@@ -609,5 +609,5 @@ technology businesses. For specific sectors, adapt the methodology:
 
 - `frameworks/deep-financial-scoring.md` -- normalized earnings and FCF quality inputs
 - `frameworks/deep-moat-scoring.md` -- moat quality feeds terminal value assumptions
-- `brain:library/value-investing/margin-of-safety.md` -- the principle this framework implements
-- `brain:library/value-investing/intrinsic-value-estimation-methods.md` -- broader valuation context
+- `agentic-brain:library/value-investing/margin-of-safety.md` -- the principle this framework implements
+- `agentic-brain:library/value-investing/intrinsic-value-estimation-methods.md` -- broader valuation context

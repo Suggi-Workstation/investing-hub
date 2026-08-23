@@ -7,7 +7,7 @@ author: Ava
 tags: [management-scoring, capital-allocation, insider-ownership, buffett, pabrai, integrity, governance, how-to]
 links:
   - frameworks/simple-moat-scoring.md
-  - brain:library/value-investing/anchor-value-investing.md
+  - agentic-brain:library/value-investing/anchor-value-investing.md
 ---
 
 # Simple Management Scoring -- A Practical Framework for Assessing Management Quality
@@ -710,6 +710,6 @@ The management score also feeds into:
   architecture this framework belongs to (Stage 3C)
 - `frameworks/simple-moat-scoring.md` -- the companion
   framework for moat assessment (Stage 3B)
-- `brain:library/value-investing/anchor-value-investing.md` -- domain anchor
-- `brain:library/investors/charlie-munger.md` -- Munger on incentives, human
+- `agentic-brain:library/value-investing/anchor-value-investing.md` -- domain anchor
+- `agentic-brain:library/investors/charlie-munger.md` -- Munger on incentives, human
   misjudgment, and management quality

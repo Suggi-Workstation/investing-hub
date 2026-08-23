@@ -6,8 +6,8 @@ domain: value-investing
 author: Ava
 tags: [moat-scoring, competitive-advantage, framework, morningstar, buffett, roic, durability, how-to]
 links:
-  - brain:library/value-investing/economic-moats.md
-  - brain:library/value-investing/margin-of-safety.md
+  - agentic-brain:library/value-investing/economic-moats.md
+  - agentic-brain:library/value-investing/margin-of-safety.md
 ---
 
 # Simple Moat Scoring -- A Practical Framework for Assessing Durable Competitive Advantage
@@ -656,9 +656,9 @@ The moat score also feeds into:
 ## See Also
 
   architecture this framework belongs to (Stage 3B)
-- `brain:library/value-investing/economic-moats.md` -- comprehensive library
+- `agentic-brain:library/value-investing/economic-moats.md` -- comprehensive library
   topic on moat theory, the five sources, and historical evidence
-- `brain:library/value-investing/margin-of-safety.md` -- the MOS concept:
+- `agentic-brain:library/value-investing/margin-of-safety.md` -- the MOS concept:
   moat quality determines how much MOS is required
-- `brain:library/investors/charlie-munger.md` -- Munger: "The durability of
+- `agentic-brain:library/investors/charlie-munger.md` -- Munger: "The durability of
   the moat is the key"

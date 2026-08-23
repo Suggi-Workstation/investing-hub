@@ -7,8 +7,8 @@ author: Ava
 tags: [deep-moat, competitive-dynamics, porters-five-forces, destination-analysis, competitor-benchmarking, moat-durability, sleep, deep-dive]
 links:
   - frameworks/simple-moat-scoring.md
-  - brain:library/value-investing/economic-moats.md
-  - brain:library/industries-sectors/porters-five-forces.md
+  - agentic-brain:library/value-investing/economic-moats.md
+  - agentic-brain:library/industries-sectors/porters-five-forces.md
 ---
 
 # Deep Moat Scoring -- Full Competitive Dynamics Analysis (Stage 4A)
@@ -667,6 +667,6 @@ revenue as a proxy. Never fabricate market share numbers.
 ## See Also
 
 - `frameworks/simple-moat-scoring.md` -- Stage 3B triage scoring
-- `brain:library/value-investing/economic-moats.md` -- moat theory and evidence
-- `brain:library/industries-sectors/porters-five-forces.md` -- Porter's framework
-- `brain:library/industries-sectors/disruption-theory.md` -- Christensen disruption
+- `agentic-brain:library/value-investing/economic-moats.md` -- moat theory and evidence
+- `agentic-brain:library/industries-sectors/porters-five-forces.md` -- Porter's framework
+- `agentic-brain:library/industries-sectors/disruption-theory.md` -- Christensen disruption
