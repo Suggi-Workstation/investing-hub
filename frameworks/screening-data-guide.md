@@ -6,8 +6,7 @@ domain: value-investing
 author: Ava
 tags: [screening, data, api, financial-statements, fmp, simfin, alpha-vantage, yfinance, global]
 links:
-  - investing/frameworks/screening-template.md
-  - investing/pipeline/intrinsic-value-pipeline.md
+  - frameworks/screening-template.md
 ---
 
 # Screening Data Guide -- How to Pull Global Financial Data for the Screener
@@ -16,7 +15,7 @@ links:
 
 This guide documents every free financial data source available to
 Suggi-Workstation agents for populating the screening template
-(`investing/frameworks/screening-template.md`). It covers what each
+(`frameworks/screening-template.md`). It covers what each
 source provides, its rate limits, exact API endpoints, code examples,
 and the practical strategy for assembling a global screening universe.
 
@@ -678,11 +677,11 @@ for i, tck in enumerate(tickers):
 ### Workflow Order
 
 1. **Download US stocks via SimFin** (one script, bulk) into
-   `investing/data/us/`
+   `data/us/`
 2. **For each non-US region**, compile ticker lists (from exchange
    indices, Suggi's existing screener sheets, or yfinance discovery)
 3. **Download non-US stocks via yfinance**, region by region, into
-   `investing/data/<region>/`
+   `data/<region>/`
 4. **Store in standardized format** (see "Data Storage Format" below)
 
 ### 10-Year Data Upgrade Path
@@ -704,10 +703,10 @@ candidates.
 
 ## Data Storage Format
 
-Store downloaded data in `investing/data/` with this structure:
+Store downloaded data in `data/` with this structure:
 
 ```
-investing/data/
+data/
   us/
     profiles.csv         # symbol, name, sector, industry, country, exchange, marketCap
     income_annual.csv    # symbol, year, revenue, operatingIncome

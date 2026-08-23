@@ -6,9 +6,8 @@ domain: value-investing
 author: Ava
 tags: [screening, quality, composite, growth, roic, cheapness, percentile-rank, 25-25-50]
 links:
-  - investing/pipeline/intrinsic-value-pipeline.md
-  - investing/frameworks/dcf-intrinsic-value.md
-  - investing/frameworks/deep-financial-scoring.md
+  - frameworks/dcf-intrinsic-value.md
+  - frameworks/deep-financial-scoring.md
 ---
 
 # Screening Template -- 25/25/50 Composite Scorer
@@ -185,7 +184,7 @@ For each company in the universe, the screener needs:
 7. **Review flags:** Low Growth (N) and Reason (O) columns flag
    edge cases for manual review. Excluded (P) removes from scoring.
 8. **Output to screening folder:** Save dated results to
-   `investing/screening/<region>-<date>.md` or `.xlsx`
+   `screening/<region>-<date>.md` or `.xlsx`
 
 ## Integration with Intrinsic Value Pipeline
 
@@ -208,5 +207,5 @@ The screener helps Suggi decide which ones to act on.
 
 ## File Location
 
-Screening results are stored in `investing/screening/`. Raw financial
-data used to populate the screener is stored in `investing/data/`.
+Screening results are stored in `screening/`. Raw financial
+data used to populate the screener is stored in `data/`.

@@ -6,11 +6,10 @@ domain: value-investing
 author: Ava
 tags: [dcf, valuation, intrinsic-value, EPV, margin-of-safety, bull-bear-scenarios, wacc, terminal-value, sensitivity]
 links:
-  - investing/pipeline/investment-pipeline-final.md
-  - investing/frameworks/deep-financial-scoring.md
-  - investing/frameworks/deep-moat-scoring.md
-  - library/value-investing/margin-of-safety.md
-  - library/value-investing/intrinsic-value-estimation-methods.md
+  - frameworks/deep-financial-scoring.md
+  - frameworks/deep-moat-scoring.md
+  - brain:library/value-investing/margin-of-safety.md
+  - brain:library/value-investing/intrinsic-value-estimation-methods.md
 ---
 
 # DCF Intrinsic Value -- Valuation Framework with Bull/Base/Bear Cases (Stage 7A)
@@ -608,8 +607,7 @@ technology businesses. For specific sectors, adapt the methodology:
 
 ## See Also
 
-- `investing/pipeline/investment-pipeline-final.md` -- Stages 7A-7D specification
-- `investing/frameworks/deep-financial-scoring.md` -- normalized earnings and FCF quality inputs
-- `investing/frameworks/deep-moat-scoring.md` -- moat quality feeds terminal value assumptions
-- `library/value-investing/margin-of-safety.md` -- the principle this framework implements
-- `library/value-investing/intrinsic-value-estimation-methods.md` -- broader valuation context
+- `frameworks/deep-financial-scoring.md` -- normalized earnings and FCF quality inputs
+- `frameworks/deep-moat-scoring.md` -- moat quality feeds terminal value assumptions
+- `brain:library/value-investing/margin-of-safety.md` -- the principle this framework implements
+- `brain:library/value-investing/intrinsic-value-estimation-methods.md` -- broader valuation context

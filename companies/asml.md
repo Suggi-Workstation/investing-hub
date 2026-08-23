@@ -7,10 +7,9 @@ domain: value-investing
 author: Link
 tags: [ASML, semiconductor-equipment, lithography, EUV, monopoly, deep-moat, DCF, intrinsic-value]
 links:
-  - investing/frameworks/deep-moat-scoring.md
-  - investing/frameworks/deep-financial-scoring.md
-  - investing/frameworks/dcf-intrinsic-value.md
-  - investing/pipeline/investment-pipeline-final.md
+  - frameworks/deep-moat-scoring.md
+  - frameworks/deep-financial-scoring.md
+  - frameworks/dcf-intrinsic-value.md
 ---
 
 # ASML -- Deep Analysis: Moat, Financial Health & Intrinsic Value

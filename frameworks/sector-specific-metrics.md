@@ -6,9 +6,8 @@ domain: value-investing
 author: Ava
 tags: [sector-metrics, screening, valuation, SaaS, banks, REITs, insurance, energy, industrials, composite-ranking]
 links:
-  - investing/pipeline/investment-pipeline-final.md
-  - investing/frameworks/dcf-intrinsic-value.md
-  - library/value-investing/anchor-value-investing.md
+  - frameworks/dcf-intrinsic-value.md
+  - brain:library/value-investing/anchor-value-investing.md
 ---
 
 # Sector-Specific Metrics -- Choosing the Right Yardstick for Every Business (Phase A)
@@ -747,6 +746,5 @@ substantial.
 
 ## See Also
 
-- `investing/pipeline/investment-pipeline-final.md` -- Stages 1-2 specification
-- `investing/frameworks/dcf-intrinsic-value.md` -- sector-specific DCF methods
-- `library/value-investing/anchor-value-investing.md` -- domain anchor
+- `frameworks/dcf-intrinsic-value.md` -- sector-specific DCF methods
+- `brain:library/value-investing/anchor-value-investing.md` -- domain anchor

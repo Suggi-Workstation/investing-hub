@@ -6,9 +6,8 @@ domain: value-investing
 author: Ava
 tags: [management-scoring, capital-allocation, insider-ownership, buffett, pabrai, integrity, governance, how-to]
 links:
-  - investing/pipeline/investment-pipeline-final.md
-  - investing/frameworks/simple-moat-scoring.md
-  - library/value-investing/anchor-value-investing.md
+  - frameworks/simple-moat-scoring.md
+  - brain:library/value-investing/anchor-value-investing.md
 ---
 
 # Simple Management Scoring -- A Practical Framework for Assessing Management Quality
@@ -661,7 +660,6 @@ this level of value destruction.**
 ## Integration with the Pipeline
 
 This framework feeds into Stage 3C of the investment pipeline
-(`investing/pipeline/investment-pipeline-final.md`). The management
 score is the second half of the Stage 3 triage:
 
 - Management score >= 3.0 AND Moat score >= 3.0 -> PASS to Stage 4
@@ -709,10 +707,9 @@ The management score also feeds into:
 
 ## See Also
 
-- `investing/pipeline/investment-pipeline-final.md` -- the full pipeline
   architecture this framework belongs to (Stage 3C)
-- `investing/frameworks/simple-moat-scoring.md` -- the companion
+- `frameworks/simple-moat-scoring.md` -- the companion
   framework for moat assessment (Stage 3B)
-- `library/value-investing/anchor-value-investing.md` -- domain anchor
-- `library/investors/charlie-munger.md` -- Munger on incentives, human
+- `brain:library/value-investing/anchor-value-investing.md` -- domain anchor
+- `brain:library/investors/charlie-munger.md` -- Munger on incentives, human
   misjudgment, and management quality

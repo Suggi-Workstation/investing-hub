@@ -6,9 +6,8 @@ domain: value-investing
 author: Ava
 tags: [moat-scoring, competitive-advantage, framework, morningstar, buffett, roic, durability, how-to]
 links:
-  - investing/pipeline/investment-pipeline-final.md
-  - library/value-investing/economic-moats.md
-  - library/value-investing/margin-of-safety.md
+  - brain:library/value-investing/economic-moats.md
+  - brain:library/value-investing/margin-of-safety.md
 ---
 
 # Simple Moat Scoring -- A Practical Framework for Assessing Durable Competitive Advantage
@@ -617,7 +616,6 @@ indicate moat erosion and should trigger a re-scoring:
 ## Integration with the Pipeline
 
 This framework feeds directly into Stage 3B of the investment pipeline
-(`investing/pipeline/investment-pipeline-final.md`). The composite moat
 score is one half of the Stage 3 triage (alongside management scoring).
 A company must achieve:
 
@@ -657,11 +655,10 @@ The moat score also feeds into:
 
 ## See Also
 
-- `investing/pipeline/investment-pipeline-final.md` -- the full pipeline
   architecture this framework belongs to (Stage 3B)
-- `library/value-investing/economic-moats.md` -- comprehensive library
+- `brain:library/value-investing/economic-moats.md` -- comprehensive library
   topic on moat theory, the five sources, and historical evidence
-- `library/value-investing/margin-of-safety.md` -- the MOS concept:
+- `brain:library/value-investing/margin-of-safety.md` -- the MOS concept:
   moat quality determines how much MOS is required
-- `library/investors/charlie-munger.md` -- Munger: "The durability of
+- `brain:library/investors/charlie-munger.md` -- Munger: "The durability of
   the moat is the key"

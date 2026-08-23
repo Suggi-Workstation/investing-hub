@@ -6,9 +6,8 @@ domain: value-investing
 author: Ava
 tags: [financial-health, earnings-quality, red-flags, FCF, debt-analysis, ROIIC, forensic-accounting, Beneish-M-Score, Altman-Z-Score]
 links:
-  - investing/pipeline/investment-pipeline-final.md
-  - investing/frameworks/simple-management-scoring.md
-  - library/value-investing/anchor-value-investing.md
+  - frameworks/simple-management-scoring.md
+  - brain:library/value-investing/anchor-value-investing.md
 ---
 
 # Deep Financial Scoring -- Financial Health & Red Flag Analysis (Stage 4B)
@@ -625,6 +624,5 @@ without raising capital? Are reported earnings trustworthy?
 
 ## See Also
 
-- `investing/pipeline/investment-pipeline-final.md` -- Stage 4B specification
-- `investing/frameworks/simple-management-scoring.md` -- Stage 3C management triage
-- `investing/frameworks/deep-moat-scoring.md` -- Stage 4A competitive dynamics (companion deep dive)
+- `frameworks/simple-management-scoring.md` -- Stage 3C management triage
+- `frameworks/deep-moat-scoring.md` -- Stage 4A competitive dynamics (companion deep dive)

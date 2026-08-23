@@ -6,10 +6,9 @@ domain: value-investing
 author: Ava
 tags: [deep-moat, competitive-dynamics, porters-five-forces, destination-analysis, competitor-benchmarking, moat-durability, sleep, deep-dive]
 links:
-  - investing/pipeline/investment-pipeline-final.md
-  - investing/frameworks/simple-moat-scoring.md
-  - library/value-investing/economic-moats.md
-  - library/industries-sectors/porters-five-forces.md
+  - frameworks/simple-moat-scoring.md
+  - brain:library/value-investing/economic-moats.md
+  - brain:library/industries-sectors/porters-five-forces.md
 ---
 
 # Deep Moat Scoring -- Full Competitive Dynamics Analysis (Stage 4A)
@@ -667,8 +666,7 @@ revenue as a proxy. Never fabricate market share numbers.
 
 ## See Also
 
-- `investing/pipeline/investment-pipeline-final.md` -- Stage 4A specification
-- `investing/frameworks/simple-moat-scoring.md` -- Stage 3B triage scoring
-- `library/value-investing/economic-moats.md` -- moat theory and evidence
-- `library/industries-sectors/porters-five-forces.md` -- Porter's framework
-- `library/industries-sectors/disruption-theory.md` -- Christensen disruption
+- `frameworks/simple-moat-scoring.md` -- Stage 3B triage scoring
+- `brain:library/value-investing/economic-moats.md` -- moat theory and evidence
+- `brain:library/industries-sectors/porters-five-forces.md` -- Porter's framework
+- `brain:library/industries-sectors/disruption-theory.md` -- Christensen disruption
