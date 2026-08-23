@@ -1,0 +1,5 @@
+# Normalize line endings to LF for all text files.
+* text=auto eol=lf
+# Union merge for index files: on conflict, keep both sides' lines.
+_index.md merge=union
+MEMORY.md merge=union

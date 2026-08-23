@@ -1,0 +1,87 @@
+name: ascii-guard
+
+# WHAT THIS DOES (plain English):
+# Every time anyone pushes a change to this repo (or opens a pull request),
+# this checker scans every text file and fails the build if it finds even one
+# character that is not plain 7-bit ASCII - no curly quotes, em/en dashes,
+# emoji, arrows, or accented letters. It tells you the exact file and line so
+# you can fix it. Nothing lands until the repo is pure ASCII again.
+#
+# WHY: a non-ASCII character silently turns into mojibake the moment a file is
+# opened and re-saved in a non-UTF-8 editor - the corruption that has repeatedly
+# broken our cards. This turns the "ASCII-only" RULE into a self-firing GATE, so
+# nobody has to remember it.
+#
+# HOW TO INSTALL: put this file at  .github/workflows/ascii-guard.yml  in each
+# repo. It is identical for all repos - no per-repo edits needed.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:   # lets you also run it by hand from the Actions tab
+
+# If two pushes land quickly, only run the gate on the latest.
+concurrency:
+  group: ascii-guard-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read       # least privilege: the gate only needs to READ the files
+
+jobs:
+  ascii-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Fail on any non-ASCII byte in a tracked text file
+        shell: bash
+        run: |
+          set -uo pipefail
+          echo "ascii-guard: scanning tracked text files for bytes > 127 (non-ASCII)..."
+
+          # git ls-files -z   : list every git-tracked file, NUL-separated
+          #                     (handles spaces / odd characters in file names).
+          # xargs -0 -r       : feed those names to grep; -r = do nothing if the
+          #                     list is empty (prevents a hang on an empty repo).
+          # grep -I           : SKIP files grep detects as binary (images, the
+          #                     vector index, .pkl blobs, etc.) - we only check text.
+          # grep -n           : show the line number of each hit.
+          # grep -P '[^\x00-\x7F]' : Perl regex matching ANY non-ASCII byte.
+          # || true           : grep exits non-zero when it finds nothing; we do
+          #                     not want that to abort the step - we decide below
+          #                     based on whether the report is empty.
+          report="$(git ls-files -z \
+            | xargs -0 -r grep -InP '[^\x00-\x7F]' 2>/dev/null || true)"
+
+          if [ -n "$report" ]; then
+            echo ""
+            echo "================================================================"
+            echo "ascii-guard FAILED - non-ASCII characters found (file:line:text):"
+            echo "================================================================"
+            echo "$report"
+            echo "================================================================"
+            echo ""
+            echo "Every file in this repo must be plain 7-bit ASCII."
+            echo "Replace the flagged characters with their ASCII equivalents:"
+            echo "  -    for any dash (em-dash, en-dash)"
+            echo "  ->   for an arrow"
+            echo "  \"  '  straight quotes (not curly)"
+            echo "  <=  >=  !=   for comparisons"
+            echo "  Sec  or a plain number   for a section mark"
+            echo "  (and remove any emoji or accented letters)"
+            echo ""
+            echo "Fix the lines above, commit again, and this gate will pass."
+            exit 1
+          fi
+
+          echo "ascii-guard PASSED: every tracked text file is pure ASCII."
+
+      - name: Validate frontmatter IDs
+        shell: bash
+        run: |
+          # Check that all frontmatter id: fields are not manually typed.
+          # Suspect rounded timestamps (ending in 00Z) get a warning.
+          # Invalid formats and duplicates fail the build.
+          bash scripts/validate-ids.sh

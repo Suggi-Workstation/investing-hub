@@ -1,0 +1,41 @@
+#!/bin/sh
+# ASCII guard - local layer. Auto-fixes non-ASCII in staged files.
+#
+# Behavior:
+#   1. Scans staged files for non-ASCII bytes.
+#   2. Prints the offending file:line so the author sees the mistake.
+#   3. Auto-sanitizes via scripts/sanitize-ascii.py and re-stages.
+#   4. Commits proceed with pure-ASCII content.
+#
+# If the sanitizer script is missing, falls back to BLOCKING the commit
+# (old behavior) so bad content can never be committed silently.
+
+bad=0
+for f in $(git diff --cached --name-only --diff-filter=ACM); do
+  case "$f" in
+    *.pdf|*.png|*.jpg|*.jpeg|*.gif|*.webp|*.ico|*.svg|*.zip|*.gz|*.tar|*.xlsx|*.docx|*.pptx|*.woff|*.woff2|*.ttf|*.otf|*.mp3|*.mp4|*.mov|*.bin) continue ;;
+  esac
+  if ! grep -qI . "$f" 2>/dev/null; then
+    continue
+  fi
+  if LC_ALL=C grep -nP "[^\x00-\x7F]" "$f" >/dev/null 2>&1; then
+    echo ""
+    echo "ASCII GUARD: non-ASCII found in: $f"
+    LC_ALL=C grep -nP "[^\x00-\x7F]" "$f" | head -n 5
+    if [ -f scripts/sanitize-ascii.py ]; then
+      python3 scripts/sanitize-ascii.py "$f"
+      git add "$f"
+      echo "  -> auto-sanitized to pure ASCII and re-staged: $f"
+    else
+      echo "COMMIT BLOCKED: fix the non-ASCII characters above, then commit again."
+      echo "(scripts/sanitize-ascii.py not found - install it for auto-fix)"
+      bad=1
+    fi
+  fi
+done
+if [ "$bad" -ne 0 ]; then
+  echo ""
+  echo "COMMIT BLOCKED: fix the non-ASCII characters above, then commit again."
+  exit 1
+fi
+exit 0

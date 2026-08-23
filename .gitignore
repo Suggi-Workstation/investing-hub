@@ -1,0 +1,11 @@
+# Agent scratch space - never committed
+.agent_temp/
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+# Editor clutter
+*.swp
+*~
+.vscode/
+.idea/
