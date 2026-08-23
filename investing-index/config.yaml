@@ -1,0 +1,52 @@
+# brain-index config
+# Model: BAAI/bge-m3 (1024-dim) -- multilingual, hybrid dense+sparse+ColBERT
+# (dense-only via sentence-transformers; BM25 provides the sparse half)
+
+embedding:
+  model: "unsloth/embeddinggemma-300m"
+  dim: 768
+  batch_size: 32
+  device: "cpu"
+
+reranker:
+  enabled: false
+  model: "BAAI/bge-reranker-base"
+  max_length: 512
+  batch_size: 16
+  top_k: 20
+
+chunking:
+  max_chars: 1500
+  overlap_chars: 200
+  heading_aware: true
+
+bm25:
+  k1: 1.5
+  b: 0.75
+
+rrf:
+  k: 60
+
+search:
+  top_k: 20
+  snippet_chars: 300
+
+index:
+  data_dir: "~/.investing-index"
+  exclude_dirs:
+    - "logbook"
+    - "scripts"
+    - ".github"
+    - ".git"
+  exclude_patterns:
+    - "*.json"
+    - "*.yaml"
+    - "*.yml"
+
+ppr:
+  enabled: false
+  alpha: 0.85
+  max_iter: 50
+
+freshness:
+  warn_hours: 24

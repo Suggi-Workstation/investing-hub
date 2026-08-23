@@ -1,0 +1,9 @@
+# .gitignore for brain-index/
+# Index data: never commit
+__pycache__/
+*.pyc
+.model_cache/
+
+# Generated files (not source)
+heartbeat.json
+eval-results.json

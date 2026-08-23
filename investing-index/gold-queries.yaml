@@ -1,0 +1,617 @@
+# Gold queries for brain-index eval.
+# Each entry: query, expected file (must appear in top-20), and domain.
+# Coverage: full brain -- governance, research, reflections, investing,
+# and all 29 library domains. Refresh: quarterly.
+
+queries:
+  # ============ INVESTING (kept: g001-g010 of the 30 added) ============
+  - qid: g001
+    question: "What does the final investment pipeline architecture look like?"
+    gold_file: "investing/pipeline/investment-pipeline-final.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g002
+    question: "How is intrinsic value calculated using discounted cash flow?"
+    gold_file: "investing/frameworks/dcf-intrinsic-value.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g003
+    question: "What is the deep moat scoring framework?"
+    gold_file: "investing/frameworks/deep-moat-scoring.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g004
+    question: "What is Suggi's investment approach as documented in governance?"
+    gold_file: "governance/suggi-investment-approach.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g005
+    question: "What stocks are in the current main investment portfolio?"
+    gold_file: "investing/main-portfolio.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g006
+    question: "What is the Indonesian portfolio and how does it differ from the main one?"
+    gold_file: "investing/indo-portfolio.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g007
+    question: "How is the Beneish M-Score used to detect earnings manipulation?"
+    gold_file: "library/accounting-financial-shenanigans/beneish-m-score.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g008
+    question: "What are common revenue recognition shenanigans in financial reporting?"
+    gold_file: "library/accounting-financial-shenanigans/revenue-recognition-shenanigans.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g009
+    question: "How do non-GAAP metrics and pro-forma figures get manipulated?"
+    gold_file: "library/accounting-financial-shenanigans/non-gaap-metrics-and-pro-forma-manipulation.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g010
+    question: "What lessons come from the 2008 financial crisis case study?"
+    gold_file: "library/case-studies/2008-financial-crisis.md"
+    gold_heading: ""
+    domain: "Library"
+
+  # ============ LIBRARY (kept: g011-g022 of the 30 added) ============
+  - qid: g011
+    question: "What went wrong in the Challenger disaster regarding organizational silence?"
+    gold_file: "library/case-studies/challenger-disaster-organizational-silence.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g012
+    question: "What does the intelligent investor book teach about value investing?"
+    gold_file: "library/books/the-intelligent-investor.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g013
+    question: "What are the main ideas in Thinking Fast and Slow?"
+    gold_file: "library/books/thinking-fast-and-slow.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g014
+    question: "What does the Black Swan book say about rare unpredictable events?"
+    gold_file: "library/books/the-black-swan-taleb.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g015
+    question: "How did the Enron scandal illustrate accounting fraud?"
+    gold_file: "library/case-studies/enron-scandal.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g016
+    question: "What are key techniques for agent memory and persistence in AI systems?"
+    gold_file: "library/coding-agentic-ai/agent-memory-and-persistence.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g017
+    question: "How does multi-agent orchestration work?"
+    gold_file: "library/coding-agentic-ai/multi-agent-orchestration.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g018
+    question: "What is cognitive load theory in education?"
+    gold_file: "library/education-learning/cognitive-load-theory.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g019
+    question: "How does spaced repetition improve learning and retrieval practice?"
+    gold_file: "library/education-learning/spaced-repetition-and-retrieval-practice.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g020
+    question: "What is the Feynman technique for learning?"
+    gold_file: "library/education-learning/feynman-technique-and-learning-heuristics.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g021
+    question: "What are common logical fallacies?"
+    gold_file: "library/communication/logical-fallacies.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g022
+    question: "How does propaganda and misinformation spread?"
+    gold_file: "library/communication/propaganda-and-misinformation.md"
+    gold_heading: ""
+    domain: "Library"
+
+  # ============ LIBRARY (kept: g023-g030 of the 30 added) ============
+  - qid: g023
+    question: "What is the greenhouse effect and the carbon cycle?"
+    gold_file: "library/earth-climate/carbon-cycle-greenhouse-effect.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g024
+    question: "What are the ethics considerations for AI systems?"
+    gold_file: "library/ethics-philosophy/ai-ethics.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g025
+    question: "How do bond pricing and fixed income markets work?"
+    gold_file: "library/finance/bond-pricing-and-fixed-income-markets.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g026
+    question: "What is Bayesian reasoning and how is it used in forecasting?"
+    gold_file: "library/probabilistic-thinking-forecasting/bayesian-reasoning.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g027
+    question: "What is the psychology of persuasion according to Influence?"
+    gold_file: "library/books/influence-psychology-of-persuasion.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g028
+    question: "What is the consciousness checklist in governance?"
+    gold_file: "governance/consciousness-checklist.md"
+    gold_heading: ""
+    domain: "Governance"
+
+  - qid: g029
+    question: "What did the child agent inheritance design teach about building new agents?"
+    gold_file: "reflections/2026-08-06_link_child-agent-inheritance-validated.md"
+    gold_heading: ""
+    domain: "Reflections"
+
+  - qid: g030
+    question: "How does the two-tier fleet memory work in one vector space?"
+    gold_file: "research/insights/two-tier-fleet-memory-single-vector-space.md"
+    gold_heading: ""
+    domain: "Research"
+
+  # ============ NEW 70: investing pipelines + companies ============
+  - qid: g031
+    question: "What is the intrinsic value pipeline for stock screening?"
+    gold_file: "investing/pipeline/screener-intrinsic-value-pipeline.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g032
+    question: "How does Link's investment pipeline differ from the generic one?"
+    gold_file: "investing/pipeline/link-investment-pipeline.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g033
+    question: "What is the deep financial scoring framework?"
+    gold_file: "investing/frameworks/deep-financial-scoring.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g034
+    question: "What is the simple moat scoring framework?"
+    gold_file: "investing/frameworks/simple-moat-scoring.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g035
+    question: "How is management quality scored in the investing frameworks?"
+    gold_file: "investing/frameworks/simple-management-scoring.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g036
+    question: "What sector-specific metrics exist for screening?"
+    gold_file: "investing/frameworks/sector-specific-metrics.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g037
+    question: "What is the screening template and how is it used?"
+    gold_file: "investing/frameworks/screening-template.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g038
+    question: "What does the screening data guide cover?"
+    gold_file: "investing/frameworks/screening-data-guide.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g039
+    question: "What is the ASML company analysis?"
+    gold_file: "investing/companies/asml.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  - qid: g040
+    question: "What is the intrinsic value pipeline architecture document?"
+    gold_file: "investing/pipeline/intrinsic-value-pipeline.md"
+    gold_heading: ""
+    domain: "Investing"
+
+  # ============ NEW: accounting + case studies ============
+  - qid: g041
+    question: "What are cash flow shenanigans in accounting?"
+    gold_file: "library/accounting-financial-shenanigans/cash-flow-shenanigans.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g042
+    question: "How do goodwill impairment games distort earnings?"
+    gold_file: "library/accounting-financial-shenanigans/goodwill-impairment-games.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g043
+    question: "What are off-balance-sheet shenanigans?"
+    gold_file: "library/accounting-financial-shenanigans/off-balance-sheet-shenanigans.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g044
+    question: "How did Apple turn around from 1997 to 2010?"
+    gold_file: "library/case-studies/apple-turnaround-1997-2010.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g045
+    question: "What lessons came from the Cuban Missile Crisis?"
+    gold_file: "library/case-studies/cuban-missile-crisis.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g046
+    question: "What happened in the New Coke marketing disaster?"
+    gold_file: "library/case-studies/new-coke-marketing-disaster.md"
+    gold_heading: ""
+    domain: "Library"
+
+  # ============ NEW: anthropology + books + history ============
+  - qid: g047
+    question: "How do gift economies and reciprocity work in anthropology?"
+    gold_file: "library/anthropology/gift-economies-and-reciprocity.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g048
+    question: "What does Sapiens say about human history?"
+    gold_file: "library/books/sapiens-a-brief-history-of-humankind.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g049
+    question: "What is the selfish gene theory?"
+    gold_file: "library/books/the-selfish-gene.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g050
+    question: "What was the Cold War about and how did it end?"
+    gold_file: "library/history/cold-war.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g051
+    question: "What were the causes and consequences of World War II?"
+    gold_file: "library/history/world-war-ii.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g052
+    question: "What did the industrial revolution change about society?"
+    gold_file: "library/history/industrial-revolution-and-its-consequences.md"
+    gold_heading: ""
+    domain: "Library"
+
+  # ============ NEW: coding/agents + communication ============
+  - qid: g053
+    question: "How are agent skills and skill systems designed?"
+    gold_file: "library/coding-agentic-ai/agent-skill-systems.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g054
+    question: "How does context window management work for LLM agents?"
+    gold_file: "library/coding-agentic-ai/context-window-management.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g055
+    question: "What is prompt engineering for agents?"
+    gold_file: "library/coding-agentic-ai/prompt-engineering-for-agents.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g056
+    question: "How is agent evaluation and benchmarking done?"
+    gold_file: "library/coding-agentic-ai/agent-evaluation-and-benchmarking.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g057
+    question: "What is rhetoric and how is it used in communication?"
+    gold_file: "library/communication/rhetoric.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g058
+    question: "What does the medium is the message mean?"
+    gold_file: "library/communication/the-medium-is-the-message.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g059
+    question: "How does narrative structure and storytelling work?"
+    gold_file: "library/communication/narrative-structure-and-storytelling.md"
+    gold_heading: ""
+    domain: "Library"
+
+  # ============ NEW: earth/climate + education + ethics ============
+  - qid: g060
+    question: "What is the sixth extinction and biodiversity loss?"
+    gold_file: "library/earth-climate/biodiversity-sixth-extinction.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g061
+    question: "How does ocean acidification affect marine life?"
+    gold_file: "library/earth-climate/ocean-acidification.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g062
+    question: "What is the renewable energy cost revolution?"
+    gold_file: "library/earth-climate/renewable-energy-cost-revolution.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g063
+    question: "What is deliberate practice and how does it improve skill?"
+    gold_file: "library/education-learning/deliberate-practice.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g064
+    question: "What are the main pedagogical teaching methods?"
+    gold_file: "library/education-learning/pedagogy-and-teaching-methods.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g065
+    question: "What is stoicism and how is it applied?"
+    gold_file: "library/ethics-philosophy/stoicism.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g066
+    question: "What is epistemology and how do we know things?"
+    gold_file: "library/ethics-philosophy/epistemology.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g067
+    question: "What is the free will versus determinism debate?"
+    gold_file: "library/ethics-philosophy/free-will-determinism.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g068
+    question: "What is bioethics concerned with?"
+    gold_file: "library/ethics-philosophy/bioethics.md"
+    gold_heading: ""
+    domain: "Library"
+
+  # ============ NEW: finance + geopolitics + health ============
+  - qid: g069
+    question: "What does the Modigliani-Miller capital structure theory say?"
+    gold_file: "library/finance/capital-structure-modigliani-miller.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g070
+    question: "How does dividend policy and share buybacks work?"
+    gold_file: "library/finance/dividend-policy-and-share-buybacks.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g071
+    question: "What is the yield curve and what does it predict?"
+    gold_file: "library/finance/yield-curve.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g072
+    question: "How does nuclear deterrence and MAD work in geopolitics?"
+    gold_file: "library/geopolitics/nuclear-deterrence-mad.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g073
+    question: "What is the US-China great power competition about?"
+    gold_file: "library/geopolitics/us-china-great-power-competition.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g074
+    question: "How do trade wars and economic sanctions work?"
+    gold_file: "library/geopolitics/trade-wars-economic-sanctions.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g075
+    question: "What is cyber warfare in modern geopolitics?"
+    gold_file: "library/geopolitics/cyber-warfare.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g076
+    question: "How does the immune system work?"
+    gold_file: "library/health-medicine/immune-system.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g077
+    question: "What is the science of longevity and healthspan?"
+    gold_file: "library/health-medicine/longevity-science-healthspan.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g078
+    question: "How does vaccine development and immunology work?"
+    gold_file: "library/health-medicine/vaccine-development-immunology.md"
+    gold_heading: ""
+    domain: "Library"
+
+  # ============ NEW: investors + law + macro ============
+  - qid: g079
+    question: "What is Warren Buffett's investment philosophy?"
+    gold_file: "library/investors/warren-buffett.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g080
+    question: "What did Benjamin Graham teach about value investing?"
+    gold_file: "library/investors/benjamin-graham.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g081
+    question: "What are Charlie Munger's mental models?"
+    gold_file: "library/investors/charlie-munger.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g082
+    question: "What is Howard Marks's approach to market cycles?"
+    gold_file: "library/investors/howard-marks.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g083
+    question: "What is Ray Dalio's investment framework?"
+    gold_file: "library/investors/ray-dalio.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g084
+    question: "What is securities regulation about?"
+    gold_file: "library/law-regulation/securities-regulation.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g085
+    question: "What is regulatory capture theory?"
+    gold_file: "library/law-regulation/regulatory-capture-theory.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g086
+    question: "How does intellectual property law work?"
+    gold_file: "library/law-regulation/intellectual-property.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g087
+    question: "What drives business cycles?"
+    gold_file: "library/macro-micro/business-cycles.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g088
+    question: "What is game theory and strategic interaction?"
+    gold_file: "library/macro-micro/game-theory-strategic-interaction-and-cooperation.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g089
+    question: "How does monetary policy and central banking work?"
+    gold_file: "library/macro-micro/monetary-policy-and-central-banking.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g090
+    question: "What is inflation dynamics and what drives it?"
+    gold_file: "library/macro-micro/inflation-dynamics.md"
+    gold_heading: ""
+    domain: "Library"
+
+  # ============ NEW: math/stats + notable people + psych ============
+  - qid: g091
+    question: "What is causal inference in statistics?"
+    gold_file: "library/mathematics-statistics/causal-inference.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g092
+    question: "What is information theory about?"
+    gold_file: "library/mathematics-statistics/information-theory.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g093
+    question: "Who was Richard Feynman and what did he contribute?"
+    gold_file: "library/notable-people/richard-feynman.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g094
+    question: "Who was Ada Lovelace?"
+    gold_file: "library/notable-people/ada-lovelace.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g095
+    question: "What are the common cognitive biases?"
+    gold_file: "library/psychology-behavior/cognitive-biases.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g096
+    question: "What is prospect theory in behavioral economics?"
+    gold_file: "library/psychology-behavior/prospect-theory.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g097
+    question: "What is cognitive dissonance?"
+    gold_file: "library/psychology-behavior/cognitive-dissonance.md"
+    gold_heading: ""
+    domain: "Library"
+
+  # ============ NEW: science + technology + valuation ============
+  - qid: g098
+    question: "What is the scientific method and falsifiability?"
+    gold_file: "library/science/scientific-method-falsifiability.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g099
+    question: "What are the laws of thermodynamics and entropy?"
+    gold_file: "library/science/thermodynamics-laws-energy-entropy.md"
+    gold_heading: ""
+    domain: "Library"
+
+  - qid: g100
+    question: "How do large language models work?"
+    gold_file: "library/technology/large-language-models.md"
+    gold_heading: ""
+    domain: "Library"
