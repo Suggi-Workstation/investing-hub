@@ -1,0 +1,6 @@
+<!-- errors.log -- Error/scar log for Suggi-Workstation agents.
+    Append entries at the bottom. Never edit old entries.
+    Format: ## [ENT-NNN] | YYYY-MM-DD HH:MM UTC | Agent | error | ref: path/to/file.md
+    Category: error only
+    See logbook/protocol.md for the full spec.
+-->

@@ -1,0 +1,55 @@
+name: logbook-archive
+
+# WHAT THIS DOES:
+# After every push to main, checks all logbook/*.log files. If any
+# exceed 500 lines, cuts the oldest complete entries (never mid-entry)
+# and moves them to logbook/archive/<name>-<quarter>.log. The active
+# log is trimmed so it stays readable at preflight without bloating
+# agent context. Archive commits are tagged [archive] and do not
+# re-trigger this workflow (infinite loop guard).
+#
+# HOW TO INSTALL: put this file at
+# .github/workflows/logbook-archive.yml in the repo.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: logbook-archive-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    if: ${{ !contains(github.event.head_commit.message, '[archive]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run logbook archive script
+        shell: bash
+        run: |
+          set -uo pipefail
+          echo "logbook-archive: checking log files..."
+          python scripts/logbook-archive.py
+
+      - name: Commit and push archived changes
+        shell: bash
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "Logbook Archive Bot"
+          git config user.email "archive@suggi-workstation.dev"
+          git add logbook/
+          git commit -m "[archive] logbook: auto-archived entries exceeding 500 lines"
+          git push origin main

@@ -1,0 +1,6 @@
+<!-- investing.log -- Investing activity log for Suggi-Workstation agents.
+    Append entries at the bottom. Never edit old entries.
+    Format: ## [ENT-NNN] | YYYY-MM-DD HH:MM UTC | Agent | investing | ref: path/to/file.md
+    Category: investing only
+    See logbook/protocol.md for the full spec.
+-->
