@@ -52,4 +52,13 @@ jobs:
           git config user.email "archive@suggi-workstation.dev"
           git add logbook/
           git commit -m "[archive] logbook: auto-archived entries exceeding 500 lines"
-          git push origin main
+
+          # Retry push with rebase -- the VPS watcher pushes every 1 min,
+          # so the remote may have moved between checkout and push.
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            echo "Push attempt $i failed, retrying in 10s..."
+            sleep 10
+          done
+          echo "All push attempts failed."
+          exit 1
