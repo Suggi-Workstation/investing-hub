@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Query the brain-index. Returns ranked file paths with snippets.
+Query the investing-index. Returns ranked file paths with snippets.
 
 Usage:
     python query.py "your question" --top-k 20
@@ -10,9 +10,11 @@ Usage:
 """
 
 import json
+import hashlib
 import math
 import os
 import sys
+from datetime import datetime
 from pathlib import Path
 from collections import Counter
 
@@ -20,6 +22,7 @@ import yaml
 import numpy as np
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
 
 with open(SCRIPT_DIR / "config.yaml") as f:
     cfg = yaml.safe_load(f)
@@ -28,6 +31,7 @@ DATA_DIR = Path(os.path.expanduser(cfg["index"]["data_dir"]))
 CHUNKS_PATH = DATA_DIR / "chunks.jsonl"
 VECTORS_PATH = DATA_DIR / "vectors.npy"
 META_PATH = DATA_DIR / "meta.json"
+MANIFEST_PATH = DATA_DIR / "manifest.json"
 
 
 def load_index():
@@ -44,6 +48,39 @@ def load_index():
 
     vectors = np.load(str(VECTORS_PATH)).astype(np.float32)
     return chunks, vectors
+
+
+def check_corpus_manifest(root: Path, manifest_path: Path,
+                          exclude_dirs: set) -> tuple[bool, str]:
+    """Compare all live indexable Markdown hashes with the saved manifest."""
+    if not manifest_path.is_file():
+        return False, "index manifest missing"
+    with open(manifest_path) as f:
+        manifest = json.load(f)
+
+    current = {}
+    for dirpath, dirnames, filenames in os.walk(root):
+        dirnames[:] = [name for name in dirnames if name not in exclude_dirs]
+        for filename in sorted(filenames):
+            if filename.startswith(".") or Path(filename).suffix.lower() != ".md":
+                continue
+            path = Path(dirpath) / filename
+            relative = path.relative_to(root).as_posix()
+            current[relative] = hashlib.md5(path.read_bytes()).hexdigest()
+
+    expected = {
+        relative: details.get("hash") if isinstance(details, dict) else None
+        for relative, details in manifest.items()
+    }
+    new = set(current) - set(expected)
+    deleted = set(expected) - set(current)
+    changed = {path for path in current.keys() & expected.keys()
+               if current[path] != expected[path]}
+    if new or changed or deleted:
+        return False, ("live corpus differs from manifest "
+                       f"(new={len(new)}, changed={len(changed)}, "
+                       f"deleted={len(deleted)})")
+    return True, "live corpus matches manifest"
 
 
 def load_embedder():
@@ -189,6 +226,21 @@ def sparse_search(query: str, chunks: list, top_k: int) -> list:
     return results
 
 
+def deduplicate_files(results: list, top_k: int = 20) -> list:
+    """Preserve rank order while returning at most one chunk per file."""
+    unique = []
+    seen = set()
+    for result in results:
+        path = result["file"]
+        if path in seen:
+            continue
+        seen.add(path)
+        unique.append(result)
+        if len(unique) == top_k:
+            break
+    return unique
+
+
 def rrf_fusion(dense_results: list, sparse_results: list,
                k: int = 60, top_k: int = 20) -> list:
     """Reciprocal Rank Fusion -- combine dense + sparse results."""
@@ -205,15 +257,12 @@ def rrf_fusion(dense_results: list, sparse_results: list,
         scores[cid] = scores.get(cid, 0) + 1.0 / (k + rank + 1)
         info[cid] = r
 
-    # Deduplicate by file (keep highest scoring chunk per file)
-    seen_files = {}
+    ranked = []
     for cid in sorted(scores, key=lambda x: scores[x], reverse=True):
-        f = info[cid]["file"]
-        if f not in seen_files:
-            seen_files[f] = info[cid]
-            seen_files[f]["rrf_score"] = round(scores[cid], 4)
-
-    return list(seen_files.values())[:top_k]
+        result = dict(info[cid])
+        result["rrf_score"] = round(scores[cid], 4)
+        ranked.append(result)
+    return deduplicate_files(ranked, top_k=top_k)
 
 
 
@@ -255,34 +304,167 @@ def rerank(query: str, results: list, top_k: int = 20) -> list:
     reranked = sorted(results, key=lambda x: x["rerank_score"], reverse=True)
     return reranked[:top_k]
 
-def check_freshness():
-    """Check if index is current against git HEAD."""
+def _nonnegative_int(value) -> bool:
+    return isinstance(value, int) and not isinstance(value, bool) and value >= 0
+
+
+def _valid_timestamp(value) -> bool:
+    if not isinstance(value, str):
+        return False
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return parsed.tzinfo is not None
+
+
+def _valid_git_sha(value) -> bool:
+    return (isinstance(value, str) and len(value) == 40
+            and all(char in "0123456789abcdef" for char in value.lower()))
+
+
+def metadata_matches_config(meta: dict, config: dict) -> bool:
+    """Return whether stored build-sensitive metadata matches config."""
+    try:
+        model_matches = meta["model"] == config["embedding"]["model"]
+        dim_matches = meta["dim"] == config["embedding"]["dim"]
+    except (KeyError, TypeError):
+        return False
+    if not model_matches or not dim_matches:
+        return False
+    return meta.get("chunking") == config.get("chunking", {})
+
+
+def validate_index_state(root: Path, data_dir: Path, config: dict,
+                         check_head: bool = True,
+                         check_corpus: bool = True) -> tuple[bool, str]:
+    """Validate artifacts, schemas, build config, corpus, and optional HEAD."""
     import subprocess
 
-    heartbeat_path = DATA_DIR / "heartbeat.json"
-    if not heartbeat_path.exists():
-        print("NO INDEX -- run 'python index.py --force' first")
-        return
+    heartbeat_path = data_dir / "heartbeat.json"
+    chunks_path = data_dir / "chunks.jsonl"
+    vectors_path = data_dir / "vectors.npy"
+    meta_path = data_dir / "meta.json"
+    manifest_path = data_dir / "manifest.json"
+    if not heartbeat_path.is_file():
+        return False, "NO INDEX -- run 'python index.py --force' first"
 
-    with open(heartbeat_path) as f:
-        hb = json.load(f)
+    required_paths = (chunks_path, vectors_path, meta_path, manifest_path)
+    missing_data = [path.name for path in required_paths if not path.is_file()]
+    if missing_data:
+        return False, "STALE -- index data missing: " + ", ".join(missing_data)
 
     try:
-        head = subprocess.check_output(
-            ["git", "rev-parse", "HEAD"],
-            cwd=str(SCRIPT_DIR.parent), text=True
-        ).strip()
-    except Exception:
-        print(f"Heartbeat: {hb.get('last_run_utc', '?')[:19]} "
-              f"(git unavailable)")
-        return
+        with open(heartbeat_path) as f:
+            heartbeat = json.load(f)
+        with open(meta_path) as f:
+            meta = json.load(f)
+        with open(manifest_path) as f:
+            manifest = json.load(f)
+    except (OSError, ValueError) as exc:
+        return False, f"UNVERIFIED -- unreadable index metadata: {exc}"
+    if not isinstance(heartbeat, dict) or not isinstance(meta, dict):
+        return False, "UNVERIFIED -- index metadata must be JSON objects"
+    if not isinstance(manifest, dict):
+        return False, "UNVERIFIED -- index manifest must be a JSON object"
 
-    if hb.get("built_at_head") != head:
-        print(f"STALE -- index at {hb.get('built_at_head','?')[:8]}, "
-              f"HEAD at {head[:8]}")
-    else:
-        print(f"OK -- {hb.get('count', '?')} chunks, "
-              f"built {hb.get('last_run_utc', '?')[:19]}")
+    heartbeat_fields = {
+        "schema_version", "last_run_utc", "status", "built_at_head",
+        "count", "files", "model",
+    }
+    missing = sorted(heartbeat_fields - heartbeat.keys())
+    if missing:
+        return False, "UNVERIFIED -- heartbeat missing: " + ", ".join(missing)
+    heartbeat_types_ok = (
+        _nonnegative_int(heartbeat["schema_version"])
+        and heartbeat["schema_version"] == 1
+        and heartbeat["status"] == "ok"
+        and _valid_timestamp(heartbeat["last_run_utc"])
+        and _valid_git_sha(heartbeat["built_at_head"])
+        and _nonnegative_int(heartbeat["count"])
+        and _nonnegative_int(heartbeat["files"])
+        and isinstance(heartbeat["model"], str)
+        and bool(heartbeat["model"])
+    )
+    if not heartbeat_types_ok:
+        return False, "UNVERIFIED -- heartbeat schema, status, or types invalid"
+
+    meta_fields = {
+        "format_version", "model", "dim", "count", "files", "built_at",
+        "mode", "chunking",
+    }
+    missing = sorted(meta_fields - meta.keys())
+    if missing:
+        return False, "UNVERIFIED -- index metadata missing: " + ", ".join(missing)
+    meta_types_ok = (
+        _nonnegative_int(meta["format_version"])
+        and meta["format_version"] == 1
+        and isinstance(meta["model"], str) and bool(meta["model"])
+        and _nonnegative_int(meta["dim"]) and meta["dim"] > 0
+        and _nonnegative_int(meta["count"])
+        and _nonnegative_int(meta["files"])
+        and _valid_timestamp(meta["built_at"])
+        and meta["mode"] in {"full", "incremental"}
+        and isinstance(meta["chunking"], dict)
+    )
+    if not meta_types_ok:
+        return False, "UNVERIFIED -- index metadata schema or types invalid"
+    if not metadata_matches_config(meta, config):
+        return False, "STALE -- index metadata and build config disagree"
+    if heartbeat["model"] != meta["model"]:
+        return False, "STALE -- heartbeat and index model disagree"
+    if (heartbeat["count"] != meta["count"]
+            or heartbeat["files"] != meta["files"]):
+        return False, "STALE -- heartbeat and index metadata disagree"
+    if len(manifest) != meta["files"]:
+        return False, "STALE -- manifest and index file count disagree"
+
+    try:
+        chunk_count = 0
+        chunk_files = set()
+        with open(chunks_path, encoding="utf-8") as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                chunk = json.loads(line)
+                chunk_count += 1
+                chunk_files.add(chunk["file"])
+        vectors = np.load(str(vectors_path), mmap_mode="r", allow_pickle=False)
+    except (OSError, ValueError, KeyError) as exc:
+        return False, f"UNVERIFIED -- unreadable index data: {exc}"
+    if chunk_count != meta["count"]:
+        return False, "STALE -- chunks and index metadata disagree"
+    if not chunk_files.issubset(manifest):
+        return False, "STALE -- chunk files are absent from manifest"
+    if vectors.shape != (meta["count"], meta["dim"]):
+        return False, "STALE -- vector shape and index metadata disagree"
+    if vectors.dtype != np.dtype(np.float16):
+        return False, "STALE -- vector dtype is not float16"
+
+    if check_corpus:
+        corpus_ok, corpus_message = check_corpus_manifest(
+            root, manifest_path, set(config["index"]["exclude_dirs"]))
+        if not corpus_ok:
+            return False, "STALE -- " + corpus_message
+
+    if check_head:
+        try:
+            head = subprocess.check_output(
+                ["git", "rev-parse", "HEAD"], cwd=str(root), text=True
+            ).strip()
+        except Exception:
+            return False, "UNVERIFIED -- git HEAD unavailable"
+        if heartbeat["built_at_head"] != head:
+            return False, (f"STALE -- index at {heartbeat['built_at_head'][:8]}, "
+                           f"HEAD at {head[:8]}")
+
+    return True, (f"OK -- {meta['count']} chunks, "
+                  f"built {heartbeat['last_run_utc'][:19]}")
+
+
+def check_freshness():
+    """Return whether the complete index state matches the repository."""
+    return validate_index_state(REPO_ROOT, DATA_DIR, cfg, check_head=True)
 
 
 if __name__ == "__main__":
@@ -299,8 +481,9 @@ if __name__ == "__main__":
     args = ap.parse_args()
 
     if args.check_freshness:
-        check_freshness()
-        sys.exit(0)
+        ok, message = check_freshness()
+        print(message)
+        sys.exit(0 if ok else 1)
 
     if not args.query:
         ap.print_help()
@@ -328,6 +511,8 @@ if __name__ == "__main__":
         results = results_dense[:args.top_k]
     else:
         results = results_sparse[:args.top_k]
+
+    results = deduplicate_files(results, top_k=args.top_k)
 
     if cfg.get("reranker", {}).get("enabled", False):
         results = rerank(args.query, results, top_k=args.top_k)

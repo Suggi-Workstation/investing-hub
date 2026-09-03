@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build the brain-index from agentic-brain markdown files.
+Build the investing-index from investing-hub markdown files.
 
 Usage:
     python index.py              # incremental build
@@ -22,7 +22,7 @@ import numpy as np
 
 # --- Config ---
 SCRIPT_DIR = Path(__file__).resolve().parent
-BRAIN_ROOT = SCRIPT_DIR.parent
+REPO_ROOT = SCRIPT_DIR.parent
 
 with open(SCRIPT_DIR / "config.yaml") as f:
     cfg = yaml.safe_load(f)
@@ -33,6 +33,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 META_PATH = DATA_DIR / "meta.json"
 CHUNKS_PATH = DATA_DIR / "chunks.jsonl"
 VECTORS_PATH = DATA_DIR / "vectors.npy"
+MANIFEST_PATH = DATA_DIR / "manifest.json"
 
 
 # --- Warm daemon integration ---
@@ -111,7 +112,7 @@ def parse_frontmatter(text: str):
 
 
 def chunk_text(text: str, max_chars: int, overlap: int):
-    """Split text into overlapping chunks, respecting markdown headings."""
+    """Keep paragraphs intact and overlap splits of oversized paragraphs."""
     if len(text) <= max_chars:
         return [text]
 
@@ -156,7 +157,7 @@ def file_hash(path: str) -> str:
 
 
 def build_index(force: bool = False):
-    """Build or refresh the brain index."""
+    """Build or refresh the repository index."""
     t0 = time.time()
 
     # --- Change detection ---
@@ -165,15 +166,24 @@ def build_index(force: bool = False):
                     ".png", ".jpg", ".gif", ".svg", ".ico"}
 
     files_now = {}
-    for rel, abs_path in iter_markdown_files(BRAIN_ROOT, exclude_dirs, exclude_exts):
+    for rel, abs_path in iter_markdown_files(REPO_ROOT, exclude_dirs, exclude_exts):
         files_now[rel] = {"path": abs_path, "hash": file_hash(abs_path)}
 
     # Read previous manifest
     prev_manifest = {}
-    manifest_path = DATA_DIR / "manifest.json"
+    manifest_path = MANIFEST_PATH
     if manifest_path.exists():
         with open(manifest_path) as f:
             prev_manifest = json.load(f)
+
+    if not force and manifest_path.exists():
+        from query import validate_index_state
+        state_ok, state_message = validate_index_state(
+            REPO_ROOT, DATA_DIR, cfg, check_head=False, check_corpus=False)
+        if not state_ok:
+            raise SystemExit(
+                "ERROR: existing index is unsafe for incremental reuse: "
+                f"{state_message}. Run index.py --force.")
 
     # Determine what changed
     new_files = set(files_now) - set(prev_manifest)
@@ -188,7 +198,7 @@ def build_index(force: bool = False):
         import subprocess
         try:
             head = subprocess.check_output(
-                ["git", "rev-parse", "HEAD"], cwd=str(BRAIN_ROOT), text=True
+                ["git", "rev-parse", "HEAD"], cwd=str(REPO_ROOT), text=True
             ).strip()
         except Exception:
             head = "unknown"
@@ -353,6 +363,7 @@ def build_index(force: bool = False):
         "files": len(files_now),
         "built_at": datetime.now(timezone.utc).isoformat(),
         "mode": "full" if force else "incremental",
+        "chunking": cfg["chunking"],
     }
     with open(META_PATH, "w") as f:
         json.dump(meta, f, indent=2)
@@ -366,7 +377,7 @@ def build_index(force: bool = False):
     try:
         head = subprocess.check_output(
             ["git", "rev-parse", "HEAD"],
-            cwd=str(BRAIN_ROOT), text=True
+            cwd=str(REPO_ROOT), text=True
         ).strip()
     except Exception:
         head = "unknown"
@@ -386,36 +397,9 @@ def build_index(force: bool = False):
 
 
 def check_freshness():
-    """Check if index is stale. Returns (ok, message)."""
-    import subprocess
-
-    heartbeat_path = SCRIPT_DIR / "heartbeat.json"
-    if not heartbeat_path.exists():
-        return False, "NO INDEX -- run 'python index.py --force' first"
-
-    with open(heartbeat_path) as f:
-        hb = json.load(f)
-
-    try:
-        head = subprocess.check_output(
-            ["git", "rev-parse", "HEAD"],
-            cwd=str(BRAIN_ROOT), text=True
-        ).strip()
-    except Exception:
-        return True, "HEARTBEAT OK (git unavailable -- freshness unverified)"
-
-    if hb.get("built_at_head") != head:
-        return False, f"STALE -- index built at {hb.get('built_at_head','?')[:8]}, "
-        f"HEAD is {head[:8]}"
-
-    if not META_PATH.exists():
-        return False, "STALE -- index data missing"
-
-    with open(META_PATH) as f:
-        meta = json.load(f)
-
-    return True, (f"OK -- {meta['count']} chunks from {meta['files']} files, "
-                  f"built {meta['built_at'][:19]}")
+    """Delegate to the query tool's single index-state validator."""
+    from query import check_freshness as validate_freshness
+    return validate_freshness()
 
 
 if __name__ == "__main__":

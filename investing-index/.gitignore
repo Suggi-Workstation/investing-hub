@@ -1,4 +1,4 @@
-# .gitignore for brain-index/
+# .gitignore for investing-index/
 # Index data: never commit
 __pycache__/
 *.pyc
