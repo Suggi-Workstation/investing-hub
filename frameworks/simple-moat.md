@@ -38,6 +38,7 @@ Answer each question in the final force table. Rate pressure **Low / Medium / Hi
 - Where meaningful, calculate return on invested capital as after-tax operating profit divided by average invested operating capital. Compare with a defensible capital-cost estimate and peers. Identify distortions from goodwill, expensed research or a tiny/negative capital base; use suitable sector evidence instead of forcing the ratio.
 - Separate cyclical windfalls, leverage and underinvestment from durable economics. Low margins alone do not disprove a low-cost, fast-turnover or customer-savings model.
 - Ask: if a well-funded competitor attacked, how would it take the customers? What would destroy the advantage? Would ordinary competent management preserve it?
+- Distinguish protection of existing economics from opportunities to expand. A durable niche can have a strong moat without a large reinvestment runway; do not score growth potential as moat strength.
 - Name the nearest credible threat, likely timing, and an observable warning trigger. Check capacity additions, substitutes, technology, concentration, regulation and dependence on one patent, supplier or channel. State whether evidence indicates widening, stable or narrowing protection.
 
 ## 5. Score and classify
@@ -59,7 +60,16 @@ Before release, **PASS** requires answered mechanisms and forces, corroborated e
 
 ## Finished output
 
-Return the completed mechanism checklist from step 2 as short answers with confidence, then the force table and score summary below. Limit each answer to one sentence; attach compact evidence identifiers to facts, not a separate research narrative.
+Answer the mechanism questions from step 2 in the checklist below, then complete the force table and score summary. Limit each answer to one sentence; attach compact evidence identifiers to facts, not a separate research narrative.
+
+| Mechanism | Present / Absent / Unknown | Answer / evidence | Contrary evidence | Confidence |
+|:--|:--|:--|:--|:--|
+| Switching costs | | | | |
+| Network effects | | | | |
+| Brand, patents or licenses | | | | |
+| Structural cost advantage | | | | |
+| Efficient scale | | | | |
+| Scale economies shared | | | | |
 
 | Force / question | Pressure | Evidence-based answer | Confidence |
 |:--|:--|:--|:--|
