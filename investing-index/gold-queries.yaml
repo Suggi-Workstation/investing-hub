@@ -5,42 +5,33 @@ queries:
 - qid: i001
   question: How is intrinsic value calculated with a discounted cash flow model?
   gold_files:
-  - frameworks/dcf-intrinsic-value.md
+  - frameworks/simple-dcf.md
   domain: frameworks
 - qid: i002
   question: How is deep financial quality scored and normalized?
   gold_files:
-  - frameworks/deep-financial-scoring.md
+  - frameworks/financial-health.md
   domain: frameworks
 - qid: i003
   question: How is a durable competitive moat assessed in depth?
   gold_files:
-  - frameworks/deep-moat-scoring.md
+  - frameworks/simple-moat.md
   domain: frameworks
-- qid: i004
-  question: Which sources and fields are needed to populate an investment screen?
-  gold_files:
-  - frameworks/screening-data-guide.md
-  domain: frameworks
-- qid: i005
-  question: What columns and stages belong in the investment screening template?
-  gold_files:
-  - frameworks/screening-template.md
-  domain: frameworks
+
 - qid: i006
   question: Which valuation and quality metrics fit banks, SaaS, REITs, insurers, and cyclicals?
   gold_files:
-  - frameworks/sector-specific-metrics.md
+  - frameworks/sector-metrics.md
   domain: frameworks
 - qid: i007
   question: How should management quality and capital allocation be scored?
   gold_files:
-  - frameworks/simple-management-scoring.md
+  - frameworks/simple-management.md
   domain: frameworks
 - qid: i008
   question: What is the quick framework for scoring a company moat?
   gold_files:
-  - frameworks/simple-moat-scoring.md
+  - frameworks/simple-moat.md
   domain: frameworks
 - qid: i009
   question: Which companies are held in the main portfolio?
@@ -52,63 +43,44 @@ queries:
   gold_files:
   - portfolios/indo-portfolio.md
   domain: portfolios
-- qid: i011
-  question: What moat, financial quality, intrinsic value, and margin-of-safety conclusions were reached for ASML?
-  gold_files:
-  - companies/asml.md
-  domain: companies
 - qid: i012
-  question: What is the difference between the quick moat screen and the full moat analysis?
+  question: How do the moat mechanism questions and competitive-force assessment inform the final score?
   gold_files:
-  - frameworks/simple-moat-scoring.md
-  - frameworks/deep-moat-scoring.md
+  - frameworks/simple-moat.md
   domain: cross-cutting
 - qid: i013
   question: How should normalized financial quality feed into a DCF valuation?
   gold_files:
-  - frameworks/deep-financial-scoring.md
-  - frameworks/dcf-intrinsic-value.md
+  - frameworks/financial-health.md
+  - frameworks/simple-dcf.md
   domain: cross-cutting
 - qid: i014
   question: Why do banks and SaaS companies require different screening metrics?
   gold_files:
-  - frameworks/sector-specific-metrics.md
+  - frameworks/sector-metrics.md
   domain: cross-cutting
-- qid: i015
-  question: How do the screening data guide and screening template work together?
-  gold_files:
-  - frameworks/screening-data-guide.md
-  - frameworks/screening-template.md
-  domain: cross-cutting
+
 - qid: i016
   question: How do the main and Indonesian portfolios differ?
   gold_files:
   - portfolios/main-portfolio.md
   - portfolios/indo-portfolio.md
   domain: cross-cutting
-- qid: i017
-  question: Why can a wonderful semiconductor monopoly still lack a margin of safety?
-  gold_files:
-  - companies/asml.md
-  - frameworks/deep-moat-scoring.md
-  - frameworks/dcf-intrinsic-value.md
-  domain: cross-cutting
+
 - qid: i018
   question: How should a quick screen combine management quality with moat strength?
   gold_files:
-  - frameworks/simple-management-scoring.md
-  - frameworks/simple-moat-scoring.md
+  - frameworks/simple-management.md
+  - frameworks/simple-moat.md
   domain: cross-cutting
 - qid: i019
   question: Which deeper analyses should follow an initial investment screen?
   gold_files:
-  - frameworks/screening-template.md
-  - frameworks/deep-financial-scoring.md
-  - frameworks/deep-moat-scoring.md
+  - frameworks/financial-health.md
+  - frameworks/simple-moat.md
   domain: cross-cutting
 - qid: i020
   question: How does sector classification change the metrics and data used in screening?
   gold_files:
-  - frameworks/sector-specific-metrics.md
-  - frameworks/screening-data-guide.md
+  - frameworks/sector-metrics.md
   domain: cross-cutting
