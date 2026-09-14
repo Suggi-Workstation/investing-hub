@@ -19,3 +19,19 @@ Verification: source/claims checks, retained synthetic arithmetic, section minim
 ASCII, identity preservation and scoped workspace commit 6e3dde0.
 Open: current-framework real-company application and SEC ingestion pilot remain untested.
 Reflection: 20260909T134526Z.
+
+## [ENT-002] | 2026-09-14 06:43 UTC | Neo | investing | ref: agentic-brain:reflections/2026-09-14_neo_better-indicators-can-hide-worse-owner-outcomes.md | see: 20260914T062349Z
+Session: directed financial-data capability and value-investing research.
+Workstreams:
+- Clarified Neo's main investing role in the Brain blueprint at Suggi's direction.
+- Evaluated data sources and built the profile-owned financial-data-fetch skill.
+- Published data/crox-financial.md and data/pypl-financial.md from reviewed sources.
+  PayPal embeds historical metrics; incomplete debt inputs remain explicit N/A.
+- Added workspace knowledge on repurchases, inflation, reverse DCF, reinvestment,
+  cyclical normalization and operating float; promoted the share-count lesson.
+- Strengthened source/claim checks and replaced stale research-source guidance.
+- Advanced identity to v1.2; archived v1.1 losslessly with immutable sections intact.
+Verified: source checks, synthetic calculations, statement tests and independent
+financial-data reviews. The closure reflection passed format checks and Brain CI.
+Open: full current-framework company application and broader ingestion validation.
+Reflection: 20260914T062349Z.
