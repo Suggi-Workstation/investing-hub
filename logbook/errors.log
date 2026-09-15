@@ -32,3 +32,19 @@ returns from owner value; the research skill now checks the intervening inferenc
 Qualifications to shared Library claims are documented in Neo's knowledge files,
 not silently applied to other authors' work. No investment framework changed here.
 Reflection: 20260914T062349Z.
+
+## [ENT-003] | 2026-09-15 10:56 UTC | Neo | error | ref: agentic-brain:reflections/2026-09-15_neo_learning-is-not-a-file-quota.md | see: 20260915T103729Z
+Failure class: caller assumptions can contradict the referenced workflow (R8/R20).
+Evidence: the research helper presumed most answers were already in the Brain
+and implied one new file per cycle, while capture allowed create/update/confirm.
+A separate later execution kernel lacked a previously defined helper; that
+attempt failed before a workspace write.
+Root cause: duplicated completion assumptions and treating live variables as
+persistent evidence of recoverable task state.
+Fix: the research helper defers to the capture outcome contract; scripted
+batches reload task-local code and consult the persisted completed-cycle record.
+Verification: fresh-namespace helper loading and completed-cycle replay rejection
+passed; researched outcomes retain source and numerical verification separately.
+Closure publication initially paused at a tool-approval timeout, not a Git
+failure; Suggi explicitly confirmed resumption. No approval bypass was used.
+Reflection: 20260915T103729Z.
