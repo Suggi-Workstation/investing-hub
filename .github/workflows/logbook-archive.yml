@@ -33,6 +33,9 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Test logbook archiver
+        run: python3 -B -m unittest discover -s scripts/tests -p 'test_logbook_archive.py'
+
       - name: Run logbook archive script
         shell: bash
         run: |

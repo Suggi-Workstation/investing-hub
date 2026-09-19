@@ -59,13 +59,13 @@ def process_log(log_path):
         print(f"  {log_path}: header alone is {header_count} lines -- skipping (abnormal)")
         return False
 
-    # Keep entries from the BOTTOM until we stay under MAX_LINES.
-    # Work backwards through boundaries.
+    # Always retain the newest complete entry and its counter.
+    # Keep additional recent entries while they fit the target.
     kept_boundaries = []
     kept_count = header_count
     for start, end in reversed(boundaries):
         entry_len = end - start
-        if kept_count + entry_len <= TARGET_LINES:
+        if not kept_boundaries or kept_count + entry_len <= TARGET_LINES:
             kept_boundaries.insert(0, (start, end))
             kept_count += entry_len
         else:
