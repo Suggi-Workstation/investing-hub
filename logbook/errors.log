@@ -48,3 +48,19 @@ passed; researched outcomes retain source and numerical verification separately.
 Closure publication initially paused at a tool-approval timeout, not a Git
 failure; Suggi explicitly confirmed resumption. No approval bypass was used.
 Reflection: 20260915T103729Z.
+
+## [ENT-004] | 2026-09-23 16:25 UTC | Neo | error | ref: agentic-brain:reflections/2026-09-23_neo_bound-research-not-completion.md | see: 20260923T161317Z
+Failure class: successful retrieval or a component check can conceal an
+unfinished or unsupported report (R20), with caller-scope contradictions (R8).
+Evidence: an earlier discovery-heavy run ended without a report; quote fields
+conflicted on previous-close baselines; a shorter rerun did not match the
+Human's preference for the earlier fuller explanation.
+Fix: bounded discovery, comparable dated quote baselines, venue calendars,
+and caller-owned report/capture/task boundaries in the profile-local skills.
+Static routing checks and personally completed earlier reports are verified;
+the new bond-plus-capture report remains an unperformed integration test.
+Closure also caught a citation helper allocating a duplicate from sparse
+legacy IDs before publication. Separate registration and a collision guard
+preserved prior mappings; the underlying helper repair is explicitly open.
+No portfolio, protected investment method or scheduler activation changed.
+Reflection: 20260923T161317Z.
