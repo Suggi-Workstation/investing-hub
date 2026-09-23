@@ -1,0 +1,400 @@
+{
+  "company": "Shareholder Value Beteiligungen AG",
+  "ticker": "SVE.DE",
+  "created_utc": "2026-09-23T18:05:35.381096+00:00",
+  "valuation_type": "Adjusted quoted-price NAV scenarios, not independently established intrinsic value",
+  "valuation_status": "limited",
+  "critical_gaps": [
+    "independent look-through business values and private-vehicle costs/taxes",
+    "actual ESOP grants and settlement rather than authorization limits",
+    "latest bank-cash versus receivable split"
+  ],
+  "core": {
+    "shares": 677029,
+    "shares_asof": "2026-06-30",
+    "shares_assumption": "Latest verified outside count assumed unchanged to 31 August 2026; NAV total is implied, not directly reported.",
+    "raw_nav_per_share": "119.76",
+    "raw_nav_total": "81080993.04",
+    "date": "2026-08-31",
+    "bank_and_receivables_combined": "2000000",
+    "expected_future_receipts_not_added": "7000000",
+    "restricted_fraction_nav": "0.276",
+    "hurdle": "0.10"
+  },
+  "cases": {
+    "Base": {
+      "restricted_haircut": "0.20",
+      "other_investment_haircut": "0",
+      "annual_parent_cost": "1000000",
+      "incremental_realization_reserve_fraction": "0.01"
+    },
+    "Bull": {
+      "restricted_haircut": "0",
+      "other_investment_haircut": "0",
+      "annual_parent_cost": "800000",
+      "incremental_realization_reserve_fraction": "0"
+    },
+    "Bear": {
+      "restricted_haircut": "0.40",
+      "other_investment_haircut": "0.30",
+      "annual_parent_cost": "1200000",
+      "incremental_realization_reserve_fraction": "0.02"
+    }
+  },
+  "results": {
+    "Base": {
+      "restricted_nav": "22378354.07904",
+      "other_investment_proxy": "56702638.96096",
+      "asset_haircut": "4475670.8158080",
+      "pv_future_parent_costs": "1.00000E+7",
+      "incremental_leakage_reserve": "810809.9304",
+      "adjusted_nav_total": "65794512.2937920",
+      "adjusted_nav_per_share": "97.18123196169144896304294203"
+    },
+    "Bull": {
+      "restricted_nav": "22378354.07904",
+      "other_investment_proxy": "56702638.96096",
+      "asset_haircut": "0.00000",
+      "pv_future_parent_costs": "8.0000E+6",
+      "incremental_leakage_reserve": "0.00",
+      "adjusted_nav_total": "73080993.04000",
+      "adjusted_nav_per_share": "107.9436671693531591704343536"
+    },
+    "Bear": {
+      "restricted_nav": "22378354.07904",
+      "other_investment_proxy": "56702638.96096",
+      "asset_haircut": "25962133.3199040",
+      "pv_future_parent_costs": "1.20000E+7",
+      "incremental_leakage_reserve": "1621619.8608",
+      "adjusted_nav_total": "41497239.8592960",
+      "adjusted_nav_per_share": "61.29314971632825181786895391"
+    }
+  },
+  "liquidity_stress": [
+    {
+      "quarter_end": "2026-09-30",
+      "opening_cash": "984995.80",
+      "existing_claims_paid": "278282.35",
+      "stress_actual_income": "0",
+      "cash_costs": "250000",
+      "closing_cash": "456713.45",
+      "headroom_above_200k_reserve": "256713.45"
+    },
+    {
+      "quarter_end": "2026-12-31",
+      "opening_cash": "456713.45",
+      "existing_claims_paid": "0",
+      "stress_actual_income": "0",
+      "cash_costs": "250000",
+      "closing_cash": "206713.45",
+      "headroom_above_200k_reserve": "6713.45"
+    },
+    {
+      "quarter_end": "2027-03-31",
+      "opening_cash": "206713.45",
+      "existing_claims_paid": "0",
+      "stress_actual_income": "0",
+      "cash_costs": "250000",
+      "closing_cash": "-43286.55",
+      "headroom_above_200k_reserve": "-243286.55"
+    },
+    {
+      "quarter_end": "2027-06-30",
+      "opening_cash": "-43286.55",
+      "existing_claims_paid": "0",
+      "stress_actual_income": "0",
+      "cash_costs": "250000",
+      "closing_cash": "-293286.55",
+      "headroom_above_200k_reserve": "-493286.55"
+    }
+  ],
+  "liquidity_assumptions": "June 2026 parent-only cash; all current claims paid Q1; EUR1m annual cash costs; EUR200k reserve; no dividend/interest or asset sale receipts and no unverified facility. Illustrative funding need, not actual insolvency forecast.",
+  "valuation_assumptions": [
+    "NAV is already equity after current liabilities.",
+    "EUR2m banks and receivables are assumed recoverable; the cash share is unknown.",
+    "Expected EUR7m receipts are assets converting to cash, not incremental NAV.",
+    "Cost perpetuity uses the fixed 10% hurdle and flat nominal annual costs; current NAV has already incurred past costs, not these future costs.",
+    "Extra 0/1/2% reserve applies only to unprovided future leakage; verify before relying on it.",
+    "No generic holding-company discount on top; no terminal growth or market rebound.",
+    "No dilution assumed in scenario values; authorization-only stress is separate and not grant fair value."
+  ],
+  "reported_history": {
+    "2020": [
+      "12.0",
+      "3.6",
+      "18.0"
+    ],
+    "2021": [
+      "45.0",
+      "15.8",
+      "11.2"
+    ],
+    "2022": [
+      "-22.4",
+      "-12.3",
+      "-27.3"
+    ],
+    "2023": [
+      "-13.6",
+      "20.3",
+      "17.1"
+    ],
+    "2024": [
+      "-17.3",
+      "19.6",
+      "-0.5"
+    ],
+    "2025": [
+      "11.1",
+      "23.0",
+      "25.3"
+    ]
+  },
+  "visual_sources": {
+    "provenance": "Transcribed directly from original issuer images inspected visually; not OCR or audited correction.",
+    "portfolio": {
+      "source_id": 13,
+      "date": "2026-08-31",
+      "unit": "percent NAV",
+      "rows": [
+        [
+          "Armira (Sartorius)",
+          "16.4"
+        ],
+        [
+          "Acceleratio Topco (NIQ)",
+          "11.2"
+        ],
+        [
+          "secunet Security Networks AG",
+          "9.2"
+        ],
+        [
+          "SDI Group plc",
+          "7.3"
+        ],
+        [
+          "INTERSHOP Communications AG",
+          "6.7"
+        ],
+        [
+          "FamiCord AG / VITA 34 AG",
+          "5.8"
+        ],
+        [
+          "Rightmove plc",
+          "3.9"
+        ],
+        [
+          "Gerresheimer AG",
+          "3.3"
+        ],
+        [
+          "MTU AERO ENGINES NA",
+          "3.5"
+        ],
+        [
+          "NORMA Group SE",
+          "3.3"
+        ],
+        [
+          "Scout24 SE",
+          "3.0"
+        ],
+        [
+          "ElDorado Drilling AS",
+          "2.5"
+        ],
+        [
+          "Recordati - Ind. Chim. Farm. SpA",
+          "2.5"
+        ],
+        [
+          "IONOS Group SE",
+          "2.4"
+        ],
+        [
+          "SAP SE",
+          "2.2"
+        ]
+      ],
+      "stated_total": "83.11",
+      "footnote": "Claims from pending appraisal proceedings excluded; tendered volume EUR23m is not an asset value."
+    },
+    "performance": {
+      "source_id": 14,
+      "columns": [
+        "SVB AG incl dividends",
+        "DAX performance index",
+        "SDAX performance index"
+      ],
+      "rows": {
+        "2020": [
+          "12.0",
+          "3.6",
+          "18.0"
+        ],
+        "2021": [
+          "45.0",
+          "15.8",
+          "11.2"
+        ],
+        "2022": [
+          "-22.4",
+          "-12.3",
+          "-27.3"
+        ],
+        "2023": [
+          "-13.6",
+          "20.3",
+          "17.1"
+        ],
+        "2024": [
+          "-17.3",
+          "19.6",
+          "-0.5"
+        ],
+        "2025": [
+          "11.1",
+          "23.0",
+          "25.3"
+        ]
+      },
+      "annualized_since_2001_percent": [
+        "8.4",
+        "6.8",
+        "8.2"
+      ],
+      "cumulative_since_2001_percent": [
+        "592.9",
+        "380.7",
+        "558.8"
+      ]
+    },
+    "multiyear": {
+      "source_id": 15,
+      "years": [
+        2025,
+        2024,
+        2023,
+        2022,
+        2021,
+        2020
+      ],
+      "outstanding_row": [
+        677029,
+        694944,
+        694944,
+        694944,
+        697500,
+        697500
+      ],
+      "nav_total_eur_thousands": [
+        77901,
+        71951,
+        87037,
+        100695,
+        129800,
+        89856
+      ],
+      "nav_per_share": [
+        "115.06",
+        "103.54",
+        "125.45",
+        "144.95",
+        "186.78",
+        "128.83"
+      ],
+      "net_profit_eur_thousands": [
+        6797,
+        -13449,
+        -9855,
+        -7886,
+        37857,
+        162
+      ],
+      "depot_fees_eur_thousands": [
+        0,
+        1468,
+        505,
+        1354,
+        5102,
+        1002
+      ],
+      "net_investment_income_eur_thousands": [
+        812,
+        1013,
+        653,
+        678,
+        619,
+        622
+      ],
+      "equity_eur_thousands": [
+        68497,
+        63330,
+        76780,
+        86634,
+        94520,
+        56970
+      ],
+      "bank_debt_eur_thousands": [
+        0,
+        0,
+        1887,
+        1939,
+        0,
+        5455
+      ]
+    }
+  },
+  "data_discrepancies": [
+    "Issuer multiyear overview 2023 NAV/share 125.45 differs from EUR87.037m/694944=125.24 and the 2024 narrative.",
+    "Issuer multiyear 2021 share count uses 697500 although a 2556-share 2021 buyback is documented; do not mix denominators.",
+    "Rounded displayed portfolio rows sum 83.2%, whereas issuer top-15 subtotal is 83.11%; rounding is retained, not force corrected.",
+    "2024 depot-fee overview 1468 TEUR conflicts with 468 TEUR in 2025 narrative; no precise cost-savings claim used."
+  ],
+  "price_comparison": {
+    "symbol": "SVE.DE",
+    "longName": "Shareholder Value Beteiligungen AG",
+    "shortName": "Shareholder Value Beteilig.AG N",
+    "exchangeName": "GER",
+    "fullExchangeName": "XETRA",
+    "currency": "EUR",
+    "regularMarketPrice": 80.0,
+    "regularMarketTime": 1790177728,
+    "regularMarketVolume": 191,
+    "asof_utc": "2026-09-23T15:35:28+00:00",
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SVE.DE?interval=1d&range=5d",
+    "mismatched_dates": "23 September quote versus 31 August reported NAV; not a contemporaneous measured discount",
+    "raw_nav_discount_percent": "33.19973279893119572478289913",
+    "same_date_20260831_price": "74",
+    "same_date_20260831_nav_discount_percent": "38.20975283901135604542418170"
+  },
+  "authorization_stress": {
+    "max_option_rights_authorized": 60000,
+    "actual_grants": "unverified",
+    "zero_proceeds_denominator": 737029,
+    "zero_proceeds_base": "89.26990972375849525595329356",
+    "limitation": "Conservative denominator stress only: not an assertion all rights granted, zero contractual strikes, immediate exercise or fair value; do not add matching shares purchased on market."
+  },
+  "normalization": {
+    "reported_h1_profit": "-2482782.40",
+    "add_noncash_write_down": "6069918.94",
+    "remove_noncash_write_up": "-1465107.54",
+    "remove_realized_investment_gain": "-2198681.51",
+    "earnings_after_excluding_marks_and_realized_gains": "-76652.51",
+    "warning": "Not cash flow; working capital, investment trading, taxes and settlements are not reconstructed into CFO."
+  },
+  "governance": {
+    "esop_authorized_total": 60000,
+    "board_authorization_subcap": 30000,
+    "employee_authorization_subcap": 30000,
+    "minimum_wait_years": 5,
+    "nav_growth_hurdle_percent_per_year": 5,
+    "matching_stock_required": true,
+    "actual_grants": "not verified",
+    "cash_or_treasury_or_new_issue_settlement": true,
+    "fink_direct_shares_20251231": 23334,
+    "closely_associated_shares_separate": 201052
+  }
+}
