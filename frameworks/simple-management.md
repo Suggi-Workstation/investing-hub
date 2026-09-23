@@ -39,7 +39,8 @@ Answer every question with a dated action or disclosure. Record one counterexamp
 - Compare returns on new investment with its cost and reasonable alternatives. Where measurable, calculate multi-year incremental after-tax operating profit divided by the corresponding increase in invested capital. Mark the ratio not meaningful when the denominator is negative, tiny or distorted; examine actual project or acquisition outcomes instead.
 - Review the largest completed acquisitions: price, financing, original rationale, subsequent cash results and impairments. No acquisitions means that sub-question is not applicable, not poor management. No impairment does not prove a good deal.
 - Reconcile dated opening and closing actual common shares through repurchases, issuance and other changes on a consistent split basis. Reconcile existing potential dilution separately; do not infer net share retirement from weighted-average EPS denominators. Stock-based compensation is a real owner cost; subtracting compensation expense from repurchase dollars does not measure net share retirement. Do not reward debt-funded earnings-per-share growth without checking financial risk.
-- Compare at least three material promises or capital decisions with outcomes, including a setback if available. Where formal guidance is absent, use stated strategic commitments. Do not reward systematic lowball guidance or penalize a sensible refusal to forecast quarters.
+- Compare at least three material forward-looking statements or capital commitments with outcomes, including a setback if available. Preserve the original statement date, metric, scope, assumptions and target horizon; show revisions separately rather than moving the original baseline. Compare actual results in the following year and years two and three when available on the same basis. Record unavailable or not-yet-due outcomes, not guessed results. Where formal guidance is absent, use stated strategic commitments.
+- Classify each comparison as overpromised/underperformed, broadly matched, underpromised/outperformed, not yet due or not comparable. Explain management-controlled execution versus external shocks, scope changes and predecessor decisions; a miss is not itself dishonesty and favorable markets are not managerial skill. Judge candor about revisions as well as delivery. Do not reward systematic lowball guidance or penalize a sensible refusal to forecast quarters. Use this evidence within integrity and execution, not as an extra category or duplicate score.
 - For operating capability, record a material operating outcome and a limitation, not just transactions or financial targets. Use measures suited to the business; do not impose R&D criteria on every company.
 - Put ownership percentage beside its value and compensation context. Do not assume personal net worth, score founders automatically highest, or infer dishonesty from a share sale alone.
 
@@ -60,6 +61,12 @@ For a full assessment, **PASS** requires integrity and critical-stewardship chec
 ## Finished output
 
 Give company/date and decision-maker/tenure on one line. Fill rows with short answers, a decisive fact and a concern; identify evidence by filing/date/page or resolving link. For an early conclusion return only Overall, with dated evidence, the override and missing work explicit. End at Overall. No biography or essay.
+
+For a full assessment, show the compact say-do record before the scorecard:
+
+| Statement date / original commitment | Metric, scope / target horizon | Actual year 1 / 2 / 3 | Delivery pattern / explanation |
+|:--|:--|:--|:--|
+| | | | |
 
 | Category | Answers / decisive fact | Score /5 | Confidence | Concern / reassessment trigger |
 |:--|:--|--:|:--|:--|
