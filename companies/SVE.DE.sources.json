@@ -146,6 +146,18 @@
       ]
     },
     {
+      "id": 17,
+      "url": "https://svb-ag.de/wp-content/uploads/2026/06/Satzung-06-2026.pdf",
+      "title": "SVB articles of association, 9 June 2026",
+      "accessed": "2026-09-23",
+      "quotes": [
+        {
+          "text": "Das Grundkapital ist um bis zu EUR 600,000 durch Ausgabe von bis zu 60.000 auf den",
+          "added": "2026-09-23"
+        }
+      ]
+    },
+    {
       "id": 18,
       "url": "https://query1.finance.yahoo.com/v8/finance/chart/SVE.DE?interval=1d&range=5d",
       "title": "Yahoo Finance SVE.DE dated EUR quote",

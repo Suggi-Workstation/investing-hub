@@ -47,7 +47,7 @@ No comparable two/three-year outcome is yet available for these recent commitmen
 | Governance and minority treatment | Supervisory board controls executive awards; the matching-share ESOP requires capital at risk, five-year waiting, price above exercise cost and NAV growth of at least 5% annually.[19] | 3 | Low | Related-party oversight and grant-level economics need confirmation; no shareholder redemption at NAV was established. |
 | **Overall** | **INVESTIGATE: allocation weaknesses plus conclusion-critical disclosure/claim gaps; no average concealing them.** | **N/A** | **Low** | Confirm realizations, net per-share progress and current owner-cost claims. |
 
-**ESOP distinction:** authorization is 60,000 rights, split up to 30,000 for board members and 30,000 for employees, not evidence that all were granted; settlement may use cash, treasury shares or new shares.[19] Buying matching shares in the market does not itself dilute other owners; transferring treasury shares can increase outside shares.
+**ESOP distinction:** authorization is 60,000 rights, split up to 30,000 for board members and 30,000 for employees, not evidence that all were granted; settlement may use cash, treasury shares or new shares; the June 2026 articles corroborate the authorized capital.[17][19] Buying matching shares in the market does not itself dilute other owners; transferring treasury shares can increase outside shares.
 
 ## Moat
 
@@ -153,5 +153,6 @@ Calculations: [SVE.DE.model.json](SVE.DE.model.json). Source-quality caveats: is
 [13] https://svb-ag.de/wp-content/uploads/2026/09/image-1.png -- SVB portfolio weights at 31 August 2026, issuer image
 [14] https://svb-ag.de/wp-content/uploads/2026/03/Jahresperformance-Stand-31.12.2025.png -- SVB annual performance through 2025, issuer image
 [15] https://svb-ag.de/wp-content/uploads/2026/04/Mehrjahresuebersicht-Website.jpg -- SVB multiyear financial overview through 2025, issuer image
+[17] https://svb-ag.de/wp-content/uploads/2026/06/Satzung-06-2026.pdf -- SVB articles of association, 9 June 2026
 [18] https://query1.finance.yahoo.com/v8/finance/chart/SVE.DE?interval=1d&range=5d -- Yahoo Finance SVE.DE dated EUR quote
 [19] https://svb-ag.de/wp-content/uploads/2025/05/SVB_HV-Einladung-2025-Final-Druck.pdf -- SVB original ESOP terms, AGM 2025 agenda 4
