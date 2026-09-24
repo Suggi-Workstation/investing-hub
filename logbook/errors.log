@@ -64,3 +64,16 @@ legacy IDs before publication. Separate registration and a collision guard
 preserved prior mappings; the underlying helper repair is explicitly open.
 No portfolio, protected investment method or scheduler activation changed.
 Reflection: 20260923T161317Z.
+
+## [ENT-005] | 2026-09-24 11:14 UTC | Neo | error | ref: agentic-brain:reflections/2026-09-24_neo_rehearsal-is-not-scheduled-operation.md | see: 20260924T110141Z
+Failure class: shared mutable receipt data corrupts checkpoint scope (R20).
+Evidence: adding later run artifacts changed the first commit's recorded paths,
+while exact Git inspection confirmed that the committed files remained correct.
+Root cause: the run-wide artifact list and per-commit path list shared an object;
+readback checked storage fidelity but not agreement with the represented commit.
+Fix: reconstructed owned receipts from verified Git; the loop now requires
+independent snapshots and exact-commit path comparison before checkpoint writes.
+Verification: regression rejected the original aliasing and confirmed that
+later artifact additions cannot change prior receipts; corrected readback matched.
+No committed research was rolled back; no core governance or schedule changed.
+Reflection: 20260924T110141Z.
