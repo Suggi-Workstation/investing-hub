@@ -22,7 +22,7 @@ links:
 # Nintendo -- Durable Characters, Cyclical Cash
 
 Nintendo sells an integrated entertainment experience: distinctive games help sell consoles, the installed base supports software sales, and the characters reach customers through licensing and other media.[1]
-My assessment is that the intellectual property is more durable than any individual hardware generation, but owner cash is substantially less predictable than familiarity with Mario suggests.
+My assessment is that the intellectual property is more durable than any individual hardware generation, but owner cash is substantially less predictable than familiarity with Mario suggests.[1][21]
 **Thesis status: Investigate. Confidence: Medium in the business assessment; Low in a complete investment valuation. Valuation status: full-group intrinsic value Not calculable from the inspected evidence; an explicitly partial operating-cash DCF is supplied below.**
 A good business is not automatically a bargain, and an omitted asset is not an asset worth zero.
 
@@ -47,7 +47,7 @@ The quarterly release does not supply a cash-flow statement; no invented June tr
 | Principal method / cross-check | A dated core operating-cash DCF plus eligible financial assets; separately resolve material nonconsolidated holdings before a whole-group value; cross-check against historical cash after capex, not a headline P/E. |
 
 **Summary:** Nintendo is neither a pure software subscription company nor a generic hardware maker.
-The operating hypothesis is that differentiated content supports an installed base which can be monetized across multiple releases; it still requires repeated investment and customer choice.
+The operating hypothesis is that differentiated content supports an installed base which can be monetized across multiple releases; it still requires repeated investment and customer choice.[1][13]
 The FY2026 IP-related revenue category was only 3.2% of consolidated sales, but that does not measure all IP economics: much is embedded in game sales or equity-method income.[1]
 That accounting boundary is why neither a revenue multiple nor all reported net income is an adequate starting cash measure.
 
@@ -62,7 +62,7 @@ The detailed governance/pay review covers the latest disclosures, supported by f
 | May 8, 2025: original FY2026 guidance | Sales 1,900; operating profit 320; Switch 2 launch June 5, 2025.[9] | Year 1: sales 2,313.051; operating profit 360.117; launch occurred; years 2/3 N/A to this single-year target.[1] | Underpromised/outperformed: operating profit 12.5% above the original forecast; the hardware launch and mix must be distinguished from recurring earning power. |
 | February 27, 2026: repurchase/cancellation | Up to 14m shares and 100; March 3-4 purchases, March 31 cancellation; explicitly subject to market conditions.[11] | Completed 11.43m shares for 99.92106, then cancelled; later years N/A to this completed transaction.[1] | Broadly matched the conditional authorization; the share cap was not a promise to buy 14m; completion proves execution, not purchase below intrinsic value. |
 
-**Summary:** The record is mixed rather than uniformly conservative: a substantial miss was followed by a successful launch year.
+**Summary:** The record is mixed rather than uniformly conservative: a substantial miss was followed by a successful launch year.[1][8][9]
 A miss is not evidence of dishonesty, and beating a forecast does not establish superior capital allocation.
 The repurchase was partly intended to absorb a secondary offering, so its rationale was not solely a valuation judgment.[11]
 The FY2027 forecast of 2,050 sales and 370 operating profit remained unchanged in August; it is not yet due and is not scored as delivered.[5]
@@ -77,15 +77,15 @@ The FY2027 forecast of 2,050 sales and 370 operating profit remained unchanged i
 | **Overall** | **Adequate: (3 + 3 + 2 + 4 + 3) / 5 = 3.0; no established integrity or continuing critical-stewardship override in reviewed evidence.** | **3.0** | **Medium** | **Reassess destructive investment, compensation escalation, concealment or repeated failures to protect customers; this is not a valuation score.** |
 
 **Summary:** I would describe management as capable operators with adequate, not exceptional, demonstrated stewardship.
-The incentives weakness does not currently establish a continuing pattern of owner abuse, so it does not override the score; it does prevent an owner-operator characterization.
-Nintendo's development spending and retained liquidity may be sensible insurance against creative and hardware cycles, but their size is not proof of productive reinvestment.
+The incentives weakness does not currently establish a continuing pattern of owner abuse, so it does not override the score; it does prevent an owner-operator characterization.[1][18]
+Nintendo's development spending and retained liquidity may be sensible insurance against creative and hardware cycles, but their size is not proof of productive reinvestment.[1]
 Better disclosure of project outcomes, acquisition returns and per-share cash objectives would increase confidence.
 
 **Share and funding reconciliation.** FY2025 common shares excluding treasury were 1,164,248,184; subtract 11,430,000 program repurchases and 549 odd-lot purchases, then add 70 odd-lot sales and 11,000 issued restricted shares, to reach 1,152,828,705 at March 31, 2026.[1]
 Cancellation reduces issued and treasury shares together; it does not produce another reduction in the economic denominator.
 June common shares excluding treasury were 1,152,828,616; add July's completed 44,500-share award to obtain **1,152,873,116**, the latest disclosed-action-adjusted denominator used here.[5][10]
 The July award exchanged compensation claims, not fresh cash investment; future compensation remains an operating cost, without an additional replacement-buyback deduction for the same grants.[18]
-The FY2026 net share reduction was 0.98%; actual splits and treasury movements, not weighted-average EPS shares, establish that result.
+The FY2026 net share reduction was 0.98%; actual splits and treasury movements, not weighted-average EPS shares, establish that result.[1]
 Five-year dividends, capex and buybacks were funded by operating cash and the existing investment/cash pool, not assumed to be entirely covered by one year's free cash; some acquisition investment and financing outflows sit outside the cash-capex subtotal.[1][7][9]
 
 ## Moat
@@ -102,7 +102,7 @@ Independent evidence includes Circana's US retail launch measurement, reported b
 | Efficient scale | Absent as an established defense | This is a large contestable entertainment market, not a geographically protected niche whose demand supports only one supplier. | Rival platforms and substitutes can coexist profitably; no exclusionary market-capacity economics were established. | Medium |
 | Scale economies shared | Unknown / not established | Library value may improve with scale, but a sustained savings-to-price-to-retention loop has not been measured. | Current component-cost responses include hardware price revisions, not evidence of persistent savings shared with buyers.[13] | Medium |
 
-**Summary:** The supported defense is distinctive content and brand preference, reinforced by library continuity; it is not a demonstrated cost moat or an unassailable network.
+**Summary:** The supported defense is distinctive content and brand preference, reinforced by library continuity; it is not a demonstrated cost moat or an unassailable network.[1][9][20]
 Circana corroborates that customers bought the product, independently of Nintendo's shipment accounting, but a successful launch alone cannot establish durability.[20]
 Nintendo must keep earning customer attention and trust.
 A competitor need not reproduce Mario to win the same household's time and discretionary spending.
@@ -115,8 +115,8 @@ A competitor need not reproduce Mario to win the same household's time and discr
 | Buyers: can buyers force concessions? | Medium | Household buyers are dispersed but price-sensitive; retail/distribution partners still matter, and purchases can be deferred; a price increase is not itself proof of pricing power.[1][13] | Medium |
 | Substitutes: can another solution meet the need? | High | PC/mobile games and other inexpensive entertainment compete for leisure time; management itself recognizes broader, low-cost alternatives.[13] | Medium |
 
-**Summary:** Substitution and component costs are the strongest pressures in this assessment.
-IP differentiates the experience, but it cannot compel a household to buy a new console or make memory cheaper.
+**Summary:** Substitution and component costs are the strongest pressures in this assessment.[13]
+IP differentiates the experience, but it cannot compel a household to buy a new console or make memory cheaper.[1][13]
 The critical test is sustained engagement and software cash after a launch, not whether a particular device leads a launch chart.
 Controller reliability, repair access and treatment of consumers matter because conduct can erode the preference on which the economics depend.[16]
 
@@ -125,7 +125,7 @@ Controller reliability, repair access and treatment of consumers matter because 
 | 4 | 3 | 4 | 3 | **Narrow / broadly stable** | Medium | Hard-to-replicate content with substantial cash generation, but launch investment, margin swings and earlier operating losses prevent a wide-moat economics score.[1][7][21] | A successful installed base that fails to produce recurring software cash; persistent price-driven volume weakness or rising development cost per successful title. |
 
 **Summary:** The rubric yields Narrow because economic proof is 3, even though protection and durability are each 4; there is no composite moat average.
-Familiar characters may survive failed hardware, but shareholders still bear the failed platform's costs.
+Familiar characters may survive failed hardware, but shareholders still bear the failed platform's costs.[1][21]
 FY2014 operating loss of 46.425 is a useful counterweight to extrapolating only successful Switch years.[21]
 I would upgrade the economics assessment only with stronger through-cycle cash returns after the new development and inventory investment, not merely another sales record.
 
@@ -142,26 +142,26 @@ I would upgrade the economics assessment only with stronger through-cycle cash r
 | 2026 | 2,313.051 | 360.117 | 15.6% | 424.056 | 289.789 | 27.169 | 262.620 |
 
 **Summary:** Revenue almost doubled in FY2026 while operating margin fell, illustrating the economics of a hardware-heavy launch rather than a software annuity.[1]
-Across the five years, CFO/net income was 65.4%, and cash after capex/net income was 61.0%; the latter averaged 256.876 annually.
+Across the five years, CFO/net income was 65.4%, and cash after capex/net income was 61.0%; the latter averaged 256.876 annually.[1][7][9]
 FY2025's inventory build and tax payments severely depressed cash conversion; FY2024's release helped it.[9]
-These cash-after-capex amounts are diagnostics, not distributions available after every lease, acquisition, award and future investment need.
+These cash-after-capex amounts are diagnostics, not distributions available after every lease, acquisition, award and future investment need.[1]
 
 **Normalization and cash checks.** FY2026 parent net income of 424.056 contains equity-method profit of 82.792, interest income of 46.062, FX gains of 44.339 and investment-security disposal gains of 32.664, with their associated accounting/tax effects; it also contains a 6.414 litigation loss.[1]
-The operating DCF instead starts from EBIT 360.117, where those below-operating items are already excluded; they must not be subtracted again.
+The operating DCF instead starts from EBIT 360.117, where those below-operating items are already excluded; they must not be subtracted again.[1]
 The 30.5% operating tax assumption below differs deliberately from the reported 25.4% group effective rate, which benefits from the treatment of associate earnings.[1]
-The litigation charge is not dismissed as costless: ordinary legal costs remain in operating assumptions, and a separate adverse cash allowance appears in the stress.
+The litigation charge is not dismissed as costless: ordinary legal costs remain in operating assumptions, and a separate adverse cash allowance appears in the stress.[1]
 
 FY2026 CFO less cash capex was 262.620; subtracting all 52.485 investment interest/dividend receipts and adding back 0.174 interest paid gives **210.309**.[1]
-That is only a core-cash diagnostic: tax timing, compensation, working capital and lease classification still prevent equating it mechanically with normalized FCFF.
+That is only a core-cash diagnostic: tax timing, compensation, working capital and lease classification still prevent equating it mechanically with normalized FCFF.[1]
 Equity-method earnings have already been reversed in CFO; subtracting 82.792 again would double-count the adjustment.[1]
-FY2026 accruals were 3.73% of average total assets: `(424.056 - 289.789) / ((3,805.312 + 3,398.515) / 2)`.
+FY2026 accruals were 3.73% of average total assets: `(424.056 - 289.789) / ((3,805.312 + 3,398.515) / 2)`.[1]
 
 Using total sales as a credit-sales proxy and COGS as a purchases proxy, FY2025 receivable/inventory/payable days were 24.9/257.8/104.0; FY2026 were 16.8/133.4/56.8; the diagnostic cash cycle shortened from 178.7 to 93.3 days.[1][9]
-These use average opening/closing balances and 365 days, not period-end balances; launch mix and seasonality prevent a clean peer comparison.
+These use average opening/closing balances and 365 days, not period-end balances; launch mix and seasonality prevent a clean peer comparison.[1][9]
 June inventory nevertheless rose again to 618.006 from 539.804 at March, while cash/deposits fell after, among other uses, the 204.050 year-end dividend paid June 29; balance changes are not a substitute for the missing quarterly CFO.[1][5]
 
 Latest-quarter revenue was 517.813 and operating profit 142.596; the latter includes approximately USD300m of prior-period tariff refunds.[5][6]
-At the disclosed 159.38 quarterly average yen/dollar rate, the refund approximates 47.814 and residual operating profit 94.782; this is an analyst translation approximation, **not the booked yen refund amount**.
+At the disclosed 159.38 quarterly average yen/dollar rate, the refund approximates 47.814 and residual operating profit 94.782; this is an analyst translation approximation, **not the booked yen refund amount**.[5][6]
 Neither the quarter nor its refund is annualized into the valuation.
 
 | Area | Key measure / trend | Assessment | Confidence | Main vulnerability / trigger |
@@ -173,22 +173,22 @@ Neither the quarter nor its refund is annualized into the valuation.
 | Growth and reinvestment returns | Illustrative FY2026 book-operating-capital return 23.5%; R&D is expensed and announced facilities investment is 230.[1] | Adequate, not proven incremental excellence | Medium | New facilities and software spending fail to raise sustainable per-share cash. |
 | **Overall** | **No modeled funding shortfall; minimum headroom 784.117 at June 30, 2027 under the stated assumptions.** | **Watch** | **Medium** | **Strong group liquidity does not eliminate product-cycle risk or establish that all consolidated cash is immediately distributable.** |
 
-**Summary:** The principal financial danger is erosion of earning power and inefficient reinvestment, not an evident conventional debt-refinancing wall.
-The cash cushion is substantial, but treating it all as excess would ignore operating needs and location/tax uncertainty.
+**Summary:** The principal financial danger is erosion of earning power and inefficient reinvestment, not an evident conventional debt-refinancing wall.[1][5]
+The cash cushion is substantial, but treating it all as excess would ignore operating needs and location/tax uncertainty.[1][5]
 Watch is appropriate because conversion and project returns remain manageable but material weaknesses; the stress is not a guarantee against every loss.
-A long-lived franchise can remain solvent while producing a poor investment return.
+A long-lived franchise can remain solvent while producing a poor investment return.[1][21]
 
 **Capital-return definition.** For a rough operating-capital diagnostic, use total net assets plus reported borrowing/recognized leases, less cash/deposits, current securities and noncurrent investment securities, plus a fixed 750 operating-cash allocation.
 This gives FY2025 capital of 1,055.040 and FY2026 capital of 1,074.961; `360.117 * 0.695 / average(capital)` gives 23.5%.[1]
-The FY2025 funding input is 7.138 of leases plus 0.019 of borrowing; FY2026 is 7.512 of leases.
+The FY2025 funding input is 7.138 of leases plus 0.019 of borrowing; FY2026 is 7.512 of leases.[1]
 This is not a research-capitalized, lease-perfect or peer-comparable ROIC: expensed IP creation, the assumed cash reserve and book classifications materially affect it.
-The 19.921 increase in this book capital is too small and classification-sensitive to interpret its incremental-return quotient as the return on all recent R&D and facilities; no such claim is made.
+The 19.921 increase in this book capital is too small and classification-sensitive to interpret its incremental-return quotient as the return on all recent R&D and facilities; no such claim is made.[1]
 The fixed DCF hurdle is not a measured Nintendo cost of capital, and no clean peer/WACC spread has been established.
 
 **Obligations and dated stress.** March lease maturities were 1.895 within one year, followed by 1.346/1.193/1.084/0.699 in years two through five; disclosed noncancelable operating-lease commitments were a separate 7.525.[1]
 June pension liability was 25.366; the parent also guarantees 10.046 of a subsidiary's property rent, which is not automatically an additional consolidated debt on top of that rent.[5][22]
 No committed credit line is counted; no newly disclosed borrowing line was identified in June's summary balance sheet, and the detailed borrowing maturity evidence remains March-dated.[1][5]
-Cash restrictions and tax leakage are not comprehensively quantified, so the stress applies a 10% availability haircut to June's 1,967.908 liquid-asset pool; this is an assumption, not a measured restriction.
+Cash restrictions and tax leakage are not comprehensively quantified, so the stress applies a 10% availability haircut to June's 1,967.908 liquid-asset pool; this is an assumption, not a measured restriction.[1][5]
 
 The following **analyst stress, not an actual forecast**, begins from June 30, 2026, the latest disclosed balance sheet.
 It represents weaker demand/margins, slower inventory/receivable conversion and no refinancing: quarterly after-tax/interest operating cash before working-capital shocks is 15/5/10/20/25/30, with signed working-capital cash movements of -150/-100/-50/0/+25/+25.
@@ -224,7 +224,7 @@ The scenarios were fixed before retrieving a price reference.
 | Other noncurrent investments | Excluded with their income rather than casually reclassified as cash. | Recovery/fair value and distribution taxes not fully assessed. |
 | Full Nintendo / NTDOY | **Not calculable; full-company value/share, current discount and MoS N/A.** | A core subtotal is not the completed investment valuation. |
 
-**Summary:** Missing associate cash evidence does not prevent useful analysis of Nintendo's core operations.
+**Summary:** Missing associate cash evidence does not prevent useful analysis of Nintendo's core operations.[1]
 It does prevent calling the subtotal a complete Nintendo price target, especially when equity-method profit reached 82.792 in FY2026.[1]
 The disclosed 278.251 carrying amount covers unconsolidated subsidiaries and associates; adding it would make a mixed-basis estimate, not prove their intrinsic value or a downside floor.[1]
 Nor can the aggregate 255.139 net income of the three equity-method associates be treated as Pokemon alone or multiplied mechanically by 32%.[1]
@@ -254,10 +254,10 @@ All entries in this table are JPY billions; signs are explicit.
 **Summary:** The 200 run-rate is an estimate of recurring cash after ongoing investment, not a restatement of company-reported free cash flow.
 R&D, advertising, ordinary legal costs and continuing compensation remain expenses; no fictional add-back funds growth for free.
 Its proximity to the 210.309 historical core-cash diagnostic is a cross-check, not proof that timing and normalization uncertainties disappear.
-The financial-asset adjustment deliberately excludes unvalued holdings and retains liquidity buffers.
+The financial-asset adjustment deliberately excludes unvalued holdings and retains liquidity buffers.[1][5]
 
 **Facilities schedule and forecast definition.** The filing lists planned investment totaling 230, including a 121 Technology Development Center scheduled for March 2029 and 109 of other projects scheduled for March 2028.[1]
-The remaining unpaid portion is not established; I therefore charge the **full 230 as an additional conservative prospective allowance**, rather than subtracting FY2026's unrelated aggregate capex and calling the remainder verified.
+The remaining unpaid portion is not established; I therefore charge the **full 230 as an additional conservative prospective allowance**, rather than subtracting FY2026's unrelated aggregate capex and calling the remainder verified.[1]
 Assumed additional payments are 110/80/40 in forecast years 1/2/3; within those, other projects are 60/49/0 and the center 50/31/40.
 The 40 recurring investment input explicitly excludes these named projects; the 230 is not also deducted in A.
 This may understate value by re-allowing past project spending and uses the framework's period-end payment convention; it is not an issuer payment timetable.
@@ -296,14 +296,14 @@ For reproduction, Base annual cash after the extra projects is 96.000/132.180/17
 | Add associate carrying amount, solely as a what-if | +241.35 to the subtotal | 278.251 / S; mixed-basis arithmetic, not a justified associate valuation. |
 
 **Summary:** Among these tested changes, normalized cash has the largest quantified effect; uncertainty in excluded assets is additional and is not captured by those sensitivities.
-The model cannot make the missing associate cash bridge disappear by choosing a generous terminal multiple.
+The model cannot make the missing associate cash bridge disappear by choosing a generous terminal multiple.[1]
 All ten annual discounts, the terminal discount, A, share conversions and scenario ordering were independently reproduced with a second arithmetic implementation.
 Confidence is Medium in the bounded component analysis and Low in a complete equity conclusion; new cash-flow and project-payment disclosures are the priority reassessment evidence.
 
 **Price last.** The latest dated NTDOY reference retrieved was **USD13.04, September 15, 2026 close**, not a verified September 24 quote.[23]
 Other inspected quote/history routes returned older snapshots or a consent page; a same-cutoff spot USD/JPY rate was not established.
 Accordingly no current USD target, current-price premium/discount or margin of safety is claimed.
-Any later dollar translation must divide the ordinary-share yen result by four and then by the matching yen-per-dollar exchange rate; ADR fees, tax treatment and trading spreads are additional investor-level considerations.
+Any later dollar translation must divide the ordinary-share yen result by four and then by the matching yen-per-dollar exchange rate; ADR fees, tax treatment and trading spreads are additional investor-level considerations.[3]
 The market may be pricing stronger core cash, more valuable Pokemon economics or a lower required return than this component exercise assumes; the omitted value must be investigated, not presumed either worthless or sufficient to justify the quote.
 
 ## Investment Thesis
@@ -320,7 +320,7 @@ The market may be pricing stronger core cash, more valuable Pokemon economics or
 | **Overall / change since prior review** | **First assessment: Investigate, not a buy/sell instruction; retain the business-quality case without claiming a completed intrinsic value.** | **The strongest bull objection is that normalized cash and Pokemon value are materially higher than the conservative component exercise; that requires evidence, not an automatic premium.** | **Reassess on the next interim cash disclosures, material corporate action, project-budget change or reliable associate financial disclosure.** |
 
 **Summary:** I understand why Nintendo can remain an important entertainment franchise for a long time; I have not established that NTDOY is attractively priced.
-The case rests on maintaining content quality, converting a new installed base into cash after reinvestment, and respecting what Nintendo actually owns and can distribute.
+The case rests on maintaining content quality, converting a new installed base into cash after reinvestment, and respecting what Nintendo actually owns and can distribute.[1][5]
 The honest next step is a better cash and ownership bridge, not more elaborate JSON files or a confident full-company number assembled from incompatible accounting pieces.
 This report is a completed, limited research assessment; its valuation limitation is substantive rather than a placeholder.
 
