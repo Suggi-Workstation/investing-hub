@@ -3,7 +3,6 @@ name: template-company
 id: 20260924T082952Z
 tier: core-template
 author: Neo
-status: draft
 links:
   - agentic-brain:governance/template-library.md
   - frameworks/sector-metrics.md
@@ -14,12 +13,17 @@ links:
   - frameworks/investment-thesis.md
 ---
 
-# Company Research Template
+# Company Research Template -- How We Write Company Research Files
 
-First-draft format for company research files in `companies/`. This template
-specifies the finished report, not the research workflow or a new investment
-method. It is for full assessments; personal company knowledge notes and
-research-only summaries have different purposes.
+A company research file is an evidence-backed assessment of a business, its
+management, competitive position, financial health and valuation. It lives in
+`companies/` and presents the findings from the investment frameworks.
+
+This template defines the frontmatter, body structure and quality checklist
+for company research files. It is the format specification for full
+assessments, not the research workflow or a replacement for the investment
+methods. Personal company knowledge notes and research-only summaries have
+different purposes.
 
 ## Company Report Checklist -- HARD GATE
 
@@ -100,7 +104,7 @@ supporting records; all material conclusions belong in the report.
 
 The referenced frameworks own their methods, scoring, overrides and finished
 outputs. The tables here arrange those outputs; they do not replace the
-frameworks. If a framework changes, reconcile this draft before using a stale
+frameworks. If a framework changes, reconcile this template before using a stale
 table. Do not import the Library's topic word counts or source quotas into a
 company assessment.
 
