@@ -38,10 +38,12 @@ template, not in the published company report.
 - [ ] Management output includes the applicable questionnaire answers, original promises versus outcomes, scorecard and any overriding concern. (PASS / HALT)
 - [ ] Moat output includes applicable mechanism answers, competitive forces, separate dimensional ratings, confidence and the principal threat. (PASS / HALT)
 - [ ] Financial-health findings trace to historical statements, normalization and cash/claims bridges, and dated stressed funding; decisive gaps remain visible. (PASS / HALT)
-- [ ] Valuation follows an applicable framework, states its cash/earnings and ownership basis, and retains the correct valuation-type labels. Calculations and material sensitivities are reproduced by a second calculation. (PASS / HALT)
+- [ ] Valuation uses sector-appropriate metrics and methods, presents Base/Bull/Bear cases with the correct cash/earnings and ownership labels, and marks unsupported case values N/A with the blocker. Calculations and material sensitivities are reproduced by a second calculation. (PASS / HALT)
 - [ ] Thesis, contrary case, permanent-loss risk and review triggers agree with the business, management, moat, funding and valuation evidence. No composite investment score or trade instruction is added. (PASS / HALT)
+- [ ] Investment Thesis ends with Final Verdict immediately before Sources: integrated judgment, confidence, dated matching-share price, Base/Bull/Bear values and Base-case discount/premium. Its figures agree with Valuation; missing or stale evidence cannot support a current price judgment. (PASS / HALT)
 - [ ] The analytical body contains the six framework sections below. Each section states its coverage status; supported early conclusions identify skipped work without disguising gaps as neutral scores, zeros or completed valuations. (PASS / HALT)
 - [ ] Every analysis table is followed immediately by a short conclusion explaining what its findings mean. Normally use 3-5 sentences, fewer when sufficient or more when material complexity warrants; do not repeat the rows or pad to a quota. (PASS / HALT)
+- [ ] The report presents results and short explanations, not a calculation notebook. Routine workings stay outside the report; retained assumptions and qualifications are sufficient to interpret the results without repeated tables or caveats. (PASS / HALT)
 - [ ] Material facts and figures resolve to inspected sources; assumptions and interpretation are identified. Citations, calculation links and repository references resolve. (PASS / HALT)
 - [ ] Final report follows the body order below, contains no unfilled placeholders, is ASCII-only, and uses the authorized company-file destination. Existing report identity and dated thesis changes are preserved. (PASS / HALT)
 
@@ -113,10 +115,13 @@ when needed to explain a material issue. This applies to each table within a
 section, not just once after the whole section. Interpret the evidence rather
 than repeat each row, introduce unsupported claims or manufacture prose.
 
-Put uncertainty beside the affected claim. Detailed statements, questionnaires
-and calculation workings may live in linked supporting records; all material
-conclusions belong in the report. Sources and optional related references follow
-the analytical body as supporting material, not additional framework sections.
+Put uncertainty beside the affected claim. Present concise results tables and
+short explanations, retaining the material assumptions, valuation basis and
+source references rather than every calculation. Keep detailed workings in
+temporary research records for verification; link only existing retained records,
+never deleted scratch files. A single Markdown deliverable does not require
+embedding the working notebook or creating companion files. Sources and optional
+related references follow the analytical body as supporting material.
 
 The referenced frameworks own their methods, scoring and overrides. This
 template controls company-report presentation: include the short summaries even
@@ -129,7 +134,9 @@ source quotas into a company assessment.
 
 Report heading: `## Business and Method`.
 Apply `frameworks/sector-metrics.md`; classify the actual economics, with
-separate rows for materially different segments where needed.
+separate rows for materially different segments where needed. Carry these
+selected metrics into Financial Health and Valuation; do not impose the same
+ratios or valuation method on every sector.
 
 | Question | Assessment / evidence |
 |:--|:--|
@@ -228,10 +235,11 @@ overall average or let a low share price improve the moat assessment.
 ### 4. Financial Health
 
 Report heading: `## Financial Health`.
-Apply `frameworks/financial-health.md`. State the review period and link the
-historical statements, reported-to-normalized earnings bridge, valuation
-cash/claims bridge and dated liquidity stress schedule. The table must show
-what those checks imply, including the first shortfall or credible headroom.
+Apply `frameworks/financial-health.md`. State the review period and summarize
+what the historical statements, normalization, cash/claims reconciliation and
+dated liquidity stress imply. Keep full schedules and intermediate arithmetic
+in working records, not extra report tables by default. The assessment table
+must show the decisive results, including the first shortfall or credible headroom.
 Use sector-appropriate capital and funding analysis where corporate ratios
 would mislead. Do not treat unavailable data as zero or a diagnostic cash
 subtotal as automatically distributable owner cash.
@@ -260,9 +268,11 @@ Report heading: `## Valuation`.
 Use `frameworks/simple-dcf.md` only when applicable; otherwise use the selected
 alternative in `frameworks/sector-metrics.md`. State the valuation date, method,
 currency/units, normalized starting basis, claimholders, ownership perimeter,
-equity adjustments, current share basis and valuation type. Link the inputs,
-claims reconciliation and reproducible calculation. Value independently before
-introducing a dated, matching-share market price.
+equity adjustments, current share basis and valuation type. Briefly explain the
+material assumptions and adjustments; verify full calculations in working
+records rather than reproducing them all here. Value independently before
+introducing a dated, matching-share market price. Present Base, Bull and Bear
+cases for the selected method, not only when a simple DCF is applicable.
 
 For an applicable simple DCF, show its input line (V0, A, S and optional P),
 required-return convention and exactly the framework's scenario output below.
@@ -279,20 +289,22 @@ most and how much confidence the cash/claims basis warrants. Keep the valuation
 type explicit and separate business value from the subsequent price comparison.
 
 For an alternative method, replace the DCF table with a compact method-specific
-table showing the principal components or dated cash flows, valuation basis,
-attributable ownership, claims/cost adjustments and common value per share.
-Identify market-priced components. Mark simple DCF Not applicable with its
-reason; do not force unsuitable inputs into a growth model.
+Base/Bull/Bear table using the selected sector drivers and common value per
+share. Briefly explain principal components, attributable ownership and
+claims/cost adjustments; identify market-priced components. Mark simple DCF
+Not applicable with its reason; do not force unsuitable inputs into a growth
+model or substitute three arbitrary multiples for reasoned scenarios.
 
 For either route, give confidence, decisive uncertainty, material sensitivities,
-the useful cross-check and a reassessment trigger. For DCF, include the required
-no-growth check and terminal dependence, with details in linked workings.
+the useful cross-check and a reassessment trigger. For DCF, summarize the
+required no-growth check and terminal dependence; keep detailed workings outside
+the report.
 Use intrinsic-value and margin-of-safety language only where the method and
 evidence justify it; a discount to quoted NAV or an earnings proxy is not an
 established margin of safety. Neither a Bear case nor asset book value is a floor.
 
 If conclusion-critical cash, ownership or funding inputs remain unresolved,
-state **Not calculable**, show the blocker and use N/A for unsupported values.
+state **Not calculable**, show the blocker and use N/A for unsupported case values.
 Any supplementary what-if calculation must remain separately labeled and must
 not turn a limited report into a completed intrinsic valuation.
 An alternative-method or Not calculable table also needs its own short summary.
@@ -312,15 +324,48 @@ on one line, then connect the findings rather than repeat the preceding tables.
 | Value versus price / possible mispricing | | | |
 | **Overall / change since prior review** | | | |
 
-**Summary:** Give the overall research conclusion, the assumptions it rests on
-and the strongest reason it could be wrong. Explain the next observable evidence
-that would strengthen, weaken or invalidate it without prescribing a trade.
+**Summary:** Explain the weakest critical assumption and the next observable
+evidence that would strengthen, weaken or invalidate the thesis. Keep the closing
+quality-and-price judgment for Final Verdict rather than repeating it here.
 
 Keep the strongest contrary case and observable review triggers explicit.
 Preserve the original thesis and dated changes in the supporting record.
 Use the framework's supported early-conclusion form where applicable. A research
 verdict is not an instruction to trade, select a position size or set Suggi's
 required margin of safety.
+
+#### Final Verdict
+
+Report subheading: `### Final Verdict`. This closes Investment Thesis immediately
+before `## Sources`; it is not a seventh framework section. In a brief synthesis,
+normally 3-5 sentences, combine business economics and moat, management, financial
+resilience and valuation into a judgment rather than another checklist or score.
+Include the current price and quote timestamp, Bear/Base/Bull value per share,
+the Base-case percentage discount or premium, confidence and the decisive risk
+or reassessment trigger. Reuse the researched values from Valuation, on the same
+share class, currency, ADR/FX and whole-company ownership basis.
+
+Use the discount-to-value convention in `frameworks/simple-dcf.md`: the positive
+Base value, not market price, is the percentage denominator. State a discount as
+"X% below Base estimated intrinsic value" and a premium as "X% above"; distinguish
+this from upside/downside measured against purchase price. Judge undervalued,
+approximately fairly valued or overvalued relative to that stated basis, without
+presenting an uncertain estimate as fact or a discount as guaranteed protection.
+For a proxy or quoted NAV retain that label, not intrinsic-value/MoS language.
+If value is unsupported, the price is stale/missing, the bases do not match or
+Base value is zero, show the affected comparison N/A and the reason. A partial
+business valuation cannot establish whole-stock under/overvaluation. Do not
+manufacture numbers to fill the closing section.
+
+**Supported-valuation wording example -- synthetic assumed inputs, not research:**
+
+"The business has durable customer economics, adequate management and funding
+that survives the modeled stress. At the assumed USD80 ordinary-share quote as
+of <verified quote timestamp>, Bear/Base/Bull estimated intrinsic values of
+USD70/100/130 imply a 20% discount to Base, although the price is above Bear.
+My judgment is undervalued relative to Base, with Medium confidence; the apparent
+discount must be weighed against the downside case. Sustained cash-conversion
+deterioration would invalidate the thesis."
 
 ## Sources and Supporting References
 
@@ -348,12 +393,13 @@ research, explaining each connection. Do not add unrelated links to meet a quota
 ## Example -- Abbreviated Company Report
 
 This fictional example illustrates the minimum writing pattern: frontmatter,
-identity, six framework sections, tables with summaries beneath each, and
-sources. The business observations are illustrative assumptions, not claims
+identity, six framework sections, tables with summaries beneath each, a closing
+Final Verdict within Investment Thesis, and sources. The business observations are illustrative assumptions, not claims
 about a real company. Source entries and angle-bracket fields are placeholders
 to replace with verified evidence; this is not a publishable research result.
 The example uses a limited, Not calculable conclusion rather than inventing a
-valuation. A completed DCF uses the Base/Bull/Bear table specified above.
+valuation. A completed valuation populates Base/Bull/Bear using the selected
+method; the synthetic wording example above illustrates a supported comparison.
 
 ```markdown
 ---
@@ -499,9 +545,11 @@ company would survive the chosen stress without new financing.
 is resolved. **Basis:** <valuation date, currency/units, equity perimeter and
 current share basis>; no price comparison is made before a defensible value.
 
-| Valuation status | Missing input / bridge | Value/share | Price comparison |
+| Case | Valuation status / missing basis | Value/share | Price comparison |
 |:--|:--|--:|:--|
-| Not calculable | Normalized owner cash, required reinvestment and existing equity claims.[1][2] | N/A | N/A |
+| Base | Not calculable: normalized owner cash, reinvestment and equity claims.[1][2] | N/A | N/A |
+| Bull | Same missing basis; optimistic growth cannot repair the cash/claims gap. | N/A | N/A |
+| Bear | Same missing basis; no supported downside value or floor. | N/A | N/A |
 
 **Summary:** The missing economic inputs prevent an intrinsic-value conclusion,
 not merely a more precise estimate. Substituting reported profit would change
@@ -522,11 +570,20 @@ unsupported number.
 | Value versus price / possible mispricing | N/A until value is supportable. | An apparently low multiple would not establish a bargain. | Compare only after independent valuation. |
 | **Overall / change since prior review** | **Investigate; initial assessment.** | **Cash, ownership and durability remain unresolved.** | **Review at the next relevant filing or earlier decisive disclosure.** |
 
-**Summary:** The case merits investigation, not a favorable investment verdict.
-The potential attraction is recurring replacement demand, while the central
-risk is that customers or reinvestment capture the economic benefit. Evidence
-on owner cash and stressed funding must improve before price attractiveness can
-be assessed; a price movement alone would not settle those questions.
+**Summary:** Customers or reinvestment may capture the benefit of repeat demand.
+The next decisive evidence is owner cash after necessary investment and stressed
+funding, not a share-price movement alone.
+
+### Final Verdict
+
+The replacement business is understandable, but durable excess returns and
+management's allocation record remain unproven.[1][2][3]
+Unresolved cash requirements and stressed funding prevent a supported investment
+case, so my judgment is **Investigate, Low confidence**.[1][2]
+Current price is **N/A (no verified quote in this illustration)**;
+**Bear/Base/Bull intrinsic values and discount/premium are N/A** because the
+cash and ownership basis is unresolved; no under/overvaluation is established.
+Reassess when the necessary investment and claims can be reconciled.
 
 ## Sources
 
