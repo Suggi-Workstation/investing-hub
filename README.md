@@ -13,6 +13,7 @@ frameworks, and screening data.
 | `portfolios/` | `main-portfolio.md`, `indo-portfolio.md`, `watchlist.md`. Suggi maintains the portfolios. |
 | `companies/` | Company deep-dives and research files. |
 | `frameworks/` | Valuation and scoring frameworks (DCF, financial scoring, moat scoring, screening guides). |
+| `governance/` | Research format specifications and templates, including the draft [company research template](governance/template-company.md). |
 | `screening/` | Screening outputs. |
 | `data/` | Screener exports and raw data files. |
 | `documents/` | Source documents and filings. |
