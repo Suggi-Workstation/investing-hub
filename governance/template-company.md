@@ -40,7 +40,8 @@ template, not in the published company report.
 - [ ] Financial-health findings trace to historical statements, normalization and cash/claims bridges, and dated stressed funding; decisive gaps remain visible. (PASS / HALT)
 - [ ] Valuation follows an applicable framework, states its cash/earnings and ownership basis, and retains the correct valuation-type labels. Calculations and material sensitivities are reproduced by a second calculation. (PASS / HALT)
 - [ ] Thesis, contrary case, permanent-loss risk and review triggers agree with the business, management, moat, funding and valuation evidence. No composite investment score or trade instruction is added. (PASS / HALT)
-- [ ] Every framework has a coverage status. Supported early conclusions identify skipped work; missing evidence is not disguised as a neutral score, zero or completed valuation. (PASS / HALT)
+- [ ] The analytical body contains the six framework sections below. Each section states its coverage status; supported early conclusions identify skipped work without disguising gaps as neutral scores, zeros or completed valuations. (PASS / HALT)
+- [ ] Every analysis table is followed immediately by a short conclusion explaining what its findings mean. Normally use 3-5 sentences, fewer when sufficient or more when material complexity warrants; do not repeat the rows or pad to a quota. (PASS / HALT)
 - [ ] Material facts and figures resolve to inspected sources; assumptions and interpretation are identified. Citations, calculation links and repository references resolve. (PASS / HALT)
 - [ ] Final report follows the body order below, contains no unfilled placeholders, is ASCII-only, and uses the authorized company-file destination. Existing report identity and dated thesis changes are preserved. (PASS / HALT)
 
@@ -97,16 +98,32 @@ and ADR ratio if applicable; review date/reviewer; information cutoff; accountin
 standard, consolidation perimeter and fiscal year-end; currency/units; history
 and latest interim period covered. State unavailable history explicitly.
 
-Use the level-2 report headings below in order. Keep table cells short without
-compressing away decisive evidence. Put uncertainty beside the affected claim.
-Detailed statements, questionnaires and calculation workings may live in linked
-supporting records; all material conclusions belong in the report.
+The analytical body consists of the six framework sections below, in order.
+Use their level-2 report headings. In each section, state **Coverage: Assessed /
+Limited / Not applicable / Not assessed**, with the reason for a limitation or
+exclusion. Assessed means the applicable questions were addressed, not that the
+result was favorable. Keep coverage and supporting-record links in the relevant
+section rather than adding a separate coverage section or scorecard.
 
-The referenced frameworks own their methods, scoring, overrides and finished
-outputs. The tables here arrange those outputs; they do not replace the
-frameworks. If a framework changes, reconcile this template before using a stale
-table. Do not import the Library's topic word counts or source quotas into a
-company assessment.
+Keep table cells short without compressing away decisive evidence. Immediately
+below every analysis table, add a **Summary:** paragraph explaining the main
+conclusion, why it matters and the uncertainty or trigger that could change it.
+Normally use 3-5 sentences; fewer are appropriate for a simple finding and more
+when needed to explain a material issue. This applies to each table within a
+section, not just once after the whole section. Interpret the evidence rather
+than repeat each row, introduce unsupported claims or manufacture prose.
+
+Put uncertainty beside the affected claim. Detailed statements, questionnaires
+and calculation workings may live in linked supporting records; all material
+conclusions belong in the report. Sources and optional related references follow
+the analytical body as supporting material, not additional framework sections.
+
+The referenced frameworks own their methods, scoring and overrides. This
+template controls company-report presentation: include the short summaries even
+where a standalone framework requests table-only output. Do not change its
+analytical rules. If a framework changes, reconcile the affected output here
+before using a stale table. Do not import the Library's topic word counts or
+source quotas into a company assessment.
 
 ### 1. Business and Method
 
@@ -124,8 +141,9 @@ separate rows for materially different segments where needed.
 | Circle of competence and decisive limitations | |
 | Principal valuation method / useful cross-check | |
 
-Explain the selected method's fit and its main accounting or industry trap.
-This section selects the lens; it does not assign a sector score.
+**Summary:** Explain how the business earns money, which drivers matter most,
+and why the selected measures and valuation method fit. State the main
+competence limit or accounting trap. Do not assign a sector score.
 
 ### 2. Management
 
@@ -143,6 +161,10 @@ and distinguish unavailable, not-yet-due and noncomparable outcomes from misses.
 |:--|:--|:--|:--|
 | | | | |
 
+**Summary:** Explain the pattern of delivery and candor, separating decisions
+management controlled from external conditions. Distinguish a missed commitment
+from dishonesty and targets not yet due from failures.
+
 | Category | Answers / decisive fact | Score /5 | Confidence | Concern / reassessment trigger |
 |:--|:--|--:|:--|:--|
 | Integrity and candor | | | | |
@@ -151,6 +173,10 @@ and distinguish unavailable, not-yet-due and noncomparable outcomes from misses.
 | Execution and adaptability | | | | |
 | Governance and minority treatment | | | | |
 | **Overall** | **Framework classification / applicable override** | | | |
+
+**Summary:** State whether the evidence supports trusting management with owner
+capital, why, and what could change that view. Explain any overriding concern
+instead of allowing a favorable average to obscure it.
 
 Answer every applicable framework question, with a limitation or counterexample
 per category. Follow its early-conclusion option when warranted: retain Overall,
@@ -172,6 +198,10 @@ industry conditions; corroborate decisive claims beyond management's assertion.
 | Efficient scale | | | | |
 | Scale economies shared | | | | |
 
+**Summary:** Identify the supported competitive defense, or explain why none
+is established. Connect the mechanism to customer behavior and distinguish
+observed protection from an attractive but unverified story.
+
 | Force / question | Pressure | Evidence-based answer | Confidence |
 |:--|:--|:--|:--|
 | Rivalry: can rivals compete away profit through price or capacity? | | | |
@@ -180,9 +210,17 @@ industry conditions; corroborate decisive claims beyond management's assertion.
 | Buyers: can concentrated or price-sensitive customers force concessions? | | | |
 | Substitutes: can another solution meet the need more cheaply or better? | | | |
 
+**Summary:** Identify the strongest pressure on industry profits and whether
+the company's defense offsets it. Explain which competitor, supplier, customer
+or substitute could capture the economic benefit.
+
 | Protection /5 | Economics /5 | Durability /5 | Trend /5 | Class / trend | Confidence | Decisive evidence / limitation | Threat / reassessment trigger |
 |--:|--:|--:|--:|:--|:--|:--|:--|
 | | | | | | | | |
+
+**Summary:** Explain the moat classification and trend using the decisive
+economic evidence. State the principal threat, confidence limit and observable
+change that would warrant reassessment.
 
 Use the framework's classification and early-conclusion rules. Do not add an
 overall average or let a low share price improve the moat assessment.
@@ -206,6 +244,11 @@ subtotal as automatically distributable owner cash.
 | Liquidity under stress | | | | |
 | Growth and reinvestment returns | | | | |
 | **Overall** | **First stress shortfall, or headroom** | **Framework verdict** | | |
+
+**Summary:** Explain whether earning power is reliable and obligations remain
+fundable under the stated stress. Connect cash conversion, reinvestment and
+claims to the overall verdict; identify the principal vulnerability rather
+than repeat every ratio.
 
 Follow the framework's early-conclusion option when decisive weakness or
 uncertainty makes other work unnecessary; identify the gaps in Overall.
@@ -231,6 +274,10 @@ Keep earnings-proxy, market-multiple-hybrid and cash-DCF labels distinct.
 | Bull | | | | | | |
 | Bear | | | | | | |
 
+**Summary:** Explain what drives the valuation range, which assumptions matter
+most and how much confidence the cash/claims basis warrants. Keep the valuation
+type explicit and separate business value from the subsequent price comparison.
+
 For an alternative method, replace the DCF table with a compact method-specific
 table showing the principal components or dated cash flows, valuation basis,
 attributable ownership, claims/cost adjustments and common value per share.
@@ -248,6 +295,7 @@ If conclusion-critical cash, ownership or funding inputs remain unresolved,
 state **Not calculable**, show the blocker and use N/A for unsupported values.
 Any supplementary what-if calculation must remain separately labeled and must
 not turn a limited report into a completed intrinsic valuation.
+An alternative-method or Not calculable table also needs its own short summary.
 
 ### 6. Investment Thesis
 
@@ -264,34 +312,17 @@ on one line, then connect the findings rather than repeat the preceding tables.
 | Value versus price / possible mispricing | | | |
 | **Overall / change since prior review** | | | |
 
+**Summary:** Give the overall research conclusion, the assumptions it rests on
+and the strongest reason it could be wrong. Explain the next observable evidence
+that would strengthen, weaken or invalidate it without prescribing a trade.
+
 Keep the strongest contrary case and observable review triggers explicit.
 Preserve the original thesis and dated changes in the supporting record.
 Use the framework's supported early-conclusion form where applicable. A research
 verdict is not an instruction to trade, select a position size or set Suggi's
 required margin of safety.
 
-### 7. Coverage and Supporting Records
-
-Report heading: `## Coverage and Supporting Records`.
-Use **Assessed / Limited / Not applicable / Not assessed**. Explain each limit
-or exclusion, including work skipped after a supported early conclusion.
-Assessed means the applicable questions were addressed, not that the result
-was favorable. Avoid a completed-analysis claim for partial work.
-
-| Framework | Status | Material limitation / linked supporting record |
-|:--|:--|:--|
-| `frameworks/sector-metrics.md` | | |
-| `frameworks/simple-management.md` | | |
-| `frameworks/simple-moat.md` | | |
-| `frameworks/financial-health.md` | | |
-| `frameworks/simple-dcf.md` | | |
-| `frameworks/investment-thesis.md` | | |
-
-Link only records that exist: statement history, source ledger, valuation model
-and dated reassessment evidence as applicable. Do not create empty companion
-files merely to satisfy the table.
-
-### 8. Sources
+## Sources and Supporting References
 
 Report heading: `## Sources`.
 Use one combined numbered list. Cite claims with `[1]` or `[1][3]`, without
@@ -308,10 +339,202 @@ For repository sources use `repo:path -- brief relevance` across repositories,
 or a repository-root path within Investing Hub. Preserve a specific revision
 when the claim depends on it. Do not invent publication dates.
 
-### 9. See Also
+Link supporting records in the relevant framework section: statement history,
+source ledger, valuation model and dated reassessment evidence as applicable.
+Link only records that exist; do not create empty companion files to satisfy
+the format. An optional final `## See Also` may link related company or industry
+research, explaining each connection. Do not add unrelated links to meet a quota.
 
-Report heading: `## See Also`.
-Finish with relevant, verified repository references and a short explanation
-of each connection. Link related company or industry research where useful;
-do not add unrelated links to meet a quota. Keep this after Sources, with no
-further company-report sections.
+## Example -- Abbreviated Company Report
+
+This fictional example illustrates the minimum writing pattern: frontmatter,
+identity, six framework sections, tables with summaries beneath each, and
+sources. The business observations are illustrative assumptions, not claims
+about a real company. Source entries and angle-bracket fields are placeholders
+to replace with verified evidence; this is not a publishable research result.
+The example uses a limited, Not calculable conclusion rather than inventing a
+valuation. A completed DCF uses the Base/Bull/Bear table specified above.
+
+```markdown
+---
+name: example-components-company-research
+id: <generated-UTC-creation-id>
+tier: company-research
+author: <original-author>
+ticker: <exact-ticker>
+exchange: <exchange>
+review_date: <YYYY-MM-DD>
+data_cutoff: <YYYY-MM-DDTHH:MM:SSZ>
+reporting_currency: <currency-code>
+tags: [industrials, replacement-components]
+links:
+  - governance/template-company.md
+---
+
+# Example Components -- Repeat Orders Do Not Yet Establish Owner Value
+
+Example Components is a fictional supplier of replacement parts for industrial
+equipment. In this illustrative case, repeat orders suggest customer dependence,
+but incomplete cash and ownership evidence prevents an intrinsic valuation.
+
+**Thesis status:** Investigate. **Confidence:** Low. **Valuation status:** Not calculable.
+
+**Identity and basis:** <legal entity>; <ticker/exchange/share class>; <ADR ratio
+or not applicable>; <review date and reviewer>; <information cutoff>; <accounting
+standard and consolidation perimeter>; <fiscal year-end>; <currency/units>.
+**History covered:** <annual and interim periods inspected; missing periods>.
+
+## Business and Method
+
+**Coverage: Limited** -- customer economics are described, but normalized owner
+cash remains unresolved.
+
+| Question | Assessment / evidence |
+|:--|:--|
+| Who pays, for what, and why do customers return? | Industrial operators buy replacement parts to keep installed equipment running.[1] |
+| Segments, geography and principal competitors | One replacement-parts segment; competitors and geographic exposure require fuller comparison.[1][3] |
+| Main revenue, margin and cash-generation drivers | Installed equipment, replacement frequency, pricing and inventory requirements.[1] |
+| Capital required and who bears financing risk | The supplier funds tooling and inventory before collecting from customers.[1] |
+| Sector-specific measures and historical comparison | Repeat orders, cash after investment and working-capital trends matter; through-cycle evidence is incomplete.[1] |
+| Circle of competence and decisive limitations | The replacement model is understandable; tooling replacement cost is not yet established.[1] |
+| Principal valuation method / useful cross-check | Normalized equity cash valuation if the cash bridge can be built; asset recoverability as a separate cross-check. |
+
+**Summary:** Demand depends on maintaining installed equipment, not only on
+sales of new machines. Repeat purchasing may support resilience, but inventory
+and tooling still tie up owner capital. The key missing input is the investment
+needed to preserve earning power, not another revenue-growth forecast.
+
+## Management
+
+**Coverage: Limited** -- capital-allocation and ownership evidence is incomplete.
+**Decision-makers:** <CEO and capital allocator, tenure and controlling owners>.
+
+| Statement date / original commitment | Metric, scope / target horizon | Actual year 1 / 2 / 3 | Delivery pattern / explanation |
+|:--|:--|:--|:--|
+| <date>: expand service capacity | <original operating target and deadline> | Delivered / later years not applicable | Operating commitment broadly matched; economic return remains unproven.[2] |
+| <date>: reduce inventory | <original inventory measure and deadline> | Missed / revised / not yet due | A missed target was disclosed; original and revised baselines remain separate.[2] |
+| <date>: return surplus capital | <original distribution commitment and horizon> | Partial / not yet due / not yet due | Distributions occurred, but whether the cash was surplus is unresolved.[2] |
+
+**Summary:** The illustrative record is mixed rather than uniformly strong or
+weak. Disclosing the inventory miss is relevant to candor, but does not repair
+the operating result. The distribution commitment cannot be judged without
+knowing the capital the business needed to retain.
+
+| Category | Answers / decisive fact | Score /5 | Confidence | Concern / reassessment trigger |
+|:--|:--|--:|:--|:--|
+| Integrity and candor | A missed commitment was acknowledged; the wider conduct record is incomplete.[2] | N/A | Low | Check treatment of recurring adjustments and setbacks. |
+| Capital allocation | Expansion and distributions compete for cash; returns are not established.[1][2] | N/A | Low | Reconcile investment outcomes and funding. |
+| Ownership and incentives | Current award claims and economic exposure remain unclear.[2] | N/A | Low | Reconcile ownership, compensation and dilution. |
+| Execution and adaptability | Service expansion was delivered, while inventory performance lagged.[2] | N/A | Low | Test whether the inventory problem persists. |
+| Governance and minority treatment | Board challenge and related-party safeguards require evidence.[2] | N/A | Low | Resolve material minority-owner questions. |
+| **Overall** | **INVESTIGATE: conclusion-critical allocation and ownership gaps.** | N/A | Low | Complete the cash deployment and claims review. |
+
+**Summary:** An operating success is not enough to establish strong stewardship.
+The missing allocation and ownership evidence prevents a meaningful overall
+score. This is an incomplete assessment, not an allegation of dishonesty.
+
+## Moat
+
+**Coverage: Limited** -- a possible customer defense is visible, but economic
+proof and its durability remain incomplete.
+
+| Mechanism | Present / Absent / Unknown | Answer / evidence | Contrary evidence | Confidence |
+|:--|:--|:--|:--|:--|
+| Switching costs | Unknown | Qualification and downtime may discourage supplier changes.[3] | Large customers can qualify alternatives. | Low |
+| Network effects | Absent | More buyers do not directly improve the product for other buyers in this case.[3] | Shared service coverage would need a separate test. | Low |
+| Brand, patents or licenses | Unknown | Reliability may matter more than brand recognition.[3] | No protected pricing advantage is established. | Low |
+| Structural cost advantage | Unknown | Installed tooling may support efficient production.[1] | Competitor unit costs are unavailable. | Low |
+| Efficient scale | Unknown | Niche demand may constrain entrants.[3] | No market-capacity evidence establishes this. | Low |
+| Scale economies shared | Unknown | Customer savings have not been demonstrated.[1][3] | Lower prices alone would not establish the loop. | Low |
+
+**Summary:** Qualification and downtime are the most plausible sources of
+customer attachment in this case. They are hypotheses to test, not proven
+switching costs. Repeat orders alone cannot show that customers lack attractive
+alternatives or that the supplier captures excess returns.
+
+| Force / question | Pressure | Evidence-based answer | Confidence |
+|:--|:--|:--|:--|
+| Rivalry: can rivals compete away profit through price or capacity? | Medium | Qualified competitors can bid for replacement contracts.[3] | Low |
+| Entry: what prevents a funded newcomer from winning customers? | Unknown | Qualification may delay entry, but the delay is unmeasured.[3] | Low |
+| Suppliers: can essential providers capture the margin? | Unknown | Specialized inputs may restrict sourcing options.[1] | Low |
+| Buyers: can concentrated or price-sensitive customers force concessions? | High | Large industrial buyers can negotiate across multiple plants.[3] | Low |
+| Substitutes: can another solution meet the need more cheaply or better? | Unknown | Redesign or third-party servicing could reduce part demand.[3] | Low |
+
+**Summary:** Buyer bargaining power is the clearest pressure in the illustrative
+case. Customer dependence on a part does not mean dependence on one supplier.
+The analysis needs evidence that qualification barriers protect the supplier's
+economics rather than merely slow procurement.
+
+| Protection /5 | Economics /5 | Durability /5 | Trend /5 | Class / trend | Confidence | Decisive evidence / limitation | Threat / reassessment trigger |
+|--:|--:|--:|--:|:--|:--|:--|:--|
+| N/A | N/A | N/A | N/A | Unclear / Unknown | Low | Customer attachment is plausible; returns after necessary investment are unproven. | Lost qualifications, pricing concessions or evidence of durable excess returns. |
+
+**Summary:** The moat remains Unclear because neither economic proof nor
+durability has been established. That differs from a supported finding of no
+moat. Evidence on customer alternatives and returns after reinvestment could
+change the classification in either direction.
+
+## Financial Health
+
+**Coverage: Limited** -- normalized owner cash and usable stressed liquidity
+are unresolved. **Supporting records:** <verified statement and bridge links>.
+
+| Area | Key measure / trend | Assessment | Confidence | Main vulnerability / trigger |
+|:--|:--|:--|:--|:--|
+| Earnings reliability | Exceptional and recurring costs still need reconciliation.[1] | Unknown | Low | Adjusted profit may omit ongoing costs. |
+| Cash generation and conversion | Inventory and tooling consume cash; sustaining needs remain uncertain.[1] | Unknown | Low | Weak collections or replacement spending. |
+| Debt and solvency | Claims and accessible cash are not fully reconciled.[1] | Unknown | Low | Undisclosed restrictions or obligations. |
+| Liquidity under stress | No defensible dated headroom figure is available.[1] | Unknown | Low | Maturities before usable funding arrives. |
+| Growth and reinvestment returns | Added capacity has not yet demonstrated owner returns.[1] | Unknown | Low | Growth absorbs cash without earning its cost. |
+| **Overall** | **Stress headroom not established.** | **Unclear** | Low | Complete the cash, claims and dated funding bridges. |
+
+**Summary:** Reported profitability does not yet establish financial resilience.
+Working capital and replacement investment could consume much of the apparent
+earning power. Without a dated funding bridge, the report cannot claim that the
+company would survive the chosen stress without new financing.
+
+## Valuation
+
+**Coverage: Limited.** Simple DCF is not calculable until the cash/claims basis
+is resolved. **Basis:** <valuation date, currency/units, equity perimeter and
+current share basis>; no price comparison is made before a defensible value.
+
+| Valuation status | Missing input / bridge | Value/share | Price comparison |
+|:--|:--|--:|:--|
+| Not calculable | Normalized owner cash, required reinvestment and existing equity claims.[1][2] | N/A | N/A |
+
+**Summary:** The missing economic inputs prevent an intrinsic-value conclusion,
+not merely a more precise estimate. Substituting reported profit would change
+the result into an earnings proxy rather than solve the problem. The next step
+is to resolve the cash and ownership bridges, not apply a larger discount to an
+unsupported number.
+
+## Investment Thesis
+
+**Coverage: Limited. Thesis status: Investigate. Confidence: Low.**
+
+| Area | Conclusion / decisive evidence | Contrary evidence / limitation | Review trigger / date |
+|:--|:--|:--|:--|
+| Business / competence | Replacement demand is understandable.[1] | Sustaining tooling economics remain unclear. | Obtain replacement-cost evidence. |
+| Source of value / critical assumptions | Repeat orders may support durable earning power.[1][3] | Customer bargaining and reinvestment may absorb the benefit. | Verify returns after necessary investment. |
+| Permanent-loss case / protection | Cash absorption combined with obligations could damage owners.[1] | Usable funding and recoverable asset values are not established. | Complete the dated stress case. |
+| Quality, funding and valuation consistency | No completed valuation is claimed. | Plausible customer attachment cannot fill the cash gap. | Reconcile the decisive inputs together. |
+| Value versus price / possible mispricing | N/A until value is supportable. | An apparently low multiple would not establish a bargain. | Compare only after independent valuation. |
+| **Overall / change since prior review** | **Investigate; initial assessment.** | **Cash, ownership and durability remain unresolved.** | **Review at the next relevant filing or earlier decisive disclosure.** |
+
+**Summary:** The case merits investigation, not a favorable investment verdict.
+The potential attraction is recurring replacement demand, while the central
+risk is that customers or reinvestment capture the economic benefit. Evidence
+on owner cash and stressed funding must improve before price attractiveness can
+be assessed; a price movement alone would not settle those questions.
+
+## Sources
+
+These are source-format placeholders for the fictional example, not citations
+to real evidence. Replace each with the inspected document and appropriate
+authority rating before using this format for a real company.
+
+1. <Issuer>. <Date>. "<Annual/interim report title>." <Direct URL and relevant pages/notes>. <Authority rating>.
+2. <Issuer or regulator>. <Date>. "<Ownership, compensation and original-commitment disclosures>." <Direct URLs and sections>. <Authority rating>.
+3. <Independent customer, competitor or industry source>. <Date>. "<Title>." <Direct URL and relevant section>. <Authority rating>.
+```
