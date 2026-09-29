@@ -30,6 +30,7 @@ Calculate and explain the following where economically meaningful. CFO means cas
 | Test | Calculation / investigation |
 |:--|:--|
 | CFO less cash capex | CFO minus cash capex; a diagnostic, not automatically distributable cash. Locate lease payments, capitalized development and acquisition investment separately. |
+| Owner earnings | Normalized net income + depreciation, amortization and other noncash charges (keep stock compensation as a cost) - average capex and working capital needed to maintain competitive position and unit volume. Earning power before growth investment; use a range when maintenance is uncertain. |
 | Cash conversion | Sum of CFO / sum of NI over the same period; repeat using cash after total capex. Use positive, meaningful denominators; explain differences, not universal cutoffs. |
 | Accruals | (NI - CFO) / average total assets. Investigate persistent growth and the underlying accounts; this is not a fraud verdict. |
 | Working capital | Receivables and inventory versus sales; payables versus purchasing activity. Calculate receivable days = average receivables / credit sales * period days where credit sales are available. Label total-sales substitutes. |
@@ -78,7 +79,7 @@ Rate each area **Strong / Adequate / Fragile / Unknown**. Overall: **Fragile** f
 
 ## Finished output
 
-Give company/date and review period on one line. Return only this table; keep each finding and trigger to one sentence. For a decisive early conclusion, return only Overall with its evidence and unassessed gaps.
+Give company/date and review period on one line. Return this table; keep each finding and trigger to one sentence. For a decisive early conclusion, return only Overall with its evidence and unassessed gaps. Follow the table with a **Summary:** of 3-5 sentences, fewer when sufficient: the conclusion, why it matters and what would change it.
 
 | Area | Key measure / trend | Assessment | Confidence | Main vulnerability / trigger |
 |:--|:--|:--|:--|:--|

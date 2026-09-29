@@ -74,6 +74,7 @@ For a positive modeled value: `price at 30% discount = value/share * 0.70`; `pri
 - Reduce Base X and growth separately over plausible ranges; record each input change and its value effect before naming the dominant sensitivity. Keep 10% fixed. Flag dependence on generous exit assumptions.
 - If X represents a perpetuity of the same distributable cash with no payout change, check implied continuing growth: `gT = (0.10 * X - 1) / (X + 1)`. Assess its plausibility; do not apply this identity to earnings, EBITDA or finite-life assets. Zero growth in years 1-10 does not establish zero growth afterward.
 - Calculate terminal dependence as `PV terminal / (PV years 1-10 + PV terminal)`; do not include A in that denominator or force a target percentage.
+- Where normalized earnings E and the reinvestment I funding growth are known, check the implied return on new capital: `r = g / (I / E)`. Below 10%, faster growth lowers value; challenge any case whose growth depends on it.
 - Before release, MUST verify finite inputs, basis, units, financing date, all ten annual discounts, year-10 terminal discount, and single application of A. Verify `Bear <= Base <= Bull`; investigate reversed ordering rather than relabeling rows. A second calculation MUST reproduce the results.
 
 **PASS:** applicable cash/claim identities and arithmetic reconcile, assumptions are traceable and limitations reach the final labels. **HALT** missing inputs, inconsistent claims, an unrepresentable path or unsupported valuation claims. Unsupported cash conversion blocks a cash-DCF claim, not an explicitly labeled earnings proxy. Bear is a scenario, never a downside floor.
@@ -86,7 +87,7 @@ Give one input line: company/date, currency, metric/claimholder basis, V0, A, S,
 - **Market-multiple hybrid:** cash reconciled, but X is market-derived.
 - **Cash DCF:** cash reconciled and terminal assumptions supported by fundamentals. Only this type may call value/share **intrinsic value** and the discounts **margin of safety**.
 
-Give one confidence line: High / Medium / Low, decisive uncertainty, sensitivity and reassessment trigger. Confidence cannot exceed support for the weakest conclusion-critical assumption; repeated versions of one claim are not independent evidence. If case types differ, identify the type in each value cell. Keep proxy/hybrid labels; do not rename their markdowns MoS. Use exactly these three rows for a completed calculation; otherwise return Not calculable / Not applicable and the blocker, with values N/A.
+Give one confidence line: High / Medium / Low, decisive uncertainty, sensitivity and reassessment trigger. Confidence cannot exceed support for the weakest conclusion-critical assumption; repeated versions of one claim are not independent evidence. If case types differ, identify the type in each value cell. Keep proxy/hybrid labels; do not rename their markdowns MoS. Use exactly these three rows for a completed calculation; otherwise return Not calculable / Not applicable and the blocker, with values N/A. Follow the table with a **Summary:** of 3-5 sentences, fewer when sufficient: what drives the range, the decisive assumption and what would change it.
 
 | Case | g1 / g2 / X | PV years 1-10 | PV terminal | Value/share (type above) | Price at 30% discount | Price at 50% discount |
 |:--|:--|--:|--:|--:|--:|--:|

@@ -34,7 +34,8 @@ Answer each question in the final force table. Rate pressure **Low / Medium / Hi
 
 ## 4. Verify the economics and durability
 
-- Check multi-year returns on capital, cash generation after necessary reinvestment, pricing versus volume, retention and relevant unit costs. Explain the mechanism behind the result.
+- Test pricing power: can the business raise real prices without losing customers or volume to competitors? Separate price from inflation pass-through, mix and volume.
+- Check multi-year returns on capital, cash generation after necessary reinvestment, retention and relevant unit costs. Explain the mechanism behind the result.
 - Where meaningful, calculate return on invested capital as after-tax operating profit divided by average invested operating capital. Compare with a defensible capital-cost estimate and peers. Identify distortions from goodwill, expensed research or a tiny/negative capital base; use suitable sector evidence instead of forcing the ratio.
 - Separate cyclical windfalls, leverage and underinvestment from durable economics. Low margins alone do not disprove a low-cost, fast-turnover or customer-savings model.
 - Ask: if a well-funded competitor attacked, how would it take the customers? What would destroy the advantage? Would ordinary competent management preserve it?
@@ -61,7 +62,7 @@ For a full assessment, **PASS** requires answered mechanisms and forces, corrobo
 
 ## Finished output
 
-Complete the mechanism, force and score tables; keep answers to one sentence with a filing/date/page or resolving link. For an early conclusion return only the score-summary row, with the reason, evidence and gaps visible. No research narrative.
+Complete the mechanism, force and score tables; keep answers to one sentence with a filing/date/page or resolving link. For an early conclusion return only the score-summary row, with the reason, evidence and gaps visible. Follow each table with a **Summary:** of 3-5 sentences, fewer when sufficient: the conclusion, why it matters and what would change it. No research narrative.
 
 | Mechanism | Present / Absent / Unknown | Answer / evidence | Contrary evidence | Confidence |
 |:--|:--|:--|:--|:--|

@@ -38,7 +38,7 @@ Select the relevant row or rows. Prioritize the economic drivers and traps; do n
 | Semiconductors and hardware | Through-cycle margins, inventory, utilization, design wins, customer concentration and returns after research/capex | Cycle-normalized operating earnings and cash flow | Separate fabless designers, foundries, memory and equipment. Inspect capacity additions, technology transitions, research spending and asset obsolescence; peak utilization flatters returns. |
 | Cyclical manufacturing, transport and shipping | Normalized volume/margins, utilization, replacement costs, industry capacity and trough liquidity | Mid-cycle earnings/cash and asset-value cross-checks | High fixed costs, order cancellations, leases and new supply. Do not capitalize peak earnings or assume a trough survives without funding. |
 | Energy and mining | Commodity-price scenarios, unit costs, production decline, reserves, sustaining investment and returns through the cycle | Normalized cash flow and resource/asset value after royalties, taxes and closure costs | Separate producers, refiners, services and pipelines. EBITDA omits depletion and replacement economics; reserves require economic recoverability, not a universal life cutoff. |
-| Regulated utilities | Rate-base growth, allowed versus earned equity returns, recovery lag and operating cash relative to obligations | Distributable equity cash/earnings, regulated asset value and sustainable dividends | Allowed returns are not guaranteed. Test capex funding, disallowed costs and equity issuance. Dividend yield versus bond yield alone does not determine value. |
+| Regulated utilities | Rate-base growth, allowed versus earned equity returns, recovery lag and operating cash relative to obligations | Distributable equity cash/earnings, regulated asset value and sustainable dividends | Allowed returns are not guaranteed. Rate-base growth adds owner value only when the earned equity return exceeds the required return. Test capex funding, disallowed costs and equity issuance; a premium paid over rate base earns nothing unless regulators allow it. Dividend yield versus bond yield alone does not determine value. |
 | Telecom and infrastructure | Subscriber/unit economics, churn, utilization, pricing, returns after replacement and spectrum spending | Normalized cash after investment; lease-consistent enterprise multiples | Debt, renewal concessions, spectrum auctions and technology replacement. EBITDA can hide heavy ongoing investment. |
 | Deposit-taking banks | Sustainable return on equity/tangible common equity, credit losses, loan quality, net interest margin, deposits and capital headroom | Price / tangible book alongside sustainable returns; normalized equity earnings or distributions | Funding concentration, uninsured deposits, securities losses and collateral access. Cheap book may conceal credit losses; CFO, corporate current ratios and enterprise EBITDA multiples are poor default measures. |
 | Non-deposit lenders and specialty finance | Loan-vintage losses, credit quality, lending spread after losses/costs, equity returns and funding duration | Sustainable common-equity earnings/distributions and asset/NAV cross-checks | Warehouse funding, collateral haircuts, recourse and refinancing concentration. Do not import deposit-bank funding assumptions or ordinary corporate EBITDA multiples. |
@@ -48,7 +48,7 @@ Select the relevant row or rows. Prioritize the economic drivers and traps; do n
 | Pharma and biotechnology | Sales by product, patent/exclusivity expiry, research productivity, pipeline probabilities and cash runway | Existing-product cash plus separately risk-adjusted pipeline value | Binary trials, reimbursement, concentration and replacement research. Do not assume pipeline approval or add pipeline value already inside the cash forecast. |
 | Medical devices and care providers | Devices: installed base, procedure volume, recurring consumables. Providers: patient volumes, payer mix, reimbursement, staffing and collections | Normalized earnings/cash adjusted for recurring equipment and working capital | Product liability, recalls, labor costs and payer concentration. Separate device economics from hospital operations and health insurance. |
 | Asset managers and exchanges | Managers: net flows, fee rates and recurring fee profit. Exchanges: volume, recurring data revenue and operating leverage | Normalized fee earnings/cash, with performance fees separated | Market appreciation is not organic inflow. Inspect fee pressure, client concentration and capital commitments. Do not apply deposit-bank metrics to a fee business by label alone. |
-| Holding companies | Look-through earning power, investee value, parent liquidity and capital allocation | Sum of component equity values less parent claims, costs and tax leakage | Avoid double-counting subsidiaries, distributions and investments. Distinguish parent-only debt from claims already deducted at subsidiary level. |
+| Holding companies | Look-through earning power, investee value, parent liquidity and capital allocation | Sum of component equity values less parent claims, costs and tax leakage | Avoid double-counting subsidiaries, distributions and investments. Distinguish parent-only debt from claims already deducted at subsidiary level. Record a controller's voting versus economic interest; a discount to asset value is not a catalyst without an enforceable release. |
 
 ## 4. Define and reconcile selected measures
 
@@ -85,3 +85,25 @@ Reconcile alternative estimates, not add valuations of the same assets and their
 MUST verify business/method fit, definitions, dated periods, cycle normalization, ownership and claims, funding needs and main failure risks. Reproduce any valuation with a second calculation and check no asset, income stream or claim is counted twice. **PASS:** the selected measures and method support the stated analysis. **HALT** unsupported numbers or incompatible methods; an explicit Not assessable finding with its missing inputs is valid.
 
 Keep the working selection to a few measures, one principal method and a useful cross-check where available. This file is a selection and method guide, not a sector score or company verdict.
+
+## Finished output
+
+Give company/date, segments and reporting basis on one line. Return this table with one-sentence cells and a filing/date/page or resolving link for each decisive fact. Follow each table with a **Summary:** of 3-5 sentences, fewer when sufficient: how the business earns money, why the method fits and the main trap. No sector score or company verdict.
+
+| Question | Assessment / evidence |
+|:--|:--|
+| Who pays, for what, and why do customers return? | |
+| Segments, geography and principal competitors | |
+| Main revenue, margin and cash-generation drivers | |
+| Capital required and who bears financing risk | |
+| Sector-specific measures and historical comparison | |
+| Circle of competence and decisive limitations | |
+| Principal valuation method / useful cross-check | |
+
+When a section 5 method is calculated, add one row per case; unsupported values are N/A with the blocker.
+
+| Case | Method / key drivers | Value/share (basis) | Price comparison |
+|:--|:--|--:|:--|
+| Base | | | |
+| Bull | | | |
+| Bear | | | |

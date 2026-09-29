@@ -11,7 +11,7 @@ tags: [management, capital-allocation]
 
 ## 1. Establish who controls the decisions
 
-Record company, date, chief executive, principal capital allocator, tenure and controlling shareholders. Review 5-10 years of annual reports, ownership/pay disclosures and capital decisions where available. Separate the current team's record from predecessors, acquisitions and favorable industry conditions.
+Record company, date, chief executive, principal capital allocator, tenure and controlling shareholders, with their voting power beside their economic interest. Review 5-10 years of annual reports, ownership/pay disclosures and capital decisions where available. Separate the current team's record from predecessors, acquisitions and favorable industry conditions.
 
 Read recent communications and a difficult period where available. Corroborate decisive claims against financial results, regulatory records and independent reporting. Identify source origins; a filing and articles repeating it are not independent observations. Record unavailable history rather than filling it with reputation or charisma.
 
@@ -28,7 +28,7 @@ Answer every question with a dated action or disclosure. Record one counterexamp
 | Category | Questions that MUST be answered |
 |:--|:--|
 | Integrity and candor | Are reported and adjusted results reconciled consistently? Are failures explained and responsibility accepted? Is communication candid during setbacks? Who benefits or bears material harm, and is management's conduct defensible beyond its own stated principles? |
-| Capital allocation | Where did retained cash go, and what return followed? Did major acquisitions justify their full cost, including issued shares and assumed debt? Were buybacks below defensible intrinsic value while liquidity remained adequate? Does management stop poor projects and return surplus capital when reinvestment is unattractive? |
+| Capital allocation | Where did retained cash go, and what return followed? Is spending driven by returns, or by available cash and imitation of peers? Did major acquisitions justify their full cost, including issued shares and assumed debt? Were buybacks below defensible intrinsic value while liquidity remained adequate? Does management stop poor projects and return surplus capital when reinvestment is unattractive? |
 | Ownership and incentives | What economic stake do managers hold, how was it acquired, and is it hedged or pledged? Do pay targets reward durable per-share results and capital efficiency, or merely size and adjusted earnings? What dilution, vesting and downside exposure do owners actually bear? |
 | Execution and adaptability | Which commitments were delivered, delayed or abandoned? Do talent retention/delegation, product or service renewal and cost/accounting controls sustain performance? Can the team learn, simplify and stop defending sunk costs? Does succession reduce dependence on one individual? |
 | Governance and minority treatment | Can the board challenge management and review conflicts? Do controlling owners receive preferential deals? Are capital raising, voting rights and related-party transactions fair to outside shareholders? Are oversight and succession credible in practice, not just on paper? |
@@ -36,7 +36,7 @@ Answer every question with a dated action or disclosure. Record one counterexamp
 ## 4. Check the record behind the answers
 
 - Summarize cash used for reinvestment, acquisitions, debt reduction, dividends and repurchases over the review period. Reconcile material funding from operations, cash reserves, borrowing and issuance; do not imply all deployment came from free cash flow.
-- Compare returns on new investment with its cost and reasonable alternatives. Where measurable, calculate multi-year incremental after-tax operating profit divided by the corresponding increase in invested capital. Mark the ratio not meaningful when the denominator is negative, tiny or distorted; examine actual project or acquisition outcomes instead.
+- Apply the one-dollar test: over five years or more, each retained dollar should create at least one dollar of value for owners, which requires incremental returns at or above those available elsewhere. Compare returns on new investment with its cost and reasonable alternatives. Where measurable, calculate multi-year incremental after-tax operating profit divided by the corresponding increase in invested capital. Mark the ratio not meaningful when the denominator is negative, tiny or distorted; examine actual project or acquisition outcomes instead.
 - Review the largest completed acquisitions: price, financing, original rationale, subsequent cash results and impairments. No acquisitions means that sub-question is not applicable, not poor management. No impairment does not prove a good deal.
 - Reconcile dated opening and closing actual common shares through repurchases, issuance and other changes on a consistent split basis. Reconcile existing potential dilution separately; do not infer net share retirement from weighted-average EPS denominators. Stock-based compensation is a real owner cost; subtracting compensation expense from repurchase dollars does not measure net share retirement. Do not reward debt-funded earnings-per-share growth without checking financial risk.
 - Compare at least three material forward-looking statements or capital commitments with outcomes, including a setback if available. Preserve the original statement date, metric, scope, assumptions and target horizon; show revisions separately rather than moving the original baseline. Compare actual results in the following year and years two and three when available on the same basis. Record unavailable or not-yet-due outcomes, not guessed results. Where formal guidance is absent, use stated strategic commitments.
@@ -60,7 +60,7 @@ For a full assessment, **PASS** requires integrity and critical-stewardship chec
 
 ## Finished output
 
-Give company/date and decision-maker/tenure on one line. Fill rows with short answers, a decisive fact and a concern; identify evidence by filing/date/page or resolving link. For an early conclusion return only Overall, with dated evidence, the override and missing work explicit. End at Overall. No biography or essay.
+Give company/date and decision-maker/tenure on one line. Fill rows with short answers, a decisive fact and a concern; identify evidence by filing/date/page or resolving link. For an early conclusion return only Overall, with dated evidence, the override and missing work explicit. End each table at its last row and follow it with a **Summary:** of 3-5 sentences, fewer when sufficient: the conclusion, why it matters and what would change it. No biography or essay.
 
 For a full assessment, show the compact say-do record before the scorecard:
 

@@ -11,13 +11,13 @@ tags: [thesis, reassessment, risk]
 
 ## 1. Establish understanding
 
-Record company, date, business/segment scope and valuation basis. Explain who pays, why customers return, how cash is earned, what capital is required and who bears the financing risk. Identify the few drivers that determine long-term results. State the competence boundary; familiarity with the product is not sufficient.
+Record company, date, business/segment scope and valuation basis. Explain who pays, why customers return, how cash is earned, what capital is required and who bears the financing risk. The thesis must pass four tests: an understandable business, favorable long-term economics, able and trustworthy management, and a price below estimated value. Identify the few drivers that determine long-term results. State the competence boundary; familiarity with the product is not sufficient.
 
 If a decisive business mechanism cannot be explained, conclude **Too hard** and name it. If understanding is adequate but decisive information is missing, conclude **Investigate**. Do not fill gaps with a favorable score or proceed merely because the stock looks cheap.
 
 ## 2. State and challenge the thesis
 
-State the source of value and the assumptions it requires: durable cash generation, productive reinvestment, recoverable assets or another identified mechanism. Distinguish facts, estimates and judgments. Record a filing/date/page or resolving link for each decisive factual claim; repeated reports of one claim are not independent evidence.
+State the source of value and the assumptions it requires: durable cash generation, productive reinvestment, recoverable assets or another identified mechanism. Distinguish facts, estimates and judgments. Treat management projections and research paid for by an interested party as claims to test, not evidence. Record a filing/date/page or resolving link for each decisive factual claim; repeated reports of one claim are not independent evidence.
 
 Answer the strongest contrary case fairly. Name the route to permanent loss, the evidence supporting it and what actually limits that loss. Check leverage, critical stewardship failures, competitive erosion, investment needs and any material stakeholder harm. Do not describe a Bear scenario, book value or price discount as a guaranteed floor.
 
@@ -43,7 +43,7 @@ Confidence: **High / Medium / Low** for corroborated evidence / material estimat
 
 ## Finished output
 
-Give company/date, thesis status and confidence on one line. Return this table with one-sentence cells; for early conclusions return only the decisive row and Overall, identifying skipped work. No essay.
+Give company/date, thesis status and confidence on one line. Return this table with one-sentence cells; for early conclusions return only the decisive row and Overall, identifying skipped work. Follow the table with a **Summary:** of 3-5 sentences, fewer when sufficient: the weakest critical assumption and the next evidence that would change the thesis. No essay.
 
 | Area | Conclusion / decisive evidence | Contrary evidence / limitation | Review trigger / date |
 |:--|:--|:--|:--|
