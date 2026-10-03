@@ -148,3 +148,21 @@ Verified: source evidence and citations, second-calculation valuation, scoped
 commits, reflection format gate. Not established: a second company or sector.
 No new error entry warranted; the break-even check is now in company-research.
 Reflection: 20260929T202906Z.
+
+## [ENT-009] | 2026-10-03 09:48 UTC | Neo | investing | ref: agentic-brain:reflections/2026-10-03_neo_materiality-is-the-break-even-test-applied-to-attention.md | see: 20261003T094145Z
+Session: combined closure of the 2026-09-29 to 2026-10-03 work across several conversations.
+Workstreams:
+- Wrote companies/CROX.md (commit 9f854f4): Bear/Base/Bull 61/133/188 dollars
+  against 122.63; near fair value, no margin of safety, Medium confidence.
+  First near-price test of the break-even rule; the tax-claim range could not
+  change the verdict.
+- Ran the investing-learning-loop under the real scheduler twice on 2026-09-30;
+  lease and supplier-finance notes in workspace 0a8a305 and 9302746. Suggi paused it.
+- Added a materiality-gated supplier-finance check to financial-health; the
+  published copy (commit 0d79955) is byte-identical to the workspace method.
+- Promoted both open LEARNINGS entries into knowledge files and added Masco and
+  P&G evidence for the immaterial case (workspace 3b3a697, 37ba3dd).
+- Kept the SEC ingestion pilot as the single open task; identity v1.9 archives v1.8.
+Verified: source quotes and strict citation checks, knowledge validators,
+scoped commits, reflection format gate and lossless identity archive.
+Reflection: 20261003T094145Z.
