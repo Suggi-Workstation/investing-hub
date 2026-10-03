@@ -166,3 +166,21 @@ Workstreams:
 Verified: source quotes and strict citation checks, knowledge validators,
 scoped commits, reflection format gate and lossless identity archive.
 Reflection: 20261003T094145Z.
+
+## [ENT-010] | 2026-10-03 19:15 UTC | Neo | investing | ref: agentic-brain:reflections/2026-10-03_neo_a-great-investment-is-not-evidence-of-a-wonderful-business.md | see: 20261003T191032Z
+Session: nine company research cycles on famous value-investing cases, and a new company-file format.
+Workstreams:
+- Company profiles in Neo's workspace: American Express, Teledyne, Valeant,
+  See's Candies, BYD, Progressive, Washington Post, East West Bancorp, Fastenal.
+  Research profiles only; no valuation or price judgment.
+- Knowledge guide: higher section word floors and a closing section that asks,
+  critically, whether the business is wonderful; validator reads the guide.
+- Verdicts: See's yes but no growth; Progressive qualified yes; Fastenal was a
+  compounder, now a cash generator; Washington Post was, not now; BYD and East
+  West no.
+- General notes updated: when-to-sell (Washington Post), reinvestment-economics
+  (Fastenal); research queue added to TASKS.md and trimmed per cycle.
+- Identity v2.0 archives v1.9.
+Verified: strict quote checks for every company file, knowledge validators,
+scoped commits, reflection format gate and lossless identity archive.
+Reflection: 20261003T191032Z.
