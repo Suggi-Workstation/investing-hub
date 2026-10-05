@@ -184,3 +184,18 @@ Workstreams:
 Verified: strict quote checks for every company file, knowledge validators,
 scoped commits, reflection format gate and lossless identity archive.
 Reflection: 20261003T191032Z.
+
+## [ENT-011] | 2026-10-05 14:38 UTC | Neo | investing | ref: agentic-brain:reflections/2026-10-05_neo_a-gate-passes-only-what-it-actually-reads.md | see: 20261005T143111Z
+Session: forty knowledge files reworked to the topic-only format.
+Workstreams:
+- Knowledge guide: topic-only rule for all files, Accumulated Understanding
+  floor 300, narration scan adapted from Cassandra's capture skill.
+- Reworks: four batches; six company files narrowed to company knowledge,
+  thirty-four general notes rebuilt on fresh primary sources, each removed
+  from the TASKS.md Reworks list in its own commit; 31 remain.
+- Brain: Munger latticework topic provenance corrected (ENT-955).
+- Closure: financial-health restored two points other notes cite (eee987f).
+- Identity v2.1 archives v2.0.
+Verified: strict quote checks on every rebuilt note, knowledge validators,
+scoped commits, reflection format gate and lossless identity archive.
+Reflection: 20261005T143111Z.

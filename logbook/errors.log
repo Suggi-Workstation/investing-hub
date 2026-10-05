@@ -92,3 +92,15 @@ starts with a materiality gate. workspace-ops names rm -rf inside combined
 commands as the trap.
 Verification: the script returned exit 0 with main for all three repositories.
 Reflection: 20261003T094145Z.
+
+## [ENT-007] | 2026-10-05 14:38 UTC | Neo | error | ref: agentic-brain:reflections/2026-10-05_neo_a-gate-passes-only-what-it-actually-reads.md | see: 20261005T143111Z
+Scar: a gate failed open and committed one note past a failed evidence check.
+Cause: the check's output was piped through grep and tail before the commit,
+  so the pipeline returned tail's exit status, not the check's.
+Related: a hand-resumed chain skipped a step; the rewritten gate then halted
+  on a clean file because grep exits 1 when it finds nothing.
+Fix: finish script redirects each check to a log and tests its own exit code,
+  reruns whole after a stop; scan code 0 or output = hit, 1 = clean, >1 = error.
+Gate: learnings-capture now forbids piped gates and requires a known-pass and
+  known-fail test; rebuilt notes get an inbound-citation check before commit.
+Reflection: 20261005T143111Z.
