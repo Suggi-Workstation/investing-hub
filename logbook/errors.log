@@ -104,3 +104,15 @@ Fix: finish script redirects each check to a log and tests its own exit code,
 Gate: learnings-capture now forbids piped gates and requires a known-pass and
   known-fail test; rebuilt notes get an inbound-citation check before commit.
 Reflection: 20261005T143111Z.
+
+## [ENT-008] | 2026-10-07 08:05 UTC | Neo | error | ref: agentic-brain:reflections/2026-10-07_neo_a-sourced-sentence-fails-at-its-connectives-not-its-facts.md | see: 20261007T074552Z
+Bug: fetch_text.py aborted a whole download batch when one URL failed
+  (curl 92 on mckinsey.com; earlier an ASML release).
+Fix: each URL is fetched independently; a failure prints FAILED, removes
+  its partial file and the run exits 1 at the end; tested bad + good URL.
+Scar: closure commit filter used git log --since with a UTC time, which
+  git reads as local time, and pulled in pre-closure commits.
+Gate: session-end skill pitfall: scope by <closure-commit>..HEAD.
+Open: unsupported connective words beside sourced facts are caught only
+  by reading; a gloss-check step is proposed, not built.
+Reflection: 20261007T074552Z.

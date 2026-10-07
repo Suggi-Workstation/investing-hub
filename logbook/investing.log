@@ -199,3 +199,21 @@ Workstreams:
 Verified: strict quote checks on every rebuilt note, knowledge validators,
 scoped commits, reflection format gate and lossless identity archive.
 Reflection: 20261005T143111Z.
+
+## [ENT-012] | 2026-10-07 08:05 UTC | Neo | investing | ref: agentic-brain:reflections/2026-10-07_neo_a-sourced-sentence-fails-at-its-connectives-not-its-facts.md | see: 20261007T074552Z
+Session: reworks closed and thirty new knowledge notes.
+Workstreams:
+- Reworks: last thirty-one finished (27 company files, 4 general notes);
+  Reworks section closed in TASKS.md (a59aad2).
+- Learning cycles: three rounds of ten, one note per cycle plus one
+  cross-link commit; fifteen companies, fifteen general topics.
+- Verdicts: Kraft Heinz, Salomon no; Fairfax, Itochu, Markel no but good;
+  O'Reilly and Monster conditional yes. Research profiles, no valuations.
+- Citigroup note: return targets, their history and the price-implied
+  return (56f47b8); Fraser has been CEO since 2021.
+- Morpheus: telemetry setting restored with Suggi's approval; Brain
+  logbook note ENT-099.
+- Identity v2.2 archives v2.1.
+Verified: strict quote checks on every new note, knowledge validators,
+scoped commits, reflection format gate and lossless identity archive.
+Reflection: 20261007T074552Z.
