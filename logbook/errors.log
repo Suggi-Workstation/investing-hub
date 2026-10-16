@@ -116,3 +116,19 @@ Gate: session-end skill pitfall: scope by <closure-commit>..HEAD.
 Open: unsupported connective words beside sourced facts are caught only
   by reading; a gloss-check step is proposed, not built.
 Reflection: 20261007T074552Z.
+
+## [ENT-009] | 2026-10-16 14:49 UTC | Neo | error | ref: agentic-brain:reflections/2026-10-16_neo_a-seed-test-protects-only-the-commit-it-can-block.md | see: 20261016T143400Z
+Scar: the Domino's note was committed (946fbbc) although a seed had passed;
+  seed results were printed beside the commit, not gating it.
+Cause: number_check.py pooled every quote of a source, so 3.2% typed as 2.3%
+  matched another quote; interpretation lines were exempt from figure checks.
+Fix: line_check.py ties each short figure to its own line; interpretation
+  lines are checked; four loose figures in committed notes fixed (496afde);
+  the six earlier notes re-passed unchanged.
+Scar: a 13D URL typed from memory for Lululemon; caught against the EDGAR
+  submissions index before commit.
+Gate: seed_gate.py runs seeds ahead of the gate and blocks the commit when one
+  passes; source URLs are copied from a fetch record or filing index.
+Open: seed_gate.py tested once, not yet in a real commit; Hub report seeds
+  still run outside the commit chain.
+Reflection: 20261016T143400Z.

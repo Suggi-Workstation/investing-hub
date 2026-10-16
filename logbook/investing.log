@@ -217,3 +217,25 @@ Workstreams:
 Verified: strict quote checks on every new note, knowledge validators,
 scoped commits, reflection format gate and lossless identity archive.
 Reflection: 20261007T074552Z.
+
+## [ENT-013] | 2026-10-16 14:49 UTC | Neo | investing | ref: agentic-brain:reflections/2026-10-16_neo_a-seed-test-protects-only-the-commit-it-can-block.md | see: 20261016T143400Z
+Session: valuations at volume, results reviews and twenty new company notes.
+Workstreams:
+- Learning cycles (2026-10-07 afternoon, unlogged until now): ten notes, among
+  them Precision Castparts, TJX, ADP, Occidental, General Re, index funds,
+  market-level valuation, acquisitions and activism (945050d..dd6028b).
+- Results reviews against Suggi's theses: Citigroup Q3, ASML Q3, Crocs; notes
+  on bank credit costs, equipment orders, lithography substitution and equity
+  bonds (29b78cd, cc14b29, 9e5386b, d83d2ae, da0e78a).
+- Recession claim checked against NBER and GDP data: not supported for the US,
+  euro area or China (dc35fd1).
+- Hub reports: ADBE, BKNG, MRVL, CSU, RDDT (edc37ba); FICO, ZTS, INTU, CPRT,
+  KNSL, DPZ, LULU, IT, STZ, CMCSA (6602830). None at a 30% margin of safety;
+  Adobe closest at 28.6% below Base.
+- Workspace: a company note for every valued company, five general notes
+  extended with the October cases; TASKS I4 added (a87b4b9).
+- Identity v2.3 archives v2.2 (c091e41).
+Verified: scripted figure checks and seeds on every report and note, strict
+quote checks, knowledge validators, scoped commits, reflection format gate and
+lossless identity archive.
+Reflection: 20261016T143400Z.
