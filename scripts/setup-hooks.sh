@@ -4,4 +4,4 @@
 # It switches on the local ASCII guard for this repo on this machine.
 git config core.hooksPath .githooks
 chmod +x .githooks/pre-commit
-echo "Done. This machine now refuses non-ASCII commits in this repo."
+echo "Done. This machine now auto-fixes non-ASCII characters in commits to this repo."
