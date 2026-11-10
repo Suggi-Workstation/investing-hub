@@ -151,6 +151,7 @@ Tencent's capital spending is now far above its depreciation, so these owner ear
 **Summary:** Tencent's owner earnings on this basis are about RMB23.65 a share, or HK$27.79, 6.6% of its HK$418.00 price (derived from [8]).
 The Base case grows them more slowly than the 2025 rate and counts listed investees at 70% and unlisted ones at 50% of their stated values (assumption).
 The Bear case adds a charge of RMB164 billion for AI capital that earns half its cost (assumption).
+The Bear/Base/Bull estimated values for Tencent are HK$338/HK$508/HK$682 a share (derived).
 Tencent's price is 18% below this Base value and 24% above the Bear value (derived).
 
 | Case | Tencent value/share (HK$) | Tencent stake (EUR bn) | Other assets counted at; less net debt and capitalized costs (EUR bn) | Value/share (sum of parts, EUR) | Price at 30% discount | Price at 50% discount |
