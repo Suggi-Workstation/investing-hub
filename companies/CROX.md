@@ -5,10 +5,10 @@ tier: company-research
 author: Neo
 ticker: CROX
 exchange: Nasdaq
-review_date: 2026-09-29
-data_cutoff: 2026-09-29T21:20:22Z
+review_date: 2026-11-10
+data_cutoff: 2026-11-10T04:45:00Z
 reporting_currency: USD
-tags: [footwear, consumer-brands, asset-light, acquisitions]
+tags: [footwear, consumer-brands, asset-light, acquisitions, buybacks]
 links:
   - governance/template-company.md
   - frameworks/sector-metrics.md
@@ -19,18 +19,18 @@ links:
   - frameworks/investment-thesis.md
 ---
 
-# Crocs -- A Highly Profitable Clog, Priced Near Its Value
+# Crocs -- A Highly Profitable Clog, Now Priced Slightly Above Its Value
 
-Crocs makes most of its money from one iconic product family, the Crocs clog, sold through retailers and its own stores and websites.[1]
-That brand earns exceptional margins on little capital, but its $2 billion HEYDUDE acquisition has failed and the company carries debt and a large long-term tax liability.[1][2][11]
-The current price is close to what 2025-level owner cash is worth, so it offers little margin of safety for a fashion-sensitive business.
-**Thesis status:** Thesis not supported at the current price. **Confidence:** Medium. **Valuation status:** Completed; Base value $133 per share against a $122.63 price.
+Crocs makes most of its money from one product family, the Crocs clog, sold through retailers and its own stores and websites in more than 85 countries.[1]
+The brand earns high margins on little capital, but the $2.05 billion HEYDUDE acquisition has failed, and the company carries debt and a large long-term tax liability.[1][2][8]
+Owner earnings to common shareholders are about USD 690 million a year, USD 14.90 a share and 9.3% of the share price (derived).
+**Thesis status:** Thesis not supported at the current price. **Confidence:** Medium. **Valuation status:** Completed as a cash DCF; Base value USD 146 per share against a USD 160.23 price.
 
-**Identity and basis:** Crocs, Inc. (Delaware), common stock CROX on Nasdaq; no ADR or second share class.[1][15]
-Reviewed 2026-09-29 by Neo; information cutoff as in frontmatter.
-US GAAP consolidated statements, December year-end; amounts in USD millions unless stated per share, in units or in percent.
-**History covered:** 2023-2025 annual statements and the six months to June 30, 2026 in detail.[1][2]
-Downside references are the 2007-2009 and 2016-2018 statements of operations.[12][13]
+**Identity and basis:** Crocs, Inc. (Delaware); common stock CROX on Nasdaq, of which 45,725,039 shares were outstanding as of October 22, 2026.[2]
+Reviewed 2026-11-10 by Neo; information cutoff as in frontmatter.
+US GAAP, consolidated, fiscal year ending December 31; filing figures in USD thousands as printed; valuation inputs in USD millions.
+**History covered:** fiscal 2023 to 2025 and the first nine months of 2026.[1][2]
+Downturn references: selected financial data for 2005 to 2009 and 2014 to 2018.[9][10]
 
 ## Business and Method
 
@@ -38,177 +38,162 @@ Downside references are the 2007-2009 and 2016-2018 statements of operations.[12
 
 | Question | Assessment / evidence |
 |:--|:--|
-| Who pays, for what, and why do customers return? | Consumers buy Crocs clogs, sandals and Jibbitz charms, and HEYDUDE casual shoes, through retailers and Crocs' own stores and websites; digital sales were 37.8% of 2025 revenue.[1] |
-| Segments, geography and principal competitors | 2025 revenue of 4,040.6 split Crocs Brand 3,325.8 and HEYDUDE 714.8; products sell in more than 85 countries; the 10-K names Nike, adidas, Deckers, Birkenstock, Steven Madden, Wolverine and VF as competitors.[1][3] |
-| Main revenue, margin and cash-generation drivers | Crocs Brand segment operating margin was 33.4% in 2025 and 36.1% in 2024 (derived); 2025 prices fell on discounting, Q2 2026 prices rose on international price increases, and duties cut 2025 gross margin by 130 basis points.[1][2] |
-| Capital required and who bears financing risk | Manufacturing is outsourced, with 45% of Crocs Brand output from Vietnam and 45% from one maker; 2025 capex was 51.2; owners bear 1,334 of borrowings and 639.6 of long-term income taxes payable, against 637.0 of unrecognized tax benefits at end-2025.[1][2] |
-| Sector-specific measures and historical comparison | Owner cash after capex and stock pay, before financing, was 902.5 / 966.7 / 682.3 in 2023-2025 (derived); operating losses of 188.3 in 2008 and 6.2 in 2016 show the downside.[1][12][13] |
-| Circle of competence and decisive limitations | An asset-light brand business is understandable; how long a fashion-sensitive clog stays in demand cannot be forecast, which is the competence limit. |
-| Principal valuation method / useful cross-check | Simple DCF on normalized pre-financing owner cash, deducting borrowings and part of the tax liability; cross-check: the owner cash the price implies. |
+| Who pays, for what, and why do customers return? | Consumers buy clogs, sandals and charms under the Crocs name and casual shoes under HEYDUDE, because they like the look and the comfort. Nothing obliges a second purchase. |
+| Segments, geography and principal competitors | Two brands: in 2025 Total Crocs Brand revenue was 3,325,807 and Total HEYDUDE Brand revenue 714,840.[1] Any maker of casual footwear is a competitor. |
+| Main revenue, margin and cash-generation drivers | Demand for the clog and the price it can hold. Crocs Brand income from operations was 1,111,679 in 2025, about 33.4% of its revenue (derived from [1]). |
+| Capital required and who bears financing risk | Little: third-party manufacturers make the shoes, and purchases of property, equipment and software were 51,231 in 2025.[1] Owners stand behind borrowings of 1,313,000 at face value and long-term income taxes payable of 641,563.[2] |
+| Sector-specific measures and historical comparison | Income (loss) from operations was (188,282) in 2008 and (51,184) in 2009, and (72,324) in 2015 and (6,154) in 2016.[9][10] |
+| Circle of competence and decisive limitations | An asset-light brand is understandable. How long a fashion-sensitive clog stays wanted cannot be forecast, and that is the limit. |
+| Principal valuation method / useful cross-check | Simple DCF on owner cash before financing, less borrowings and part of the tax liability. Cross-checks: guided earnings, and the owner cash the price implies. |
 
-**Summary:** Crocs is a brand owner that designs and markets shoes others manufacture, so almost all value comes from consumer demand for the clog.[1]
-The right measure is owner cash after capex and stock pay, because reported profit swings with impairments and unusual tax items.[1]
-Its history shows two demand slumps, with operating losses in 2008-2009 and again in 2016, so current margins are a peak-cycle reading unless demand proves durable.[12][13]
-The competence limit is fashion durability, not accounting.
+**Summary:** Crocs designs and markets shoes that others make, so almost all its value is consumer demand for the clog.
+That demand has been strong for years and collapsed twice before, with operating losses each time.
+The right measure is cash after capital spending and stock pay, because reported profit swings with impairments and unusual tax items.
+Current margins are a good-times reading unless the brand proves more durable than its own history.
 
 ## Management
 
-**Coverage: Assessed; Medium confidence.** Andrew Rees joined as President in June 2014 and has been CEO since June 2017; there is no controlling shareholder; the proxy lists BlackRock (11.0%), Vanguard (10.9%) and FMR (8.4%) from 13G filings dated early 2024.[4]
+**Coverage: Assessed.**
+**Decision-makers:** Andrew Rees, Chief Executive Officer.[4]
 
 | Statement date / original commitment | Metric, scope / target horizon | Actual year 1 / 2 / 3 | Delivery pattern / explanation |
 |:--|:--|:--|:--|
-| 2023-02-16: FY2023 outlook | Adjusted EPS $11.00-11.31; HEYDUDE revenue up mid-20%.[8] | Adjusted EPS $12.03; HEYDUDE up 6.0% to 949.[6][7] | EPS beat; HEYDUDE overpromised. |
-| 2024-02-15: FY2024 outlook | Adjusted EPS $12.05-12.50; HEYDUDE flat to slightly up.[7] | $13.17; HEYDUDE 824.1, down 13.2% (derived).[1][6][7] | EPS beat; HEYDUDE overpromised. |
-| 2025-02-13: FY2025 outlook and margin commitment | Adjusted operating margin about 24.0%, and at or above that level in later years; HEYDUDE down 9% to 7%.[6] | Outlook withdrawn 2025-05-08; margin 22.3%; HEYDUDE down 13.3%.[1][5][9] | Overpromised; the margin floor broke in its first year. |
-| 2026-02-12: FY2026 outlook | Adjusted EPS $12.88-13.35.[5] | Raised to $13.20-13.75, then $13.70-14.00.[3][10] | Not yet due. |
+| February 2022: HEYDUDE acquisition | Consideration of $2.05 billion in cash and 2,852,280 shares.[8] | 2025: asset impairments of 738,115, for the HEYDUDE trademark and goodwill.[1] | Value destroyed; the largest capital decision of the period. |
+| February 2025: outlook for 2025 | Adjusted operating margin of approximately 24.0%.[6] | Guidance withdrawn in May 2025; the 2025 adjusted operating margin was 22.3%.[5][7] | Missed in its first year. |
+| February 2026: outlook for 2026 | Adjusted diluted earnings per share in the range of $12.88 to $13.35.[5] | October 2026: the range of $14.45 to $14.65, up from $13.70 to $14.00.[3] | Raised through the year; the first guide was cautious. |
+| Share repurchase authorization | Approximately $1.7 billion remained available for future repurchases at quarter-end.[3] | Third quarter of 2026: approximately 2.0 million shares for $250.0 million at the average share price of $123.32.[3] | Bought below the Base value here. |
 
-**Summary:** Management usually meets or beats company-wide earnings guidance, helped by buybacks and a strong Crocs Brand.[6][7]
-HEYDUDE guidance has been too optimistic every year since the acquisition, and the 24% margin commitment lasted less than a year.[1][6]
-The 2025 outlook withdrawal was prompt and blamed trade policy, which was outside management's control.[9]
-A missed forecast is not dishonesty.
+**Summary:** Management has run the Crocs brand well and usually beats its own company-wide guidance.
+Its record on the one large acquisition is poor, and a margin commitment made in 2025 did not last the year.
+The buybacks of 2026 were made at prices below the value estimated here.
 
 | Category | Answers / decisive fact | Score /5 | Confidence | Concern / reassessment trigger |
 |:--|:--|--:|:--|:--|
-| Integrity and candor | Impairments and the guidance withdrawal were disclosed promptly; no misconduct found in the filings reviewed.[1][9] | 3 | Medium | Repeated HEYDUDE optimism. |
-| Capital allocation | HEYDUDE cost $2.05B cash plus 2.85M shares, earned about 5.2% after tax on the cash price in 2024 (derived) and needed 737 of impairments in 2025.[1][11] | 2 | Medium | H1 2026 buybacks of 259.4 exceeded free cash flow of 232.0, with net borrowing of 72.[2] |
-| Ownership and incentives | Rees holds 1,016,929 shares incl. 200,000 options (2.0%), against 2025 pay of $10.96M; bonuses use adjusted EBIT and adjusted free cash flow.[4] | 3 | Medium | No return-on-capital metric; PSUs use operating margin and revenue with a relative-return modifier. |
-| Execution and adaptability | Company revenue rose from 1,023.5 in 2017 to 4,040.6 in 2025; the Crocs Brand passed $1B in one quarter for the first time in Q2 2026.[1][3][13] | 4 | Medium | HEYDUDE revenue fell 25% from 2023 to 2025 (derived). |
-| Governance and minority treatment | Independent chair and majority-vote policy, but a classified board of nine in three classes.[4] | 3 | Medium | WIT Partners holds 2,852,280 shares, the exact number issued to HEYDUDE's sellers.[4][11] |
-| **Overall** | **Adequate: (3 + 2 + 3 + 4 + 3) / 5 = 3.0; no override.** | **3.0** | **Medium** | **Another large acquisition, or buybacks funded by debt above value.** |
+| Integrity and candor | The 2025 guidance was withdrawn openly: "we are withdrawing our guidance for 2025".[7] Adjusted results leave out the IEEPA tariff refunds of 64,071, so the one-off gain is not counted.[3] | 3 | Medium | Repeated optimism about HEYDUDE. |
+| Capital allocation | HEYDUDE cost $2.05 billion in cash plus shares and led to impairments of 738,115.[1][8] Nine-month 2026 repurchases of $500.6 million were about equal to free cash flow of 507,574.[2][3] | 2 | Medium | Another large acquisition, or buybacks funded by borrowing. |
+| Ownership and incentives | Mr. Rees beneficially owned 1,016,929 shares, 2.0% of the company, worth about USD 163 million at the current price (derived from [4][11]). | 3 | Medium | The proxy's performance measures are adjusted EBIT, adjusted free cash flow, revenue and adjusted EBIT operating margin; none is a return on capital.[4] |
+| Execution and adaptability | Total Crocs Brand revenue rose from 3,012,954 in 2023 to 3,325,807 in 2025, while Total HEYDUDE Brand revenue fell 13.3% in 2025.[1] | 4 | Medium | HEYDUDE shrinking again after its 2026 recovery. |
+| Governance and minority treatment | The Board consists of nine members divided into three classes, each elected to a three-year term.[4] | 3 | Medium | A classified board slows any change owners might want. |
+| **Overall** | **Adequate (mean 3.0)** | 3.0 | Medium | One more value-destroying deal would move it to Weak. |
 
-**Summary:** Management revived the Crocs Brand into one of footwear's most profitable businesses, which is real, sustained execution.[1][13]
-Its largest capital decision, HEYDUDE, destroyed value: roughly 5% after-tax returns on $2 billion of cash, then a $737 million write-down.[1][11]
-Buybacks since 2025 were bought below my Base value, at about $89 in 2025 (derived) and $106.87 in Q2 2026, which helps owners if that value holds.[3][5]
-The overall score sits exactly on the Adequate boundary; one more value-destroying deal would move it to Weak.
+**Summary:** The managers built one of the most profitable brands in footwear and then spent about two billion dollars on a second brand that did not work.
+Since then they have used cash for buybacks at sensible prices and some debt repayment.
+The overall score sits on the lower edge of Adequate because of the acquisition.
 
 ## Moat
 
-**Coverage: Assessed.** Perimeter: the Crocs Brand, which produced 82% of 2025 revenue and all of the segment profit; HEYDUDE shows no durable advantage.[1]
+**Coverage: Assessed.** Perimeter: the Crocs brand, which earns all of the segment profit; HEYDUDE shows no durable advantage.[1]
 
 | Mechanism | Present / Absent / Unknown | Answer / evidence | Contrary evidence | Confidence |
 |:--|:--|:--|:--|:--|
-| Switching costs | Absent | A consumer can buy any other shoe at no cost. | None. | High |
-| Network effects | Absent | More buyers do not make the product better for each buyer. | None. | Medium |
-| Brand, patents or licenses | Present | The Classic Clog, Croslite material and Jibbitz support a 61.3% Crocs Brand gross margin in 2025.[1] | 2025 discounting lowered prices; counterfeiting is a stated risk; demand collapsed in 2008 and 2016.[1][12][13] | Medium |
-| Structural cost advantage | Absent | Production is outsourced to third-party factories.[1] | None. | High |
-| Efficient scale | Absent | Footwear is a large, contestable market. | None. | High |
-| Scale economies shared | Absent | No evidence of passing scale savings to customers. | None. | Medium |
+| Switching costs | Absent | A buyer can choose any other shoe at no cost. | None. | High |
+| Network effects | Absent | None. | None. | High |
+| Brand, patents or licenses | Present | The clog is recognizable and cheap to make: Crocs Brand income from operations was about 33.4% of revenue in 2025 (derived from [1]). | Operating losses in 2008 and 2009 and again from 2014 to 2016.[9][10] | Medium |
+| Structural cost advantage | Absent | Production comes from third-party manufacturers, primarily in Vietnam for the Crocs Brand.[1] | None. | High |
+| Efficient scale | Absent | Footwear is a large market open to all. | None. | High |
+| Scale economies shared | Absent | No evidence. | None. | Medium |
 
-**Summary:** The only defense is the brand: people pay a premium for a recognizable clog that costs little to make.[1]
-Pricing power is mixed: Crocs discounted in 2025 but raised international prices in Q2 2026.[1][2]
-A brand built on a fashion statement can lose its pull faster than one built on habit or necessity, and Crocs has lived through that twice.[12][13]
+**Summary:** The only protection is the brand: people pay well for a recognizable clog that costs little to make.
+A brand built on a fashion statement can lose its pull faster than one built on habit, and Crocs has lived through that twice.
+Adjusted gross margin increased to 60.3% compared to 58.5% in the third quarter of 2026; the release does not show that higher prices caused it.[3]
 
 | Force / question | Pressure | Evidence-based answer | Confidence |
 |:--|:--|:--|:--|
-| Rivalry: can rivals compete away profit through price or capacity? | High | Large, well-funded footwear brands compete for the same casual wear.[1] | High |
-| Entry: what prevents a funded newcomer from winning customers? | Medium | A clog is easy to copy, but the Crocs name and distribution take years to build.[1] | Medium |
-| Suppliers: can essential providers capture the margin? | Medium | One maker produces 45% of Crocs Brand output, and duties cost 130 basis points of margin in 2025.[1] | Medium |
-| Buyers: can concentrated or price-sensitive customers force concessions? | Medium | Wholesale partners are cautious; Q2 2026 wholesale revenue fell 7.2% while direct sales grew 12.0%.[2][3] | Medium |
-| Substitutes: can another solution meet the need more cheaply or better? | High | Any casual shoe meets the need; teen surveys have put Crocs at 2% favorite-brand share among average-income teens.[14] | Low |
+| Rivalry: can rivals compete away profit through price or capacity? | High | Large footwear brands sell casual shoes to the same buyers. | High |
+| Entry: what prevents a funded newcomer from winning customers? | Medium | A clog is easy to copy; the name and the distribution take years. | Medium |
+| Suppliers: can essential providers capture the margin? | Medium | Production depends on third-party manufacturers, primarily in Vietnam.[1] | Medium |
+| Buyers: can concentrated or price-sensitive customers force concessions? | Medium | In the third quarter of 2026 Crocs Brand wholesale revenues decreased 0.5% while its direct-to-consumer revenues increased 8.2%.[3] | Medium |
+| Substitutes: can another solution meet the need more cheaply or better? | High | Any casual shoe meets the need. | High |
 
-**Summary:** Substitutes and rivals are the strongest pressures, because Crocs sells a want, not a need.[1]
-The brand offsets them while it stays in fashion, which it has since the 2016 loss.[1][13]
-Independent demand evidence is thin: the only survey detail found is Piper Sandler's 46th teen survey, fall 2023 by its numbering.[14]
+**Summary:** Rivals and substitutes are the strongest pressures, because Crocs sells a want and not a need.
+The brand offsets them while it stays in fashion, which it has since 2017.
+Growth now comes from abroad: in the third quarter of 2026 international revenues increased 11.8% while North America revenues decreased 2.1%.[3]
 
 | Protection /5 | Economics /5 | Durability /5 | Trend /5 | Class / trend | Confidence | Decisive evidence / limitation | Threat / reassessment trigger |
 |--:|--:|--:|--:|:--|:--|:--|:--|
-| 3 | 3 | 3 | 3 | **Narrow / stable** | Low | About 26% after-tax return on invested capital in 2025, derived from adjusted operating income.[1][5] Operating losses in 2008 and 2016.[12][13] | Crocs Brand revenue declining with rising discounts. |
+| 3 | 3 | 3 | 3 | Narrow / stable | Low | A segment margin of about a third of revenue, against operating losses in two earlier slumps (derived from [1]).[9][10] | Crocs Brand revenue falling with lower prices for two quarters. |
 
-**Summary:** The rubric gives Narrow: a real but copyable brand whose superior economics have not held through past downturns.[1][13]
-Confidence is Low because durability rests on fashion demand, for which I found little recent independent evidence.[14]
-Two consecutive quarters of falling Crocs Brand revenue with lower prices would signal erosion.
+**Summary:** The class is Narrow: a real but copyable brand whose economics have not held through past downturns.
+Confidence is Low because durability rests on fashion.
+Nothing in 2026 changes the class; international growth supports the trend score.
 
 ## Financial Health
 
-**Coverage: Assessed.** Review period 2023-2025 plus the six months to June 30, 2026.[1][2]
+**Coverage: Assessed.**
 
 | Area | Key measure / trend | Assessment | Confidence | Main vulnerability / trigger |
 |:--|:--|:--|:--|:--|
-| Earnings reliability | 2025 GAAP net loss of 81.2 after 738.1 of impairments; the effective tax rate swung from 9.6% to -4.3% to 211% in 2023-2025 (derived).[1] | Adequate | Medium | Tax outcomes from intra-group IP transfers.[1] |
-| Cash generation and conversion | Operating cash 930.4 / 992.5 / 710.4 in 2023-2025; H1 2026 270.8 versus 218.6.[1][2] | Strong | High | 2025 cash taxes and working capital lowered conversion.[1] |
-| Debt and solvency | Borrowings 1,334 at face; 1.36x 2025 adjusted EBITDA and 10.2x interest cover (derived); 639.6 of long-term income taxes payable.[1][2][5] | Adequate | Medium | 850 of term loan and notes mature in 2029.[2] |
-| Liquidity under stress | Two-year stress from June 2026 ends 69 above a 100 cash floor. | Adequate | Medium | Operating cash below about 165 a year. |
-| Growth and reinvestment returns | Capex 1.3% of 2025 revenue; Crocs Brand returns high; HEYDUDE about 5% on its cash price (derived).[1][11] | Adequate | Medium | Growth bought through acquisitions. |
-| **Overall** | **Headroom 69 above the floor at the stress minimum.** | **Watch** | **Medium** | **Debt-funded buybacks plus the tax liability.** |
+| Earnings reliability | 2025 ended with a net loss of (81,198) after asset impairments of 738,115.[1] Third-quarter 2026 gross profit includes IEEPA tariff refunds of 64,071.[3] | Adequate | Medium | One-off items in both directions. |
+| Cash generation and conversion | Cash provided by operating activities was 992,486 in 2024 and 710,431 in 2025, and 561,189 in the first nine months of 2026 against 457,901 a year earlier.[1][2] | Strong | High | Operating cash fell 28.4% in 2025.[1] |
+| Debt and solvency | Total face value of long-term borrowings of 1,313,000 against cash and cash equivalents of 163,457; long-term income taxes payable of 641,563.[2] | Adequate | Medium | A tax liability about half the size of the borrowings (derived from [2]). |
+| Liquidity under stress | The Revolving Facility matures in November 2027, with 113,000 drawn.[2] A two-year stress leaves about USD 100 million above a cash floor of 100 (derived from [2]). | Adequate | Medium | Operating cash below about 200 a year. |
+| Growth and reinvestment returns | Capital spending was about 1.3% of 2025 revenue (derived from [1]). | Adequate | Medium | Growth bought through acquisitions. |
+| **Overall** | **Headroom: about USD 100 million above the floor at the end of the stress (derived from [2]).** | **Watch** | Medium | Debt-funded buybacks beside the tax liability. |
 
-**Summary:** Crocs turns profit into cash well and needs little capital, so ordinary downturns are fundable.[1]
-The stress assumes operating cash falls to 200 a year, 72% below 2025, with capex of 75, no buybacks, the 134 revolver repaid at its November 2027 maturity and 100 of tax positions paid.[1][2]
-The 639.6 tax liability has no fixed payment date, and 850 of debt matures in 2029, so a demand slump would meet a refinancing need.[1][2]
-Watch reflects those claims, not a near-term solvency problem.
+**Summary:** Crocs turns profit into cash and needs little capital, so an ordinary downturn can be funded.
+The stress assumes operating cash of 200 a year, capital spending of 75, no buybacks, the revolver repaid and 100 of tax positions paid (assumption).
+Watch reflects the debt and the tax claim together, not a near-term solvency problem.
 
 ## Valuation
 
-**Coverage: Assessed;** all values reproduced by a second, independent calculation. Simple DCF at the fixed 10%, valued 2026-09-29 in USD, for the whole company's common equity.
-**Input line:** V0 = 720, owner cash before financing, after capex and with stock pay kept as a cost; the 2026 guidance implies 696-741 (derived), against 902.5 / 966.7 / 682.3 in 2023-2025.[1][3]
-A = cash 170.3 less 1,334 of borrowings, less 50% / 25% / 100% of the 639.6 tax liability in Base / Bull / Bear: -1,483.5 / -1,323.6 / -1,803.3.[2]
-S = 48.458M: 47,945,075 shares on 2026-07-23 plus 0.513M dilutive awards; P = $122.63, Nasdaq close 2026-09-29.[2][15]
-Operating leases stay in V0 as an operating cost; the 911 deferred tax asset is not added, because its benefit is the lower cash tax rate. **Type:** Cash DCF.
+**Coverage: Assessed.** Valuation date 2026-11-10; simple DCF at a 10% required return; USD millions.
+**Valuation type: cash DCF.** Owner cash is cash provided by operating activities less capital spending and share-based compensation, plus cash interest paid after tax at 23%, so it is cash before financing (derived from [1][2]).
+It was 966.7 in 2024, 682.3 in 2025 and 763.6 in the twelve months to September 2026, or about 714 without the tariff refunds (derived from [1][2][3]).
+Guided 2026 adjusted earnings before financing come to about 770 (derived from [2][3]).
+Input line: Crocs, 2026-11-10; owner cash before financing; V0 750; A -1,470.3 (Base); S 46.266 million; P USD 160.23 (derived).
+A is cash less the face value of borrowings, less 50% of the long-term income taxes payable in Base, 25% in Bull and 100% in Bear (assumption; derived from [2]).
+S is the shares outstanding on October 22, 2026 plus the third quarter's dilutive awards (derived from [2][3]).
+Owner earnings to common shareholders, after about 60 of after-tax interest: about 690, USD 14.90 a share and a 9.3% yield on the price; before financing the yield on enterprise value is about 8.4% (derived).
 
-| Case | g1 / g2 / X | PV years 1-10 | PV terminal | Value/share (USD, Cash DCF) | Price at 30% discount | Price at 50% discount |
+| Case | g1 / g2 / X | PV years 1-10 | PV terminal | Value/share (cash DCF) | Price at 30% discount | Price at 50% discount |
 |:--|:--|--:|--:|--:|--:|--:|
-| Base | 1% / 2% / 10 | 4,690.9 | 3,221.2 | 133 | 93 | 66 |
-| Bull | 5% / 3% / 12 | 5,490.2 | 4,928.6 | 188 | 131 | 94 |
-| Bear | -6% / -2% / 7 | 3,478.0 | 1,289.1 | 61 | 43 | 31 |
+| Base | 1% / 2% / 10 | 4,886.3 | 3,355.4 | 146 | 102 | 73 |
+| Bull | 5% / 3% / 12 | 5,718.9 | 5,133.9 | 206 | 144 | 103 |
+| Bear | -6% / -2% / 7 | 3,622.9 | 1,342.8 | 69 | 48 | 34 |
 
-**Summary:** The range turns on whether Crocs Brand demand holds: Bear assumes a fashion fade like the mid-2010s, Bull a return to 2023-2024 cash.[1][13]
-Base moves within $110-$139 across the stress tests: no growth $118; X of 8 $119; V0 of 620 $110; tax claim at 0% or 100% $139 or $126.
-The tax claim is valued as a range because no value in 0-100% reaches a 30% margin of safety or falls below the price.
-At Base growth, the price implies about 676 of annual owner cash, close to 2025's 682.3; a generous case, with 850.5 of cash, Bull growth and no tax claim, gives about $230.
-Terminal value is 40.7% of Base operating value, with implied continuing growth of 0%.
+**Summary:** The range turns on whether demand for the clog holds: the Bear case assumes a fade like the earlier slumps, the Bull case steady growth abroad with HEYDUDE stable (assumption).
+With no growth the Base value is about USD 130 a share; with an exit at 8 times, about USD 132 (derived).
+Owner cash 10% lower or higher gives about USD 129 or USD 164, and counting none or all of the tax liability gives about USD 153 or USD 139 (derived).
+At USD 160.23 the price implies owner cash of about 808 at Base growth and claims, 8% above V0 and above the guided-earnings figure (derived).
+A generous case, with owner cash of 770, Bull growth and no tax claim, gives about USD 216 a share (derived).
+The terminal value is 40.7% of the Base operating value, and an exit at ten times implies no growth after the tenth year (derived).
+Confidence is Medium: the cash is well documented, and the decisive input is how long the clog stays wanted.
 
 ## Investment Thesis
 
-**Coverage: Assessed. Status: Thesis not supported at the current price. Confidence: Medium.** Thesis tested: Crocs shares are priced with a margin of safety against durable Crocs Brand cash.
+**Coverage: Assessed. Thesis status: Thesis not supported at the current price. Confidence: Medium.**
 
 | Area | Conclusion / decisive evidence | Contrary evidence / limitation | Review trigger / date |
 |:--|:--|:--|:--|
-| Business / competence | Understandable, asset-light brand; record Crocs Brand quarter in Q2 2026.[3] | Operating losses in 2008-2009 and 2016 followed demand slumps.[12][13] | Q3 2026 results, due October 2026. |
-| Source of value / critical assumptions | About 720 a year of owner cash, held roughly flat.[1][3] | 2025 cash was 682.3 and HEYDUDE is still shrinking.[1] | Crocs Brand revenue and prices each quarter. |
-| Permanent-loss case / protection | A fashion fade toward Bear ($61) would halve the price. | Debt and the tax claim amplify a decline.[2] | Two quarters of falling Crocs Brand revenue with lower prices. |
-| Quality, funding and valuation consistency | Narrow moat, Adequate management and Watch finances fit a Base case with no growth premium. | Bull needs HEYDUDE stabilized and Crocs Brand growth. | HEYDUDE revenue returning to growth. |
-| Value versus price / possible mispricing | Price is 7.6% below Base and 34.7% below Bull. | The market may doubt fashion durability more than I do, or see the tax claim as larger. | Price near $93, the 30% margin-of-safety level. |
-| **Overall / change since prior review** | **Near fair value; no margin of safety.** | **Initial assessment in this file.** | **Reassess at each results release.** |
+| Business / competence | An understandable, asset-light brand growing abroad.[3] | Operating losses followed both earlier demand slumps.[9][10] | Fourth-quarter 2026 results. |
+| Source of value / critical assumptions | Owner cash of about 750 a year, held roughly flat (derived). | It was 682.3 in 2025, and 2026 includes tariff refunds (derived from [3]). | Crocs Brand revenue and prices each quarter. |
+| Permanent-loss case / protection | A fashion fade toward the Bear value of about USD 69 a share (derived). | Debt and the tax claim deepen a decline.[2] | Two quarters of falling Crocs Brand revenue with lower prices. |
+| Quality, funding and valuation consistency | A Narrow moat, Adequate management and Watch finances fit a Base case with no growth premium. | The Bull case needs HEYDUDE to stay stable and the Crocs brand to keep growing. | HEYDUDE revenue each quarter. |
+| Value versus price / possible mispricing | Price 9% above Base, 22% below Bull and 134% above Bear (derived). | Buybacks at lower prices have raised value per share, and may continue. | A price near USD 102, the 30% discount to Base. |
+| **Overall / change since prior review** | **About fairly valued, slightly above Base; no margin of safety.** | **At the prior review of 2026-09-29 the Base value was USD 133 against a USD 122.63 price; the price has risen about 31% since and the value about 10% (derived).** | **Fourth-quarter 2026 results.** |
 
-**Summary:** The weakest assumption is that Crocs Brand demand stays near today's level for a decade, which the brand's own history makes uncertain.[12][13]
-The price already assumes roughly that, so the shares offer a small discount, not the margin of safety a fashion-exposed business needs.
-Buffett's four filters: the business is understandable, economics are strong but fashion-dependent, management is able but a poor acquirer, and the price is only slightly below value.
+**Summary:** The weakest assumption is that demand for the clog stays near today's level for a decade, which the brand's own history makes uncertain.
+The price now assumes a little more than that.
+Value per share has risen since September because owner cash is higher and buybacks below value have cut the share count.
 
 ### Final Verdict
 
-Crocs is a highly profitable, asset-light brand business with a narrow moat around the clog, adequate management whose largest acquisition failed, and manageable debt plus an uncertain tax liability.[1][2]
-At the Nasdaq close of $122.63 on 2026-09-29, Bear / Base / Bull values of $61 / $133 / $188 put the price 7.6% below Base estimated intrinsic value and 34.7% below Bull.[15]
-My judgment is roughly fairly valued, with Medium confidence: a small discount, but no margin of safety.
-This is a research assessment for an existing portfolio holding, not a sell instruction.
-I would reassess if the price falls toward $93, or if owner cash recovers sustainably above about 900 million a year.
+Crocs is a highly profitable, asset-light brand with a narrow moat around the clog, adequate managers whose largest acquisition failed, and manageable debt beside an uncertain tax liability.[1][2]
+At USD 160.23 per share (Nasdaq close, November 9, 2026) the price stands against Bear/Base/Bull estimated values of USD 69/USD 146/USD 206, 9% above the Base value (derived from [11]).[11]
+These are cash DCF estimates on owner cash that depends on fashion, so the range is wide.
+The judgment is about fairly valued, with Medium confidence: the price is a little above Base value and offers no margin of safety.
+This is a research assessment of an existing holding, not a sell instruction; the decisive risk is a third collapse in demand for the clog.
 
 ## Sources
 
-1. Crocs, Inc. 2026-02-12. "Form 10-K for the fiscal year ended December 31, 2025": statements pp.F-4 to F-8, segment results, tax note, sourcing and competition. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000006/crox-20251231.htm [high]
-
-2. Crocs, Inc. 2026-07-30. "Form 10-Q for the quarterly period ended June 30, 2026": balance sheet, cash flows, borrowings and cover shares. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000052/crox-20260630.htm [high]
-
-3. Crocs, Inc. 2026-07-30. "Crocs, Inc. Reports Record Second Quarter 2026 Results; Raises Full-Year 2026 Outlook," Exhibit 99.1. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000050/croxq22026-pressrelease.htm [high]
-
-4. Crocs, Inc. 2026-04-23. "Definitive Proxy Statement (DEF 14A)": ownership, board and compensation. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000020/crox-20260423.htm [high]
-
-5. Crocs, Inc. 2026-02-12. "Fourth Quarter and Full-Year 2025 Results," Exhibit 99.1. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000004/croxq42025-pressrelease.htm [high]
-
-6. Crocs, Inc. 2025-02-13. "Fourth Quarter and Full Year 2024 Results," Exhibit 99.1. https://www.sec.gov/Archives/edgar/data/1334036/000133403625000007/croxq42024-pressrelease.htm [high]
-
-7. Crocs, Inc. 2024-02-15. "Fourth Quarter and Full Year 2023 Results," Exhibit 99.1. https://www.sec.gov/Archives/edgar/data/1334036/000133403624000022/crox123123earningsreleasea.htm [high]
-
-8. Crocs, Inc. 2023-02-16. "Fourth Quarter and Full Year 2022 Results," Exhibit 99.1. https://www.sec.gov/Archives/edgar/data/1334036/000133403623000012/crox123122earningsreleasea.htm [high]
-
-9. Crocs, Inc. 2025-05-08. "First Quarter 2025 Results," Exhibit 99.1. https://www.sec.gov/Archives/edgar/data/1334036/000133403625000052/croxq12025-pressrelease.htm [high]
-
-10. Crocs, Inc. 2026-04-30. "First Quarter 2026 Results," Exhibit 99.1. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000029/croxq12026-pressrelease.htm [high]
-
-11. Crocs, Inc. 2023-02-16. "Form 10-K for the fiscal year ended December 31, 2022": HEYDUDE acquisition consideration and financing. https://www.sec.gov/Archives/edgar/data/1334036/000133403623000015/crox-20221231.htm [high]
-
-12. Crocs, Inc. 2010-02-25. "Form 10-K for the fiscal year ended December 31, 2009": 2007-2009 statements of operations. https://www.sec.gov/Archives/edgar/data/1334036/000104746910001357/a2196634z10-k.htm [high]
-
-13. Crocs, Inc. 2019-02-28. "Form 10-K for the fiscal year ended December 31, 2018": 2016-2018 statements of operations. https://www.sec.gov/Archives/edgar/data/1334036/000133403619000012/crox12311810-k.htm [high]
-
-14. SGB Media. "EXEC: Report Sees Crocs, Hoka, New Balance, and On Increasing Teen Appeal," reporting Piper Sandler's 46th semi-annual Taking Stock With Teens survey (fall 2023). https://sgbonline.com/report-sees-crocs-hoka-new-balance-on-increasing-with-teens/ [medium]
-
-15. Stock Analysis. "Crocs, Inc. (CROX)," quote $122.63 at the 2026-09-29 4:00 PM EDT close, inspected 2026-09-29. https://stockanalysis.com/stocks/crox/ [medium]
+1. Crocs, Inc. (2026). "Form 10-K for the fiscal year ended December 31, 2025." Filed 2026-02-12; business, segment results, impairments and cash flows. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000006/crox-20251231.htm [high]
+2. Crocs, Inc. (2026). "Form 10-Q for the quarterly period ended September 30, 2026." Filed 2026-10-29; cover shares, balance sheet, borrowings and cash flows. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000060/crox-20260930.htm [high]
+3. Crocs, Inc. (2026). "Crocs, Inc. Reports Strong Third Quarter 2026 Results; Raises Full-Year 2026 Outlook." Exhibit 99.1 to Form 8-K, filed 2026-10-29. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000058/croxq32026-pressrelease.htm [high]
+4. Crocs, Inc. (2026). "Definitive Proxy Statement." Filed 2026-04-23; board and beneficial ownership. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000020/crox-20260423.htm [high]
+5. Crocs, Inc. (2026). "Fourth Quarter and Full-Year 2025 Results." Exhibit 99.1 to Form 8-K, filed 2026-02-12; 2025 adjusted results and the first 2026 outlook. https://www.sec.gov/Archives/edgar/data/1334036/000133403626000004/croxq42025-pressrelease.htm [high]
+6. Crocs, Inc. (2025). "Fourth Quarter and Full Year 2024 Results." Exhibit 99.1 to Form 8-K, 2025-02-13; outlook for 2025. https://www.sec.gov/Archives/edgar/data/1334036/000133403625000007/croxq42024-pressrelease.htm [high]
+7. Crocs, Inc. (2025). "First Quarter 2025 Results." Exhibit 99.1 to Form 8-K, 2025-05-08; guidance withdrawn. https://www.sec.gov/Archives/edgar/data/1334036/000133403625000052/croxq12025-pressrelease.htm [high]
+8. Crocs, Inc. (2023). "Form 10-K for the fiscal year ended December 31, 2022." The HEYDUDE acquisition and its financing. https://www.sec.gov/Archives/edgar/data/1334036/000133403623000015/crox-20221231.htm [high]
+9. Crocs, Inc. (2010). "Form 10-K for the fiscal year ended December 31, 2009." Selected financial data for 2005 to 2009. https://www.sec.gov/Archives/edgar/data/1334036/000104746910001357/a2196634z10-k.htm [high]
+10. Crocs, Inc. (2019). "Form 10-K for the fiscal year ended December 31, 2018." Selected financial data for 2014 to 2018. https://www.sec.gov/Archives/edgar/data/1334036/000133403619000012/crox12311810-k.htm [high]
+11. Stock Analysis. (2026). "Crocs, Inc. (CROX) Stock Price History." Daily closes, accessed 2026-11-10. https://stockanalysis.com/stocks/crox/history/ [medium]
