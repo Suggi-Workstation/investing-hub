@@ -59,12 +59,15 @@ Current margins are a good-times reading unless the brand proves more durable th
 | Statement date / original commitment | Metric, scope / target horizon | Actual year 1 / 2 / 3 | Delivery pattern / explanation |
 |:--|:--|:--|:--|
 | February 2022: HEYDUDE acquisition | Consideration of $2.05 billion in cash and 2,852,280 shares.[8] | 2025: asset impairments of 738,115, for the HEYDUDE trademark and goodwill.[1] | Value destroyed; the largest capital decision of the period. |
-| February 2025: outlook for 2025 | Adjusted operating margin of approximately 24.0%.[6] | Guidance withdrawn in May 2025; the 2025 adjusted operating margin was 22.3%.[5][7] | Missed in its first year. |
+| February 16, 2023: outlook for 2023 | Revenues for the HEYDUDE Brand to grow mid-20%; adjusted diluted earnings per share of $11.00 to $11.31.[12] | 2023: HEYDUDE revenues increased 6.0% to $949 million.[13] Adjusted diluted earnings per share were $12.03.[6] | Earnings beat; HEYDUDE overpromised. |
+| February 15, 2024: outlook for 2024 | Revenues for the HEYDUDE Brand flat to slightly up; adjusted diluted earnings per share of $12.05 to $12.50.[13] | 2024: HEYDUDE revenues decreased 13.2% to $824 million; adjusted diluted earnings per share of $13.17.[6] | Earnings beat; HEYDUDE overpromised. |
+| February 13, 2025: outlook for 2025 | Operating margin of approximately 24.0% for 2025, and a commitment to an annual operating margin at or above this level beyond it; HEYDUDE Brand to be down approximately 9% to 7%.[6] | Guidance withdrawn in May 2025.[7] The 2025 adjusted operating margin was 22.3%, HEYDUDE revenues decreased 13.3% to $715 million and adjusted diluted earnings per share were $12.51.[5] | Missed in its first year; the October 2026 outlook is for a margin expanding modestly from 22.5%.[3] |
 | February 2026: outlook for 2026 | Adjusted diluted earnings per share in the range of $12.88 to $13.35.[5] | October 2026: the range of $14.45 to $14.65, up from $13.70 to $14.00.[3] | Raised through the year; the first guide was cautious. |
 | Share repurchase authorization | Approximately $1.7 billion remained available for future repurchases at quarter-end.[3] | Third quarter of 2026: approximately 2.0 million shares for $250.0 million at the average share price of $123.32.[3] | Bought below the Base value here. |
 
-**Summary:** Management has run the Crocs brand well and usually beats its own company-wide guidance.
-Its record on the one large acquisition is poor, and a margin commitment made in 2025 did not last the year.
+**Summary:** Management has run the Crocs brand well: it beat its earnings guidance in 2023 and 2024 and raised it through 2026.
+Its HEYDUDE guidance was too optimistic in 2023, 2024 and 2025, and the margin commitment made in February 2025 did not last the year.
+Its record on the one large acquisition is poor.
 The buybacks of 2026 were made at prices below the value estimated here.
 
 | Category | Answers / decisive fact | Score /5 | Confidence | Concern / reassessment trigger |
@@ -142,6 +145,8 @@ It was 966.7 in 2024, 682.3 in 2025 and 763.6 in the twelve months to September 
 Guided 2026 adjusted earnings before financing come to about 770 (derived from [2][3]).
 Input line: Crocs, 2026-11-10; owner cash before financing; V0 750; A -1,470.3 (Base); S 46.266 million; P USD 160.23 (derived).
 A is cash less the face value of borrowings, less 50% of the long-term income taxes payable in Base, 25% in Bull and 100% in Bear (assumption; derived from [2]).
+Deferred tax assets, net, were 904,841 at September 30, 2026.[2]
+They are not added to A, because their benefit is lower cash tax, which owner cash already includes; operating leases stay in owner cash as an operating cost (assumption).
 S is the shares outstanding on October 22, 2026 plus the third quarter's dilutive awards (derived from [2][3]).
 Owner earnings to common shareholders, after about 60 of after-tax interest: about 690, USD 14.90 a share and a 9.3% yield on the price; before financing the yield on enterprise value is about 8.4% (derived).
 
@@ -197,3 +202,5 @@ This is a research assessment of an existing holding, not a sell instruction; th
 9. Crocs, Inc. (2010). "Form 10-K for the fiscal year ended December 31, 2009." Selected financial data for 2005 to 2009. https://www.sec.gov/Archives/edgar/data/1334036/000104746910001357/a2196634z10-k.htm [high]
 10. Crocs, Inc. (2019). "Form 10-K for the fiscal year ended December 31, 2018." Selected financial data for 2014 to 2018. https://www.sec.gov/Archives/edgar/data/1334036/000133403619000012/crox12311810-k.htm [high]
 11. Stock Analysis. (2026). "Crocs, Inc. (CROX) Stock Price History." Daily closes, accessed 2026-11-10. https://stockanalysis.com/stocks/crox/history/ [medium]
+12. Crocs, Inc. (2023). "Fourth Quarter and Full Year 2022 Results." Exhibit 99.1 to Form 8-K, 2023-02-16; outlook for 2023. https://www.sec.gov/Archives/edgar/data/1334036/000133403623000012/crox123122earningsreleasea.htm [high]
+13. Crocs, Inc. (2024). "Fourth Quarter and Full Year 2023 Results." Exhibit 99.1 to Form 8-K, 2024-02-15; 2023 results and outlook for 2024. https://www.sec.gov/Archives/edgar/data/1334036/000133403624000022/crox123123earningsreleasea.htm [high]
