@@ -75,13 +75,14 @@ For a positive modeled value: `price at 30% discount = value/share * 0.70`; `pri
 - If X represents a perpetuity of the same distributable cash with no payout change, check implied continuing growth: `gT = (0.10 * X - 1) / (X + 1)`. Assess its plausibility; do not apply this identity to earnings, EBITDA or finite-life assets. Zero growth in years 1-10 does not establish zero growth afterward.
 - Calculate terminal dependence as `PV terminal / (PV years 1-10 + PV terminal)`; do not include A in that denominator or force a target percentage.
 - Where normalized earnings E and the reinvestment I funding growth are known, check the implied return on new capital: `r = g / (I / E)`. Below 10%, faster growth lowers value; challenge any case whose growth depends on it.
+- Report owner earnings per share, `V0 / S`, and with P their yield on price, `V0 / (S * P)`, both carrying the valuation-type label. Where net debt or net cash is material, add the same cash before after-tax interest over `S * P + net debt`; a wide gap means the yield on the shares is mostly leverage. Use the normalized V0 supplied, never reported earnings or one year's cash after capital spending.
 - Before release, MUST verify finite inputs, basis, units, financing date, all ten annual discounts, year-10 terminal discount, and single application of A. Verify `Bear <= Base <= Bull`; investigate reversed ordering rather than relabeling rows. A second calculation MUST reproduce the results.
 
 **PASS:** applicable cash/claim identities and arithmetic reconcile, assumptions are traceable and limitations reach the final labels. **HALT** missing inputs, inconsistent claims, an unrepresentable path or unsupported valuation claims. Unsupported cash conversion blocks a cash-DCF claim, not an explicitly labeled earnings proxy. Bear is a scenario, never a downside floor.
 
 ## Finished output
 
-Give one input line: company/date, currency, metric/claimholder basis, V0, A, S, optional P and valuation type. Select the type in this order:
+Give one input line: company/date, currency, metric/claimholder basis, V0, A, S, optional P and valuation type; add owner earnings per share and, with P, their yield on price. Select the type in this order:
 
 - **Earnings proxy:** earnings not reconciled to distributable cash; disclose any market-derived X too.
 - **Market-multiple hybrid:** cash reconciled, but X is market-derived.
