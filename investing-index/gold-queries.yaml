@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3.0'
 status: provisional-agent-curated
 description: Investing Hub retrieval benchmark.
 queries:
@@ -84,3 +84,133 @@ queries:
   gold_files:
   - frameworks/sector-metrics.md
   domain: cross-cutting
+- qid: i021
+  question: Could VantageScore's entry into Fannie Mae and Freddie Mac mortgages break FICO's pricing power, and how would that hit its value?
+  gold_files:
+  - companies/FICO.md
+  domain: companies
+- qid: i022
+  question: With subsidies in the e-commerce price war and AI data centre spending draining cash, what are Alibaba's Hong Kong shares really worth?
+  gold_files:
+  - companies/BABA.md
+  domain: companies
+- qid: i023
+  question: Did the HEYDUDE acquisition destroy value for Crocs shareholders, and how does it weigh on management's capital allocation score?
+  gold_files:
+  - companies/CROX.md
+  domain: companies
+- qid: i024
+  question: Has Matt Murphy's transformation of Marvell into an AI chip supplier come at the cost of heavy shareholder dilution?
+  gold_files:
+  - companies/MRVL.md
+  domain: companies
+- qid: i025
+  question: Is Comcast's roughly 20% owner cash yield a genuine bargain, or mostly leverage on a broadband business that keeps losing customers?
+  gold_files:
+  - companies/CMCSA.md
+  domain: companies
+- qid: i026
+  question: Why does ASML still look overvalued despite its EUV monopoly, and how much hinges on current record margins being a cyclical peak?
+  gold_files:
+  - companies/ASML.md
+  domain: companies
+- qid: i027
+  question: If Constellation Brands cut brewery capital spending to the level of depreciation, what would the beer franchise be worth per share?
+  gold_files:
+  - companies/STZ.md
+  domain: companies
+- qid: i028
+  question: What margin of safety does Lululemon offer after the Americas sales slump and CEO change, and how much confidence does it deserve?
+  gold_files:
+  - companies/LULU.md
+  domain: companies
+- qid: i029
+  question: Can Nintendo's cash generation across console cycles support its current share price, or does it require a far bigger Switch 2 cycle?
+  gold_files:
+  - companies/NTDOY.md
+  domain: companies
+- qid: i030
+  question: Which part of Citigroup actually has a moat, and why has the bank overall earned less than its cost of equity?
+  gold_files:
+  - companies/C.md
+  domain: companies
+- qid: i031
+  question: Has the AI-driven sell-off left Intuit trading below intrinsic value, and by how much?
+  gold_files:
+  - companies/INTU.md
+  domain: companies
+- qid: i032
+  question: Where does Kinsale's underwriting edge come from, and can it hold up as the E&S property market softens?
+  gold_files:
+  - companies/KNSL.md
+  domain: companies
+- qid: i033
+  question: How big a threat are AI booking agents to Booking Holdings, and what would its shares be worth if they capture travel demand?
+  gold_files:
+  - companies/BKNG.md
+  domain: companies
+- qid: i034
+  question: Who really controls Reddit through its dual-class shares and proxies, and what does that mean for outside Class A holders?
+  gold_files:
+  - companies/RDDT.md
+  domain: companies
+- qid: i035
+  question: Does buying Shareholder Value Beteiligungen at about a third below NAV give a real margin of safety?
+  gold_files:
+  - companies/SVE.md
+  domain: companies
+- qid: i036
+  question: What is PayPal worth if its earnings never grow again, and how does that compare with the current share price?
+  gold_files:
+  - companies/PYPL.md
+  domain: companies
+- qid: i037
+  question: Were Adobe's share buybacks and the abandoned Figma deal good uses of shareholder capital?
+  gold_files:
+  - companies/ADBE.md
+  domain: companies
+- qid: i038
+  question: Which single metric should we watch to judge whether AI is eroding Gartner's research subscription business?
+  gold_files:
+  - companies/IT.md
+  domain: companies
+- qid: i039
+  question: How risky is Domino's securitized debt, and what happens if the notes coming due are not refinanced on time?
+  gold_files:
+  - companies/DPZ.md
+  domain: companies
+- qid: i040
+  question: What makes Copart's salvage auction moat so durable, and why is the stock still not a bargain?
+  gold_files:
+  - companies/CPRT.md
+  domain: companies
+- qid: i041
+  question: After Mark Leonard stepped down, what return on new acquisitions must Constellation Software earn to justify its share price?
+  gold_files:
+  - companies/CSU.md
+  domain: companies
+- qid: i042
+  question: Is the slump in Zoetis's US companion animal sales a temporary dip or lasting share loss, and what is the stock worth?
+  gold_files:
+  - companies/ZTS.md
+  domain: companies
+- qid: i043
+  question: How much of Prosus's market value is covered by its Tencent stake alone, and does Naspers control limit the upside?
+  gold_files:
+  - companies/PRX.md
+  domain: companies
+- qid: i044
+  question: When a stock thesis rests on missing or conflicting evidence, which status and confidence level should the analyst assign?
+  gold_files:
+  - frameworks/investment-thesis.md
+  domain: frameworks
+- qid: i045
+  question: How did PayPal's revenue, free cash flow and share count evolve year by year since it was part of eBay?
+  gold_files:
+  - data/pypl-financial.md
+  domain: data
+- qid: i046
+  question: Can you pull up Crocs' annual revenue, operating income and net income for every year since its 2006 IPO?
+  gold_files:
+  - data/crox-financial.md
+  domain: data
