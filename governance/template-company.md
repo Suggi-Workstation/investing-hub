@@ -38,7 +38,7 @@ template, not in the published company report.
 - [ ] Management output includes the applicable questionnaire answers, original promises versus outcomes, scorecard and any overriding concern. (PASS / HALT)
 - [ ] Moat output includes applicable mechanism answers, competitive forces, separate dimensional ratings, confidence and the principal threat. (PASS / HALT)
 - [ ] Financial-health findings trace to historical statements, normalization and cash/claims bridges, and dated stressed funding; decisive gaps remain visible. (PASS / HALT)
-- [ ] Valuation uses sector-appropriate metrics and methods, presents Base/Bull/Bear cases with the correct cash/earnings and ownership labels, and marks unsupported case values N/A with the blocker. Calculations and material sensitivities are reproduced by a second calculation. (PASS / HALT)
+- [ ] Valuation uses sector-appropriate metrics and methods, lists material off-book items as ranges with what is counted, presents Base/Bull/Bear cases with the correct cash/earnings and ownership labels, and marks unsupported case values N/A with the blocker. Calculations and material sensitivities are reproduced by a second calculation. (PASS / HALT)
 - [ ] Thesis, contrary case, permanent-loss risk and review triggers agree with the business, management, moat, funding and valuation evidence. No composite investment score or trade instruction is added. (PASS / HALT)
 - [ ] Investment Thesis ends with Final Verdict immediately before Sources: integrated judgment, confidence, dated matching-share price, Base/Bull/Bear values and Base-case discount/premium. Its figures agree with Valuation; missing or stale evidence cannot support a current price judgment. (PASS / HALT)
 - [ ] The analytical body contains the six framework sections below. Each section states its coverage status; supported early conclusions identify skipped work without disguising gaps as neutral scores, zeros or completed valuations. (PASS / HALT)
@@ -287,6 +287,16 @@ Keep earnings-proxy, market-multiple-hybrid and cash-DCF labels distinct.
 **Summary:** Explain what drives the valuation range, which assumptions matter
 most and how much confidence the cash/claims basis warrants. Keep the valuation
 type explicit and separate business value from the subsequent price comparison.
+
+For either route, list the off-book items (`frameworks/simple-dcf.md`): every
+material part in neither the earnings basis nor the equity adjustment, valued as
+a signed range per share, counted only where cash, profit or a price supports it.
+Or write `Off-book items: none material (checked: <items>)`.
+
+| Item | Why outside V0 and A | Evidence and method | Value/share range | Counted in |
+|:--|:--|:--|:--|:--|
+
+**Summary:** One or two sentences: the largest hint and the event that would count it.
 
 For an alternative method, replace the DCF table with a compact method-specific
 Base/Bull/Bear table using the selected sector drivers and common value per

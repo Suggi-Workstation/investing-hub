@@ -33,6 +33,8 @@ Use this model only when a positive two-stage path represents the annual benefit
 
 Attach a filing/date/page or assumption label to every input. Convert per-share inputs to totals before calculation. Itemize A; include cash, debt, leases, preferred/minority claims and non-operating assets only as the supplied basis requires. Do not automatically subtract debt from an equity-basis model.
 
+List every material **off-book item**: a part whose value is in neither V0 nor A, such as an unlisted subsidiary or stake, an associate whose profit V0 excludes, a unit with no separate profit inside a reported segment, a loss-making unit, or growth of an existing unit beyond its current earnings. Omitting one values it at zero; never omit one silently. Value each as a signed range per share from the strongest evidence available, in this order: a market price for the part itself; an arm's-length sale, offering or funding round read with its terms; disclosed profit at a supported multiple; peer returns; announced plans. Capital invested is a check, not a value. Growth of a unit adds value only at returns above 10%: at 10% it adds nothing, below 10% it subtracts. Count an item in A only when cash, profit or a price supports it, after tax, access and control haircuts, and state which cases include it; show the rest as a hint. A material item whose range crosses the price or the verdict makes that conclusion Not calculable on present evidence. The margin of safety must stand on counted value alone.
+
 Use one method for existing noncommon equity claims: deduct their supplied economic value in A and use basic common shares; or use a justified diluted-equivalent S with exercise proceeds and A reconciled. Never apply both to the same claim. Separate existing awards from future compensation already charged in the forecast; do not charge the same future grants again through dilution or replacement buybacks. Check share classes, vesting and expense timing; an earnings-per-share weighted-average denominator is not automatically today's S.
 
 ## 3. Set Base, Bull and Bear
@@ -95,3 +97,8 @@ Give one confidence line: High / Medium / Low, decisive uncertainty, sensitivity
 | Base | | | | | | |
 | Bull | | | | | | |
 | Bear | | | | | | |
+
+After the case table's summary, give the off-book items table, or one line `Off-book items: none material (checked: <items>)`. Counted in is the cases whose A includes the item, or `Hint`. Follow the table with one or two sentences: the largest hint and the event that would count it (a disclosure, sale, listing or distribution).
+
+| Item | Why outside V0 and A | Evidence and method | Value/share range | Counted in |
+|:--|:--|:--|:--|:--|
