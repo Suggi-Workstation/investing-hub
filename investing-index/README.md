@@ -2,8 +2,9 @@
 
 Hybrid file retrieval over the `investing-hub` repository. It combines
 semantic search (embedding model in `config.yaml`) with BM25 keyword search,
-merges both rankings with Reciprocal Rank Fusion (RRF), and returns one best
-chunk per file.
+merges both rankings with Reciprocal Rank Fusion (RRF), reorders the first
+fused chunks with a reranker when `reranker.enabled` is set, and returns one
+best chunk per file.
 
 Gold questions measure the search results. They never influence live ranking.
 
@@ -18,6 +19,7 @@ Run from `/srv/investing/investing-hub`:
 /opt/repo-tools/venv/bin/python investing-index/eval.py --validate-only
 /opt/repo-tools/venv/bin/python investing-index/eval.py --verbose
 /opt/repo-tools/venv/bin/python investing-index/eval.py --baseline <earlier eval-results.json>
+/opt/repo-tools/venv/bin/python investing-index/eval.py --rerank on|off
 /opt/repo-tools/venv/bin/python investing-index/self-test.py
 ```
 
@@ -28,12 +30,15 @@ recovering a diagnosed corrupt index or changing the embedding model.
 
 - `index.py`: incremental/full index builder and freshness check.
 - `query.py`: dense + BM25 + RRF retrieval. BM25 matches lowercase words;
-  punctuation and Markdown marks separate words.
-- `eval.py`: relevance-set validation; Top-1/3/5, Recall, MRR and nDCG;
-  question-by-question comparison with an earlier run.
+  punctuation and Markdown marks separate words. The reranker scores the
+  first `reranker.top_k` fused chunks on their full text through the embed
+  daemon; without its answer the fused order is returned.
+- `eval.py`: relevance-set validation; Top-1/3/5, Recall, MRR, nDCG and
+  seconds per query; question-by-question comparison with an earlier run;
+  `--rerank on|off` overrides the config for one run.
 - `gold-queries.yaml`: curated questions and relevant repository files.
 - `self-test.py`: package contract and regression tests.
-- `config.yaml`: model, chunking, fusion, and data-path settings.
+- `config.yaml`: model, chunking, fusion, reranker, and data-path settings.
 
 ## Data and Evaluation
 

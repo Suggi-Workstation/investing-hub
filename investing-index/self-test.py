@@ -253,12 +253,67 @@ class IndexContractTests(unittest.TestCase):
         self.assertEqual([result["file"] for result in first], ["a.md"])
         self.assertEqual([result["file"] for result in second], ["b.md"])
 
+    @staticmethod
+    def _candidates(*chunk_ids):
+        chunks = [{"file": cid.split(":")[0] + ".md", "chunk_id": cid,
+                   "text": f"full text of {cid}"} for cid in chunk_ids]
+        ranked = [{"file": c["file"], "chunk_id": c["chunk_id"], "score": 1.0,
+                   "snippet": c["text"][:4]} for c in chunks]
+        return chunks, ranked
+
+    def test_rerank_orders_the_first_candidates_by_reranker_score(self):
+        chunks, ranked = self._candidates("a:0", "b:0", "c:0")
+        sent = []
+
+        def scores(question, texts):
+            sent.extend(texts)
+            return [0.1, 0.9]
+
+        with mock.patch.dict(query_mod.cfg, {"reranker": {"enabled": True, "top_k": 2}}), \
+                mock.patch.object(query_mod, "_daemon_rerank", scores):
+            result = query_mod.rerank("q", ranked, chunks)
+        self.assertEqual([r["file"] for r in result], ["b.md", "a.md", "c.md"])
+        self.assertEqual(sent, ["full text of a:0", "full text of b:0"])
+        self.assertEqual(result[0]["rerank_score"], 0.9)
+
+    def test_rerank_keeps_the_order_without_a_reranker_answer(self):
+        chunks, ranked = self._candidates("a:0", "b:0")
+        with mock.patch.dict(query_mod.cfg, {"reranker": {"enabled": True, "top_k": 25}}), \
+                mock.patch.object(query_mod, "_daemon_rerank", lambda question, texts: None):
+            result = query_mod.rerank("q", ranked, chunks)
+        self.assertEqual([r["file"] for r in result], ["a.md", "b.md"])
+
+    def test_rerank_is_not_called_when_disabled(self):
+        chunks, ranked = self._candidates("a:0", "b:0")
+        with mock.patch.dict(query_mod.cfg, {"reranker": {"enabled": False, "top_k": 25}}), \
+                mock.patch.object(query_mod, "_daemon_rerank") as called:
+            result = query_mod.rerank("q", ranked, chunks)
+        called.assert_not_called()
+        self.assertEqual(result, ranked)
+
+    def test_combine_returns_each_file_once_led_by_its_best_chunk(self):
+        chunks, ranked = self._candidates("a:0", "a:1", "b:0")
+        with mock.patch.dict(query_mod.cfg, {"reranker": {"enabled": True, "top_k": 25}}), \
+                mock.patch.object(query_mod, "_daemon_rerank",
+                                  lambda question, texts: [0.2, 0.9, 0.5]):
+            result = query_mod.combine("q", ranked, ranked, chunks, top_k=20)
+        self.assertEqual([r["chunk_id"] for r in result], ["a:1", "b:0"])
+
+    def test_eval_rejects_a_reranker_run_without_scores(self):
+        result = {"file": "a.md", "chunk_id": "a:0", "score": 1.0}
+        with mock.patch.dict(query_mod.cfg, {"reranker": {"enabled": True, "top_k": 25}}):
+            with self.assertRaises(ValueError):
+                eval_mod.require_reranked([result])
+            eval_mod.require_reranked([dict(result, rerank_score=0.5)])
+        with mock.patch.dict(query_mod.cfg, {"reranker": {"enabled": False, "top_k": 25}}):
+            eval_mod.require_reranked([result])
+
     def test_eval_rejects_an_empty_hybrid_modality(self):
         result = {"file": "a.md", "chunk_id": "a:0", "score": 1.0}
         with self.assertRaises(ValueError):
-            eval_mod.fuse_hybrid([], [result])
+            eval_mod.require_hybrid([], [result])
         with self.assertRaises(ValueError):
-            eval_mod.fuse_hybrid([result], [])
+            eval_mod.require_hybrid([result], [])
 
     def test_gold_set_is_complete_and_valid(self):
         queries = eval_mod.load_gold_queries()

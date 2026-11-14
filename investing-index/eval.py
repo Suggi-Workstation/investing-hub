@@ -5,6 +5,7 @@ import json
 import math
 import re
 import sys
+import time
 from pathlib import Path, PurePosixPath
 
 import yaml
@@ -14,8 +15,7 @@ REPO_ROOT = SCRIPT_DIR.parent
 EVAL_K = 20
 
 sys.path.insert(0, str(SCRIPT_DIR))
-from query import (cfg, deduplicate_files, dense_search, load_index, rerank,
-                   rrf_fusion, sparse_search)
+from query import cfg, combine, deduplicate_files, dense_search, load_index, sparse_search
 
 
 def load_gold_queries():
@@ -187,13 +187,18 @@ def prepare_eval():
     return queries, chunks, vectors
 
 
-def fuse_hybrid(dense: list, sparse: list) -> list:
+def require_hybrid(dense: list, sparse: list) -> None:
     """Require both retrieval branches before scoring the hybrid pipeline."""
     if not dense:
         raise ValueError("dense retrieval returned no candidates")
     if not sparse:
         raise ValueError("BM25 retrieval returned no candidates")
-    return rrf_fusion(dense, sparse, k=cfg["rrf"]["k"], top_k=EVAL_K)
+
+
+def require_reranked(results: list) -> None:
+    """With the reranker on, refuse a run whose results were not reranked."""
+    if cfg.get("reranker", {}).get("enabled") and "rerank_score" not in results[0]:
+        raise ValueError("reranker is on but gave no scores")
 
 
 def run_eval(verbose: bool = False):
@@ -205,13 +210,15 @@ def run_eval(verbose: bool = False):
     complete = 0
     top = {1: 0, 3: 0, 5: 0}
     details = []
+    sparse_search("warm up", chunks, top_k=1)  # keyword statistics are built once, outside the timing
+    started = time.perf_counter()
 
     for query in queries:
         dense = dense_search(query["question"], None, chunks, vectors, top_k=EVAL_K)
         sparse = sparse_search(query["question"], chunks, top_k=EVAL_K)
-        results = fuse_hybrid(dense, sparse)
-        results = deduplicate_files(results, top_k=EVAL_K)
-        results = rerank(query["question"], results, top_k=EVAL_K)
+        require_hybrid(dense, sparse)
+        results = combine(query["question"], dense, sparse, chunks, top_k=EVAL_K)
+        require_reranked(results)
 
         relevant = query["gold_files"]
         recall = recall_at_k(relevant, results)
@@ -245,6 +252,7 @@ def run_eval(verbose: bool = False):
             print()
 
     count = len(queries)
+    seconds = (time.perf_counter() - started) / count
     recall = recall_sum / count
     mrr = mrr_sum / count
     ndcg = ndcg_sum / count
@@ -255,6 +263,8 @@ def run_eval(verbose: bool = False):
     print(f"Recall@{EVAL_K}: {recall:.1%}")
     print(f"MRR:       {mrr:.4f}")
     print(f"nDCG@{EVAL_K}:   {ndcg:.4f}")
+    print(f"Reranker:  {'on' if cfg.get('reranker', {}).get('enabled') else 'off'}")
+    print(f"Seconds per query: {seconds:.2f}")
     print("PASS" if recall >= 0.80 else "FAIL: recall below 80%")
 
     output = {
@@ -266,6 +276,8 @@ def run_eval(verbose: bool = False):
         "recall_at_20": round(recall, 4),
         "mrr": round(mrr, 4),
         "ndcg_at_20": round(ndcg, 4),
+        "reranker": bool(cfg.get("reranker", {}).get("enabled")),
+        "seconds_per_query": round(seconds, 2),
         "results": details,
     }
     out_path = SCRIPT_DIR / "eval-results.json"
@@ -283,7 +295,11 @@ if __name__ == "__main__":
     parser.add_argument("--validate-only", action="store_true")
     parser.add_argument("--baseline", metavar="RESULTS_JSON",
                         help="compare this run with an earlier eval-results.json")
+    parser.add_argument("--rerank", choices=["on", "off"],
+                        help="run with the reranker on or off instead of the config setting")
     args = parser.parse_args()
+    if args.rerank:
+        cfg.setdefault("reranker", {})["enabled"] = args.rerank == "on"
     try:
         if args.validate_only:
             queries, _, _ = prepare_eval()

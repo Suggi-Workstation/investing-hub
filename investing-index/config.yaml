@@ -7,12 +7,11 @@ embedding:
   batch_size: 32
   device: "cpu"
 
+# The reranker model is loaded by the embed daemon; top_k is how many fused
+# chunks it scores per question.
 reranker:
   enabled: false
-  model: "BAAI/bge-reranker-base"
-  max_length: 512
-  batch_size: 16
-  top_k: 20
+  top_k: 25
 
 chunking:
   max_chars: 1500

@@ -255,9 +255,8 @@ def deduplicate_files(results: list, top_k: int = 20) -> list:
     return unique
 
 
-def rrf_fusion(dense_results: list, sparse_results: list,
-               k: int = 60, top_k: int = 20) -> list:
-    """Reciprocal Rank Fusion -- combine dense + sparse results."""
+def fuse_chunks(dense_results: list, sparse_results: list, k: int = 60) -> list:
+    """Reciprocal Rank Fusion of dense + sparse results, best chunk first."""
     scores = {}
     info = {}
 
@@ -276,47 +275,70 @@ def rrf_fusion(dense_results: list, sparse_results: list,
         result = dict(info[cid])
         result["rrf_score"] = round(scores[cid], 4)
         ranked.append(result)
-    return deduplicate_files(ranked, top_k=top_k)
+    return ranked
 
 
+# --- Reranker (stage 2) ---
+# The warm daemon also keeps the reranker loaded. It scores each of the
+# first candidates against the question on the candidate's full chunk text.
+# Without an answer from the daemon the fused order is returned unchanged.
 
-# Module-level cache: the cross-encoder loads ONCE per process, not per
-# query. Loading a 278M/1.1GB model per call made eval (100 queries) take
-# 13+ minutes; with the cache the model loads once and every query reuses it.
-_RERANKER_CACHE = {}
-
-
-def _get_reranker(rc: dict):
-    """Load the cross-encoder once per process; return cached instance."""
-    key = (rc["model"], rc.get("max_length", 512))
-    if key not in _RERANKER_CACHE:
-        from sentence_transformers import CrossEncoder
-
-        _RERANKER_CACHE[key] = CrossEncoder(
-            rc["model"], max_length=rc.get("max_length", 512)
-        )
-    return _RERANKER_CACHE[key]
-
-
-def rerank(query: str, results: list, top_k: int = 20) -> list:
-    """Cross-encoder rerank of fused candidates (stage 2, in-process)."""
-    if not results or not cfg.get("reranker", {}).get("enabled", False):
-        return results
+def _daemon_rerank(query: str, texts: list):
+    """Score (query, text) pairs with the daemon's reranker; None on failure."""
     try:
-        from sentence_transformers import CrossEncoder
-    except Exception:
-        print("reranker disabled: sentence-transformers unavailable")
-        return results
+        import urllib.request
 
-    rc = cfg["reranker"]
-    model = _get_reranker(rc)
-    pairs = [(query, r["snippet"]) for r in results]
-    scores = model.predict(pairs, batch_size=rc.get("batch_size", 16),
-                           show_progress_bar=False)
-    for r, s in zip(results, scores):
-        r["rerank_score"] = float(s)
-    reranked = sorted(results, key=lambda x: x["rerank_score"], reverse=True)
-    return reranked[:top_k]
+        payload = json.dumps({"query": query, "texts": texts}).encode("utf-8")
+        req = urllib.request.Request(
+            _EMBED_DAEMON_URL.rsplit("/", 1)[0] + "/rerank", data=payload,
+            headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            return json.loads(resp.read().decode("utf-8"))["scores"]
+    except Exception:
+        return None
+
+
+_TEXT_BUILT = None  # (chunks list, chunk_id -> full text): one build per loaded index
+
+
+def _full_text(chunks: list) -> dict:
+    """Return the chunk_id -> full text lookup for this chunk list, building it once."""
+    global _TEXT_BUILT
+    if _TEXT_BUILT is None or _TEXT_BUILT[0] is not chunks:
+        _TEXT_BUILT = (chunks, {c["chunk_id"]: c["text"] for c in chunks})
+    return _TEXT_BUILT[1]
+
+
+def rerank(query: str, ranked: list, chunks: list) -> list:
+    """Reorder the first reranker.top_k candidates by reranker score.
+
+    Candidates beyond top_k keep their place behind the reranked ones.
+    """
+    rc = cfg.get("reranker", {})
+    if not ranked or not rc.get("enabled", False):
+        return ranked
+    depth = rc.get("top_k", 25)
+    head, tail = ranked[:depth], ranked[depth:]
+    text = _full_text(chunks)
+    scores = _daemon_rerank(
+        query, [text.get(r["chunk_id"], r.get("snippet", "")) for r in head])
+    if scores is None or len(scores) != len(head):
+        print("reranker unavailable: results are in fused order", file=sys.stderr)
+        return ranked
+    head = [dict(r, rerank_score=float(s)) for r, s in zip(head, scores)]
+    head.sort(key=lambda r: r["rerank_score"], reverse=True)
+    return head + tail
+
+
+def combine(query: str, dense_results: list, sparse_results: list,
+            chunks: list, top_k: int) -> list:
+    """Fuse both result lists, rerank the first candidates, return one result per file."""
+    if dense_results and sparse_results:
+        ranked = fuse_chunks(dense_results, sparse_results, k=cfg["rrf"]["k"])
+    else:
+        ranked = dense_results or sparse_results
+    return deduplicate_files(rerank(query, ranked, chunks), top_k=top_k)
+
 
 def _nonnegative_int(value) -> bool:
     return isinstance(value, int) and not isinstance(value, bool) and value >= 0
@@ -518,25 +540,15 @@ if __name__ == "__main__":
     if not args.no_sparse:
         results_sparse = sparse_search(args.query, chunks, args.top_k)
 
-    if results_dense and results_sparse:
-        results = rrf_fusion(results_dense, results_sparse,
-                             k=cfg["rrf"]["k"], top_k=args.top_k)
-    elif results_dense:
-        results = results_dense[:args.top_k]
-    else:
-        results = results_sparse[:args.top_k]
-
-    results = deduplicate_files(results, top_k=args.top_k)
-
-    if cfg.get("reranker", {}).get("enabled", False):
-        results = rerank(args.query, results, top_k=args.top_k)
+    results = combine(args.query, results_dense, results_sparse, chunks,
+                      top_k=args.top_k)
 
     if not results:
         print("No results found.")
         sys.exit(0)
 
     for i, r in enumerate(results):
-        score = r.get("rrf_score", r.get("score", 0))
+        score = r.get("rerank_score", r.get("rrf_score", r.get("score", 0)))
         domain_str = f" [{r['domain']}]" if r.get("domain") else ""
         title_str = f" -- {r['title']}" if r.get("title") else ""
         print(f"\n[{i + 1}] {r['file']}{domain_str}{title_str}")
