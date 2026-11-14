@@ -1,9 +1,9 @@
 # investing-index config
-# EmbeddingGemma dense retrieval plus BM25 and RRF.
+# Dense retrieval plus BM25 and RRF.
 
 embedding:
-  model: "unsloth/embeddinggemma-300m"
-  dim: 768
+  model: "IEITYuan/Yuan-embedding-2.0-en"
+  dim: 1024
   batch_size: 32
   device: "cpu"
 
