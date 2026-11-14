@@ -5,8 +5,8 @@ tier: company-research
 author: Neo
 ticker: SVE
 exchange: Frankfurt (Xetra, open market)
-review_date: 2026-11-10
-data_cutoff: 2026-11-10T03:15:00Z
+review_date: 2026-11-14
+data_cutoff: 2026-11-14T05:45:00Z
 reporting_currency: EUR
 tags: [investment-company, net-asset-value, holding-discount, small-cap, germany]
 links:
@@ -28,7 +28,7 @@ No owner-earnings figure is defensible for a vehicle like this: an owner earns t
 
 **Identity and basis:** Shareholder Value Beteiligungen AG (Germany); registered shares SVE, ISIN DE000A168205, in the Basic Board of the Frankfurt Stock Exchange's open market.[4]
 One share class; 697,500 shares issued, of which 20,471 are treasury shares, leaving 677,029 outstanding (derived from [2][4]).
-Reviewed 2026-11-10 by Neo; information cutoff as in frontmatter.
+Reviewed 2026-11-10 by Neo, with management reassessed on 2026-11-14; information cutoff as in frontmatter.
 German Commercial Code (HGB), single-entity accounts, fiscal year equal to the calendar year; euros.
 **History covered:** 2025 and the first half of 2026, with NAV to 31 October 2026 and the company's own record since 2001.[1][2][3]
 
@@ -53,32 +53,37 @@ NAV is the measure that tracks owners' wealth, and it is the company's own unaud
 
 ## Management
 
-**Coverage: Limited** -- the managers' own shareholdings and the number of options granted are not disclosed in the documents used.
-**Decision-makers:** Dr. Helmut Fink, the executive board; Nils Herzing resigned from the board with effect from 30 August 2026.[2][4] Dr. Michael Drill chairs the supervisory board.[1]
+**Coverage: Assessed** -- the number of options granted is not disclosed in the documents used.
+**Decision-makers:** Dr. Helmut Fink is the sole executive board member since Nils Herzing resigned from the board with effect from 30 August 2026; Herzing stays with the company in an operating role in investment analysis.[2][10]
+Fink became an executive on 12 June 2025 after chairing the supervisory board, which Dr. Michael Drill has chaired since then, with Volker Schindler and David Bienbeck as members.[1]
+**Controlling holder:** Fink and persons closely associated with him held 224,386 shares at the end of 2025, about 33% of the shares outstanding and worth about EUR 19.6 million at EUR 87.50 (derived from [1][7]).
+**Origin:** SVB grew out of R 3000, a share club founded in 1980 to invest in smaller companies from German-speaking countries with a maximum risk of DM 3,000; Schindler is a founding member and still runs the club's investment policy.[1][14]
 
 | Statement date / original commitment | Metric, scope / target horizon | Actual year 1 / 2 / 3 | Delivery pattern / explanation |
 |:--|:--|:--|:--|
 | Standing long-term target | Yearly growth of net assets of over 10%.[1] | 2025: NAV per share up 11.1%; since 2001: 8.4% a year.[1] | Met in 2025, missed over the long run, and behind the general stock markets for the fourth year in a row.[1] |
 | Annual report 2025: run down the older positions | Their share of the portfolio, to zero within three years.[1] | Down to 29% by the end of 2025.[1] In October 2026 the Recordati holding was sold in full and the exit from Deep Value Driller completed.[3] | On track so far. |
 | 16 July 2025: buyback offer | Up to 10,000 shares.[5] | 17,915 shares bought at EUR 91.00, equal to 2.57% of the share capital.[5] | Delivered and enlarged; justified by a gap of over 20% between price and NAV.[5] |
+| Annual meeting 2025: Herzing's own stake | He said he had committed to put 50% of his wealth into SVB shares and stood at 30%.[11] | He and persons close to him held 4,110 shares at the end of 2025, and he or his company bought again in May and August 2026 (derived from [1][13]). | Consistent with the commitment as far as filings show; his wealth is not known. |
 | Annual meeting 2025: option programme | Up to 60,000 options until 11 June 2030, exercisable if NAV has grown at least 5% a year on average.[6] | Grants are not disclosed. | The hurdle is half the company's own 10% target. |
+| Annual meeting 2026: lessons from the losses | A new position at most 10% of the portfolio, capped at 15% as prices rise; only shares liquid enough to act on.[9] | Not yet due. | First test: the 2026 annual report. |
 
-**Summary:** Management does what it says on the things it controls: it bought back shares below NAV and is selling the older positions.
+**Summary:** Management does what it says on the things it controls: it bought back shares below NAV, is selling the older positions and has written down the causes of its losses.
 It has not delivered its central promise over the long run, because NAV has compounded at 8.4% against a target of over 10%.
-The option hurdle of 5% rewards growth well below that target.
+The people own the company: Fink holds a third of it, and Herzing has put a stated large part of his own money in it.
 
 | Category | Answers / decisive fact | Score /5 | Confidence | Concern / reassessment trigger |
 |:--|:--|--:|:--|:--|
-| Integrity and candor | The annual report states plainly that NAV lagged the markets for the fourth year in a row, and the company warns that NAV is not based on audited accounts.[1][4] | 4 | Medium | An NAV mark later shown to be optimistic. |
-| Capital allocation | A buyback at EUR 91.00 when the gap to NAV exceeded 20%; the company puts the gain at 0.5% of NAV per share or more.[5] The portfolio's long-run return of 8.4% a year is below the company's own target.[1] | 3 | Medium | New positions that depend on events others control. |
-| Ownership and incentives | Up to 60,000 options, 8.6% of the issued shares, with a 5% NAV-growth hurdle (derived from [4][6]). Managers' holdings are not established here. | 2 | Low | Options paying out for returns below the 10% target. |
-| Execution and adaptability | The older positions fell to 29% of the portfolio in a year, and personnel expenses rose to EUR 525 thousand as an in-house team replaced the outside manager.[1] | 3 | Medium | Further board changes. |
-| Governance and minority treatment | One executive runs the company after 30 August 2026, and the shares trade in the open market (Freiverkehr), not on a regulated market.[2][4] | 2 | Medium | Related-party dealings or a capital increase below NAV. |
-| **Overall** | **Weak (mean 2.8), by a narrow margin** | 2.8 | Low | Disclosed option grants with a 10% hurdle, and a second executive, would raise it. |
+| Integrity and candor | Herzing called the oil investments his mistake and apologized to shareholders in 2025; the 2026 meeting set out the causes of the losses, from position size to illiquidity.[9][11] The company warns that NAV is not based on audited accounts.[4] | 4 | Medium | An NAV mark later shown to be optimistic. |
+| Capital allocation | NAV per share was EUR 128.83 at the end of 2020 and EUR 130.07 at 31 October 2026, so retained capital added almost nothing per share in nearly six years (derived from [3][12]). The 2025 buyback at EUR 91.00 added to NAV per share; the company puts the gain at 0.5% of NAV per share or more.[5] | 2 | Medium | NAV growth above 10% a year from the positions bought since 2025. |
+| Ownership and incentives | Fink and his associates hold about a third of the shares and each supervisory board member holds some.[1] Each option requires the holder to buy a matching share within twelve months, but vests at NAV growth of 5% a year.[6] | 4 | Medium | A sale by Fink or Herzing; option grants still undisclosed. |
+| Execution and adaptability | The older positions fell to 29% of the portfolio in 2025, and the 2026 rules cap position sizes and require liquidity.[1][9] Herzing left the board in August 2026 for analysis, in a reorganization aimed at a person-independent process.[10] | 3 | Medium | Departures from the investment team. |
+| Governance and minority treatment | The sole executive is also the largest shareholder and the former supervisory board chair; Fink's end-2025 holding equals about 63% of the 353,875 shares voted on the 2026 board elections (derived from [1][8]). A Fink company proposed Bienbeck for the supervisory board in 2025.[11] | 2 | Medium | Related-party dealings or a capital increase below NAV. |
+| **Overall** | **Adequate (mean 3.0), by the narrowest margin** | 3.0 | Low | A NAV record above 10% a year, or a second independent executive, would raise it. |
 
-**Summary:** The evidence supports candor and a sensible buyback, and it does not support strong stewardship.
-The classification is Weak by a narrow margin, driven by incentives and by a one-person executive board at a very small company.
-It is not a finding of dishonesty.
+**Summary:** Ownership is the strength: the executive and the analyst have their own money in the shares.
+The record is the weakness, and the same block of votes that aligns the executive also elects the board that supervises him.
+The classification is Adequate by the narrowest margin; it is not a finding that the managers are skilled, which nearly six years of flat NAV per share do not show.
 
 ## Moat
 
@@ -166,7 +171,7 @@ Confidence is Low: the arithmetic is simple, but the private vehicles' current w
 | Business / competence | A wrapper around a concentrated portfolio of mostly listed small and mid-sized companies.[1] | The holdings themselves are not assessed here. | The annual report for 2026. |
 | Source of value / critical assumptions | NAV of EUR 130.07 a share, bought at about 33% less (derived from [3][7]). | NAV rose 7.68% in October 2026 alone, so it can fall as fast.[3] | Each monthly NAV release. |
 | Permanent-loss case / protection | NAV marks prove too high and the discount stays: about EUR 90 a share (derived). | No debt, so no forced selling.[2] | Write-downs on the private vehicles. |
-| Quality, funding and valuation consistency | No moat, Weak stewardship by a narrow margin, Resilient finances and a price near the Bear value agree with each other. | A wide discount on an ordinary wrapper can last indefinitely. | A second buyback, or none within two years. |
+| Quality, funding and valuation consistency | No moat, Adequate stewardship by the narrowest margin, Resilient finances and a price near the Bear value agree with each other. | A wide discount on an ordinary wrapper can last indefinitely. | A second buyback, or none within two years. |
 | Value versus price / possible mispricing | Price 19% below Base and 3% below Bear (derived). | The discount widened from around 29.2% at the end of 2025 while NAV rose.[1] | The discount at each year end. |
 | **Overall / change since prior review** | **Investigate; first full assessment.** | **Decisive missing evidence: the value of the holdings and the current weight of the private vehicles.** | **The 2026 annual report.** |
 
@@ -176,7 +181,7 @@ What would settle the question is an independent look at the five largest holdin
 
 ### Final Verdict
 
-Shareholder Value Beteiligungen is a debt-free investment wrapper with no moat of its own, candid managers with weak incentives, and a long record of NAV growth below its own target.[1][2]
+Shareholder Value Beteiligungen is a debt-free investment wrapper with no moat of its own, candid managers who own much of it, and a long record of NAV growth below its own target.[1][2]
 At EUR 87.50 per share (Xetra close, November 9, 2026) the price stands against Bear/Base/Bull estimated values of EUR 90/EUR 108/EUR 130, 19% below the Base value (derived from [7]).[7]
 These are adjusted net asset values built on market prices of the holdings, not intrinsic values, so no margin of safety is claimed.
 The judgment is undervalued relative to Base, with Low confidence: the price sits near the Bear value, but an owner is paid only if NAV grows faster than its record or the discount narrows.
@@ -191,3 +196,10 @@ The decisive risk is a discount that never closes on a portfolio that compounds 
 5. Shareholder Value Beteiligungen AG. (2025). "Pressemitteilung Aktienrueckkauf." 2025-08-01; completed share buyback. https://svb-ag.de/wp-content/uploads/2025/08/2025-08-01-Pressemitteilung-Aktienrueckkauf.pdf [high]
 6. Shareholder Value Beteiligungen AG. (2025). "Einladung zur ordentlichen Hauptversammlung." Meeting of 12 June 2025; Aktienoptionsprogramm 2025. https://svb-ag.de/wp-content/uploads/2025/05/SVB_HV-Einladung-2025-Final-Druck.pdf [high]
 7. Stock Analysis. (2026). "Shareholder Value Beteiligungen AG (ETR: SVE) Stock Price History." Daily closes, accessed 2026-11-10. https://stockanalysis.com/quote/etr/SVE/history/ [medium]
+8. Shareholder Value Beteiligungen AG. (2026). "Abstimmungsergebnisse der ordentlichen Hauptversammlung am 09.06.2026." Voting results of the 2026 annual meeting. https://svb-ag.de/wp-content/uploads/2026/06/Shareholder-Value-Beteiligungen-AG_HV-2026_Abstimmungsergebnisse_Uebersicht.pdf [high]
+9. Shareholder Value Beteiligungen AG. (2026). "Hauptversammlung 2026." Presentation to the annual meeting of 9 June 2026; causes of past losses and portfolio rules. https://svb-ag.de/wp-content/uploads/2026/06/Praesentation-HV-2026_Homepage.pdf [high]
+10. Shareholder Value Beteiligungen AG. (2026). "Shareholder Value Beteiligungen AG entwickelt Organisationsstruktur weiter." Release of 10 July 2026 on Herzing's move to investment analysis. https://www.pressetext.com/news/20260710020 [high]
+11. GSC Research. (2025). "HV-Bericht Shareholder Value Beteiligungen AG." Report on the annual meeting of 12 June 2025, published 2025-07-21. https://gsc-research.de/berichte/102318 [medium]
+12. Shareholder Value Beteiligungen AG. (2024). "Geschaeftsbericht 2023." Annual report for 2023; six-year summary of net asset value. https://svb-ag.de/wp-content/uploads/2024/04/2024-4-11-SVB-GB-web.pdf [high]
+13. Shareholder Value Beteiligungen AG. (2026). "Corporate Governance." Board pages and managers' dealings under Article 19 MAR, accessed 2026-11-14. https://svb-ag.de/corporate-governance/ [high]
+14. Shareholder Value Management AG. (2026). "Ueber uns." History of the R 3000 share club and of the Shareholder Value companies, accessed 2026-11-14. https://www.shareholdervalue.de/ueber-shareholdervalue [medium]
