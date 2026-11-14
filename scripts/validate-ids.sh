@@ -14,7 +14,8 @@
 #   4. id: must not be in the future (allow 5 min clock skew).
 #
 # USAGE: validate-ids.sh [file...]
-#   No args: scan all tracked markdown files in current repo.
+#   No args: scan all tracked AND untracked (not ignored) markdown files
+#   in the current repo, so a new file is checked before its first commit.
 #   With args: scan only the given files (for pre-commit hook use).
 
 set -euo pipefail
@@ -26,9 +27,9 @@ files_with_ids=0
 # Collect all ids for duplicate check
 declare -A id_map
 
-# If no args, scan all tracked markdown files
+# If no args, scan all tracked and untracked (not ignored) markdown files
 if [ $# -eq 0 ]; then
-  mapfile -t FILES < <(git ls-files '*.md')
+  mapfile -t FILES < <(git ls-files --cached --others --exclude-standard '*.md' | sort -u)
 else
   FILES=("$@")
 fi
