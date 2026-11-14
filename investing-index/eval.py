@@ -126,6 +126,13 @@ def recall_at_k(gold: str | list[str], results: list, k: int = EVAL_K) -> float:
     return len(found) / len(relevant)
 
 
+def success_at_k(gold: str | list[str], results: list, k: int) -> float:
+    """Return 1.0 when any relevant file is among the top-k files."""
+    relevant = _relevant(gold)
+    unique = deduplicate_files(results, top_k=k)
+    return float(any(result["file"] in relevant for result in unique))
+
+
 def reciprocal_rank(gold: str | list[str], results: list) -> float:
     """Return reciprocal rank of the first relevant result."""
     relevant = _relevant(gold)
@@ -147,6 +154,29 @@ def ndcg_at_k(gold: str | list[str], results: list, k: int = EVAL_K) -> float:
     ideal_count = min(len(relevant), k)
     idcg = sum(1.0 / math.log2(rank + 1) for rank in range(1, ideal_count + 1))
     return dcg / idcg if idcg else 0.0
+
+
+def compare_runs(current: list, baseline: list) -> dict:
+    """Compare two runs question by question (reciprocal rank, current minus baseline).
+
+    The interval is the 95% range of the mean difference (normal approximation);
+    a change is real only when the interval excludes zero.
+    """
+    base = {row["qid"]: row["rr"] for row in baseline}
+    if {row["qid"] for row in current} != set(base):
+        raise ValueError("baseline was run on a different question set")
+    diffs = [row["rr"] - base[row["qid"]] for row in current]
+    count = len(diffs)
+    mean = sum(diffs) / count
+    spread = math.sqrt(sum((diff - mean) ** 2 for diff in diffs) / max(count - 1, 1))
+    margin = 1.96 * spread / math.sqrt(count)
+    return {
+        "queries": count,
+        "mrr_diff": round(mean, 4),
+        "interval": [round(mean - margin, 4), round(mean + margin, 4)],
+        "better": sum(diff > 0 for diff in diffs),
+        "worse": sum(diff < 0 for diff in diffs),
+    }
 
 
 def prepare_eval():
@@ -173,6 +203,7 @@ def run_eval(verbose: bool = False):
     mrr_sum = 0.0
     ndcg_sum = 0.0
     complete = 0
+    top = {1: 0, 3: 0, 5: 0}
     details = []
 
     for query in queries:
@@ -189,6 +220,8 @@ def run_eval(verbose: bool = False):
         found = [result["file"] for result in deduplicate_files(results, EVAL_K)
                  if result["file"] in set(relevant)]
         complete += int(recall == 1.0)
+        for k in top:
+            top[k] += int(success_at_k(relevant, results, k))
         recall_sum += recall
         mrr_sum += rr
         ndcg_sum += ndcg
@@ -217,6 +250,7 @@ def run_eval(verbose: bool = False):
     ndcg = ndcg_sum / count
     print("---")
     print(f"Queries: {count}")
+    print(f"Top-1/3/5: {top[1]} / {top[3]} / {top[5]}")
     print(f"Complete@{EVAL_K}: {complete}/{count}")
     print(f"Recall@{EVAL_K}: {recall:.1%}")
     print(f"MRR:       {mrr:.4f}")
@@ -225,6 +259,9 @@ def run_eval(verbose: bool = False):
 
     output = {
         "queries": count,
+        "top1": top[1],
+        "top3": top[3],
+        "top5": top[5],
         "complete_at_20": complete,
         "recall_at_20": round(recall, 4),
         "mrr": round(mrr, 4),
@@ -244,13 +281,27 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--verbose", "-v", action="store_true")
     parser.add_argument("--validate-only", action="store_true")
+    parser.add_argument("--baseline", metavar="RESULTS_JSON",
+                        help="compare this run with an earlier eval-results.json")
     args = parser.parse_args()
     try:
         if args.validate_only:
             queries, _, _ = prepare_eval()
             print(f"GOLD SET PASS: {len(queries)} valid queries")
             sys.exit(0)
+        baseline = None
+        if args.baseline:  # read first: this run rewrites eval-results.json
+            with open(args.baseline) as handle:
+                baseline = json.load(handle)["results"]
         score = run_eval(verbose=args.verbose)
+        if baseline is not None:
+            with open(SCRIPT_DIR / "eval-results.json") as handle:
+                change = compare_runs(json.load(handle)["results"], baseline)
+            low, high = change["interval"]
+            verdict = "clear gain" if low > 0 else "clear loss" if high < 0 else "no clear difference"
+            print(f"Against baseline: MRR {change['mrr_diff']:+.4f} "
+                  f"(95% interval {low:+.4f} to {high:+.4f}); better {change['better']}, "
+                  f"worse {change['worse']} of {change['queries']}: {verdict}")
     except (OSError, ValueError, KeyError) as exc:
         print(f"GOLD SET FAIL: {exc}")
         sys.exit(1)

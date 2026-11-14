@@ -207,6 +207,52 @@ class IndexContractTests(unittest.TestCase):
         self.assertEqual(eval_mod.recall_at_k(["a.md", "b.md"], results, 2), 1.0)
         self.assertEqual(eval_mod.ndcg_at_k(["a.md", "b.md"], results, 2), 1.0)
 
+    def test_success_at_k_needs_a_relevant_file_in_the_top_k(self):
+        results = [{"file": "x.md"}, {"file": "x.md"}, {"file": "a.md"}]
+        self.assertEqual(eval_mod.success_at_k(["a.md"], results, 1), 0.0)
+        self.assertEqual(eval_mod.success_at_k(["a.md"], results, 2), 1.0)
+
+    def test_paired_comparison_reports_difference_and_interval(self):
+        baseline = [{"qid": "q1", "rr": 1.0}, {"qid": "q2", "rr": 0.5}, {"qid": "q3", "rr": 0.0}]
+        current = [{"qid": "q3", "rr": 0.5}, {"qid": "q1", "rr": 1.0}, {"qid": "q2", "rr": 1.0}]
+        result = eval_mod.compare_runs(current, baseline)
+        self.assertEqual((result["queries"], result["better"], result["worse"]), (3, 2, 0))
+        self.assertAlmostEqual(result["mrr_diff"], 1 / 3, places=4)
+        low, high = result["interval"]
+        self.assertLess(low, result["mrr_diff"])
+        self.assertGreater(high, result["mrr_diff"])
+
+    def test_paired_comparison_rejects_a_different_question_set(self):
+        with self.assertRaises(ValueError):
+            eval_mod.compare_runs([{"qid": "q1", "rr": 1.0}], [{"qid": "q2", "rr": 1.0}])
+
+    def test_keyword_tokens_are_lowercase_words(self):
+        self.assertEqual(
+            query_mod.tokenize("**BM25** retrieval, Re-ranking (v2)!"),
+            ["bm25", "retrieval", "re", "ranking", "v2"])
+
+    def test_keyword_search_matches_words_next_to_punctuation(self):
+        chunks = [
+            {"file": "a.md", "chunk_id": "a:0", "text": "Use **BM25**, then fuse both lists."},
+            {"file": "b.md", "chunk_id": "b:0", "text": "Soft-boiled eggs need six minutes."},
+        ]
+        results = query_mod.sparse_search("bm25 fusion", chunks, top_k=5)
+        self.assertEqual([result["file"] for result in results], ["a.md"])
+
+    def test_keyword_statistics_are_built_once_per_index(self):
+        chunks = [
+            {"file": "a.md", "chunk_id": "a:0", "text": "alpha beta"},
+            {"file": "b.md", "chunk_id": "b:0", "text": "gamma delta"},
+        ]
+        with mock.patch.object(query_mod, "BM25", wraps=query_mod.BM25) as built:
+            first = query_mod.sparse_search("alpha", chunks, top_k=5)
+            second = query_mod.sparse_search("gamma", chunks, top_k=5)
+            self.assertEqual(built.call_count, 1)
+            query_mod.sparse_search("alpha", list(chunks), top_k=5)
+            self.assertEqual(built.call_count, 2)
+        self.assertEqual([result["file"] for result in first], ["a.md"])
+        self.assertEqual([result["file"] for result in second], ["b.md"])
+
     def test_eval_rejects_an_empty_hybrid_modality(self):
         result = {"file": "a.md", "chunk_id": "a:0", "score": 1.0}
         with self.assertRaises(ValueError):

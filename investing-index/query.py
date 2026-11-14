@@ -13,6 +13,7 @@ import json
 import hashlib
 import math
 import os
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -156,9 +157,11 @@ def dense_search(query: str, model, chunks: list, vectors: np.ndarray,
 
 # --- Inline BM25 implementation (no external deps) ---
 
+_WORD = re.compile(r"[a-z0-9]+")
+
 def tokenize(text: str) -> list:
-    """Simple whitespace tokenizer, lowercase."""
-    return text.lower().split()
+    """Lowercase word tokens; punctuation and Markdown marks separate words."""
+    return _WORD.findall(text.lower())
 
 
 class BM25:
@@ -199,10 +202,21 @@ class BM25:
         return scores
 
 
+_BM25_BUILT = None  # (chunks list, its BM25): one build per loaded index
+
+
+def _bm25_for(chunks: list) -> BM25:
+    """Return the keyword statistics for this chunk list, building them once."""
+    global _BM25_BUILT
+    if _BM25_BUILT is None or _BM25_BUILT[0] is not chunks:
+        corpus = [tokenize(c["text"]) for c in chunks]
+        _BM25_BUILT = (chunks, BM25(corpus, k1=cfg["bm25"]["k1"], b=cfg["bm25"]["b"]))
+    return _BM25_BUILT[1]
+
+
 def sparse_search(query: str, chunks: list, top_k: int) -> list:
     """BM25 keyword search using inline implementation."""
-    corpus = [tokenize(c["text"]) for c in chunks]
-    bm25 = BM25(corpus, k1=cfg["bm25"]["k1"], b=cfg["bm25"]["b"])
+    bm25 = _bm25_for(chunks)
     tokenized = tokenize(query)
     scores = bm25.score(tokenized)
 
