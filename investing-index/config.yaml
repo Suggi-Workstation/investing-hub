@@ -10,7 +10,7 @@ embedding:
 # The reranker model is loaded by the embed daemon; top_k is how many fused
 # chunks it scores per question.
 reranker:
-  enabled: false
+  enabled: true
   top_k: 25
 
 chunking:
