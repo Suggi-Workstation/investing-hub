@@ -1,9 +1,9 @@
-version: '3.0'
+version: '3.1'
 status: provisional-agent-curated
 description: Investing Hub retrieval benchmark.
 queries:
 - qid: i001
-  question: How do I sanity-check the exit multiple in a ten-year DCF, including the perpetual growth it implies and terminal value dependence?
+  question: How should an unlisted stake or a loss-making unit missing from the earnings base be valued, and which evidence ranks first?
   gold_files:
   - frameworks/simple-dcf.md
   domain: frameworks
@@ -49,7 +49,7 @@ queries:
   - frameworks/simple-moat.md
   domain: cross-cutting
 - qid: i013
-  question: Which cash bridge, FCFF or FCFE, should feed the starting run-rate of a two-stage DCF, and where do debt and other claims enter?
+  question: How should stock-based compensation be treated both when normalizing owner cash flow and when choosing the share count for valuing equity?
   gold_files:
   - frameworks/financial-health.md
   - frameworks/simple-dcf.md
@@ -155,7 +155,7 @@ queries:
   - companies/RDDT.md
   domain: companies
 - qid: i035
-  question: Does buying Shareholder Value Beteiligungen at about a third below NAV give a real margin of safety?
+  question: How far below its published net asset value does the German investment company controlled by Helmut Fink trade?
   gold_files:
   - companies/SVE.md
   domain: companies
@@ -214,3 +214,18 @@ queries:
   gold_files:
   - data/crox-financial.md
   domain: data
+- qid: i047
+  question: Which folder should hold source filings and investment theses, and which holds raw screener exports in the investing workspace?
+  gold_files:
+  - README.md
+  domain: root
+- qid: i048
+  question: When closing a company assessment, which figures must the verdict state, and is the discount measured against price or Base value?
+  gold_files:
+  - governance/template-company.md
+  domain: governance
+- qid: i049
+  question: How can I tell whether a change to the investing search ranking really improved results compared with the earlier state?
+  gold_files:
+  - investing-index/README.md
+  domain: investing-index
