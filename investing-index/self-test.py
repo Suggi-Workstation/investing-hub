@@ -389,6 +389,9 @@ class ChunkReuseTests(unittest.TestCase):
         self.docs = self.root / DOCS_SUBDIR
         self.docs.mkdir(parents=True, exist_ok=True)
         self.data = DATA_OF(self.root, self.tool)
+        for args in (("init", "-q"), ("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                                      "commit", "--allow-empty", "-qm", "fixture")):
+            subprocess.run(["git", *args], cwd=self.root, check=True, capture_output=True)
 
     def paragraphs(self, tag, n):
         return ["Paragraph %s %d. " % (tag, i) + " ".join("word%s%d" % (tag, k) for k in range(i * 90, i * 90 + 90))
