@@ -337,5 +337,109 @@ class IndexContractTests(unittest.TestCase):
             eval_mod.validate_gold_queries(bad, set())
 
 
+# --- chunk reuse (2026-11-24): a subprocess build against a fake embed daemon ---
+TOOL_DIR = INDEX_DIR
+TOOL_SUBDIR = INDEX_DIR.name
+DOCS_SUBDIR = "notes"
+DOCS_PREFIX = "notes/"
+CONFIG_UPDATE = lambda root: {"data_dir": str(root / "data")}
+DATA_OF = lambda root, tool: root / "data"
+
+
+class ChunkReuseTests(unittest.TestCase):
+    """An edit re-embeds only the chunks whose text changed; the result equals a full rebuild."""
+
+    def setUp(self):
+        import http.server
+        import shutil
+        import threading
+        import yaml
+        temp = tempfile.TemporaryDirectory(prefix="index-reuse-")
+        self.addCleanup(temp.cleanup)
+        self.root = Path(temp.name)
+        self.seen = []
+        seen, dim = self.seen, 1024
+
+        class Fake(http.server.BaseHTTPRequestHandler):
+            def do_POST(self):
+                body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
+                seen.extend(body["texts"])
+                vecs = [np.random.default_rng(int(hashlib.sha256(t.encode()).hexdigest()[:12], 16))
+                        .standard_normal(dim).tolist() for t in body["texts"]]
+                out = json.dumps({"embeddings": vecs}).encode()
+                self.send_response(200)
+                self.send_header("Content-Length", str(len(out)))
+                self.end_headers()
+                self.wfile.write(out)
+
+            def log_message(self, *args):
+                pass
+
+        server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), Fake)
+        threading.Thread(target=server.serve_forever, daemon=True).start()
+        self.addCleanup(server.shutdown)
+        self.url = "http://127.0.0.1:%d/embed" % server.server_address[1]
+        self.tool = self.root / TOOL_SUBDIR
+        self.tool.mkdir(parents=True)
+        for name in ("index.py", "query.py"):
+            shutil.copy2(TOOL_DIR / name, self.tool / name)
+        cfg = yaml.safe_load((TOOL_DIR / "config.yaml").read_text())
+        cfg["index"].update(CONFIG_UPDATE(self.root))
+        (self.tool / "config.yaml").write_text(yaml.safe_dump(cfg))
+        self.docs = self.root / DOCS_SUBDIR
+        self.docs.mkdir(parents=True, exist_ok=True)
+        self.data = DATA_OF(self.root, self.tool)
+
+    def paragraphs(self, tag, n):
+        return ["Paragraph %s %d. " % (tag, i) + " ".join("word%s%d" % (tag, k) for k in range(i * 90, i * 90 + 90))
+                for i in range(n)]
+
+    def build(self, *flags):
+        del self.seen[:]
+        env = dict(os.environ, BRAIN_EMBED_URL=self.url)
+        run = subprocess.run([sys.executable, str(self.tool / "index.py"), *flags], cwd=self.root, env=env,
+                             capture_output=True, text=True, timeout=300)
+        self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+        return len(self.seen)
+
+    def index(self):
+        chunks = [json.loads(line) for line in (self.data / "chunks.jsonl").read_text().splitlines() if line.strip()]
+        vectors = np.load(self.data / "vectors.npy")
+        self.assertEqual(len(chunks), len(vectors))
+        return {c["chunk_id"]: (c["text"], vectors[i].tobytes()) for i, c in enumerate(chunks)}
+
+    def test_an_edit_reembeds_only_changed_chunks_and_equals_a_full_rebuild(self):
+        long_doc = self.paragraphs("a", 8)
+        (self.docs / "a.md").write_text("# A\n\n" + "\n\n".join(long_doc) + "\n")
+        (self.docs / "b.md").write_text("# B\n\nA short note that fits one chunk.\n")
+        first = self.build("--force")
+        before = self.index()
+        a_chunks = [k for k in before if k.startswith(DOCS_PREFIX + "a.md::")]
+        self.assertGreaterEqual(len(a_chunks), 3)
+        self.assertEqual(first, len(before))                       # a full build embeds every chunk
+
+        long_doc[-1] = "Paragraph a changed. " + long_doc[-1]        # one edit near the end
+        (self.docs / "a.md").write_text("# A\n\n" + "\n\n".join(long_doc) + "\n")
+        embedded = self.build()
+        after = self.index()
+        self.assertGreaterEqual(embedded, 1)
+        self.assertLess(embedded, len(a_chunks))                  # not the whole file again
+        kept = [k for k in a_chunks if after.get(k, (None,))[0] == before[k][0]]
+        self.assertTrue(kept)
+        for k in kept:
+            self.assertEqual(after[k][1], before[k][1])            # unchanged text keeps its vector
+
+        (self.docs / "b.md").rename(self.docs / "c.md")             # same text under a new name
+        twin = "# Twin\n\nThe same new note written into two files.\n"
+        (self.docs / "x.md").write_text(twin)
+        (self.docs / "y.md").write_text(twin)
+        self.assertEqual(self.build(), 1)                         # the rename costs nothing, the twins one call
+        incremental = self.index()
+
+        distinct = len({text for text, _vector in incremental.values()})
+        self.assertEqual(self.build("--force"), distinct)          # --force reuses nothing from the old index
+        self.assertEqual(self.index(), incremental)               # and builds exactly the same index
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

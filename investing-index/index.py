@@ -297,11 +297,47 @@ def build_index(force: bool = False):
             }
             new_chunks.append(chunk)
 
-    print(f"  Chunks to embed: {len(new_chunks)}", flush=True)
+    # Reuse: a chunk whose exact text is already in the index keeps its
+    # vector, so an edit re-embeds only the chunks it changed, not the whole
+    # file. A --force build reuses nothing (it reads no old chunks).
+    dim = cfg["embedding"]["dim"]
+    old_vectors_all = None
+    if existing_chunks_old and VECTORS_PATH.exists():
+        old_vectors_all = np.load(VECTORS_PATH).astype(np.float16)
+        if len(old_vectors_all) != len(existing_chunks_old):
+            raise SystemExit(
+                "ERROR: chunks.jsonl and vectors.npy differ in length "
+                f"({len(existing_chunks_old)} / {len(old_vectors_all)}). "
+                "Run index.py --force.")
+    old_model = None
+    if META_PATH.exists():
+        with open(META_PATH) as f:
+            old_model = json.load(f).get("model")
+    reuse = {}
+    if (old_vectors_all is not None and old_vectors_all.shape[1:] == (dim,)
+            and old_model == cfg["embedding"]["model"]):
+        for row, c in enumerate(existing_chunks_old):
+            reuse.setdefault(
+                hashlib.sha256(c["text"].encode("utf-8")).hexdigest(), row)
+    new_vectors = np.zeros((len(new_chunks), dim), dtype=np.float16)
+    to_embed = []          # positions in new_chunks whose vectors are made now
+    same_as = {}           # position -> earlier position with the same text
+    first = {}
+    for j, c in enumerate(new_chunks):
+        key = hashlib.sha256(c["text"].encode("utf-8")).hexdigest()
+        if key in reuse:
+            new_vectors[j] = old_vectors_all[reuse[key]]
+        elif key in first:
+            same_as[j] = first[key]
+        else:
+            first[key] = j
+            to_embed.append(j)
+    print(f"  Chunks reused: {len(new_chunks) - len(to_embed)}", flush=True)
+    print(f"  Chunks to embed: {len(to_embed)}", flush=True)
 
-    # Embed new chunks (warm daemon first, in-process fallback)
-    if new_chunks:
-        texts = [c["text"] for c in new_chunks]
+    # Embed the rest (warm daemon first, in-process fallback)
+    if to_embed:
+        texts = [new_chunks[j]["text"] for j in to_embed]
         batch_size = cfg["embedding"]["batch_size"]
         vectors = []
         use_daemon = True
@@ -330,14 +366,15 @@ def build_index(force: bool = False):
             if (i + batch_size) % 100 == 0 or i + batch_size >= len(texts):
                 print(f"  Embedded {min(i + batch_size, len(texts))}/{len(texts)}",
                       flush=True)
-        new_vectors = np.concatenate(vectors, axis=0).astype(np.float16)
-    else:
-        new_vectors = np.empty((0, cfg["embedding"]["dim"]), dtype=np.float16)
+        new_vectors[to_embed] = np.concatenate(vectors, axis=0).astype(np.float16)
+    for j, k in same_as.items():
+        new_vectors[j] = new_vectors[k]
 
     # Combine with existing (filter old vectors to match filtered chunks)
     all_chunks = existing_chunks + new_chunks
     if existing_chunks and VECTORS_PATH.exists():
-        old_vectors = np.load(VECTORS_PATH).astype(np.float16)[keep_mask]
+        old_vectors = (old_vectors_all if old_vectors_all is not None
+                       else np.load(VECTORS_PATH).astype(np.float16))[keep_mask]
         all_vectors = np.concatenate([old_vectors, new_vectors], axis=0)
     else:
         all_vectors = new_vectors
