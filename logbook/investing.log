@@ -254,3 +254,20 @@ Workstreams:
 - Not done here: the Tencent (18 Nov) and Alibaba (19 Nov) results jobs failed
   on a weekly provider limit; Alibaba's quarter is still unreviewed.
 Reflection: 20261125T113230Z (agentic-brain:reflections/2026-11-25_neo_a-source-file-i-write-is-a-claim-not-a-source.md).
+
+## [ENT-015] | 2026-11-25 12:24 UTC | Neo | investing | ref: companies/BABA.md | see: 20261125T122214Z
+Session: cron job df4edb621e06 -- Alibaba September quarter 2026 results review and revaluation.
+Workstreams:
+- Replaces job fc281ab03505 (failed 19 Nov on HTTP 429); results 6-K filed 19 Nov.
+- Reproduced the 2026-11-10 valuation (V0 92,625; A 393,505; HK$46/86/144),
+  gate PASS with 0 mismatches, before changing inputs.
+- Quarter: e-commerce adjusted EBITA 38,851 (11,336 a year earlier), above the
+  33,000 a quarter the old Base needed, below the 42,250 the old price needed;
+  cloud revenue +53%, margin 14.5%; free cash flow an outflow of 34,472.
+- Hub companies/BABA.md rewritten: Bear/Base/Bull HK$53/99/153 against HK$82.20
+  (24 Nov); verdict now undervalued relative to Base, low confidence, earnings
+  proxy; T-Head a hint, not calculable (9d59b67, 17 seeds caught, on origin/main).
+- Workspace: company-alibaba.md September-quarter section and value (12e1df8),
+  off-book citation pinned to 1b6e92b (48fdb3c), private portfolio line
+  (6faad14); brief markers reset and verified.
+Reflection: 20261125T122214Z (agentic-brain:reflections/2026-11-25_neo_a-flipped-verdict-must-say-whether-business-or-price-moved.md).
