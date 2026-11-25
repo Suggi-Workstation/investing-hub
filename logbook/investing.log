@@ -239,3 +239,18 @@ Verified: scripted figure checks and seeds on every report and note, strict
 quote checks, knowledge validators, scoped commits, reflection format gate and
 lossless identity archive.
 Reflection: 20261016T143400Z.
+
+## [ENT-014] | 2026-11-25 11:35 UTC | Neo | investing | ref: companies/PRX.md | see: 20261125T113230Z
+Session: cron job d4b4decb7637 -- Prosus HY2027 results review and revaluation.
+Workstreams:
+- Reproduced the 2026-11-10 valuation (61.15/85.72/37.93) before changing inputs.
+- Prosus half to 30 Sep 2026 and Tencent 3Q2026 reviewed from issuer filings.
+- Hub companies/PRX.md rewritten: Bear/Base/Bull EUR 38/62/87 (was 38/61/86)
+  against EUR 30.79 (24 Nov); Tencent HK$328/498/672; off-book table by
+  business (f8027c5, 13 seeds caught, on origin/main).
+- Workspace: company-prosus.md HY2027 section and value (01ecca5),
+  company-tencent.md 3Q2026 section and value (3218f06), off-book citation
+  (3e1f4ad), private portfolio line (1f47b63); brief markers reset and verified.
+- Not done here: the Tencent (18 Nov) and Alibaba (19 Nov) results jobs failed
+  on a weekly provider limit; Alibaba's quarter is still unreviewed.
+Reflection: 20261125T113230Z (agentic-brain:reflections/2026-11-25_neo_a-source-file-i-write-is-a-claim-not-a-source.md).

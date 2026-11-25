@@ -132,3 +132,17 @@ Gate: seed_gate.py runs seeds ahead of the gate and blocks the commit when one
 Open: seed_gate.py tested once, not yet in a real commit; Hub report seeds
   still run outside the commit chain.
 Reflection: 20261016T143400Z.
+
+## [ENT-010] | 2026-11-25 11:35 UTC | Neo | error | ref: agentic-brain:reflections/2026-11-25_neo_a-source-file-i-write-is-a-claim-not-a-source.md | see: 20261125T113230Z
+Session: cron job d4b4decb7637 -- Prosus HY2027 results review and revaluation.
+Workstreams:
+- Scar: an ad hoc regex over the ECB 90-day XML gave one day's rates for
+  every date (USD 1.1645 for 1.0963); Base came out EUR 57.86, not 61.93.
+- Cause: the FX table was a file I derived, and every later gate (ledger,
+  figure check, seeds) read it as ground truth, so all outputs agreed.
+- Caught before commit by printing four dates side by side.
+- Fix: company-research gate ecb.py reads each date by two routes and fails
+  on repeated rates; reproduces the 2026-11-09 table; seeded file exits 1.
+- Also caught by gates: two typed sensitivities (70/56 for 65/59) by the
+  ledger; a note rebuild that cut three sections by the knowledge validator.
+Reflection: 20261125T113230Z.
